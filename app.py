@@ -9,7 +9,7 @@ st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
 openai.api_key = st.secrets.secrets["openai"]["api_key"][0]
-print(f"adfad: {openai.api_key}")
+
 
 # Initialise session state variables
 if 'generated' not in st.session_state:
@@ -44,7 +44,6 @@ else:
 
 # reset everything
 if clear_button:
-    st.write(openai.api_key["openai"]["api_key"])
     st.session_state['generated'] = []
     st.session_state['past'] = []
     st.session_state['messages'] = [
