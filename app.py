@@ -32,6 +32,7 @@ if 'total_cost' not in st.session_state:
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Sidebar")
+uploaded_file = st.sidebar.file_uploader("Choose a .eml file")
 model_name = st.sidebar.radio("Choose a model:", ("GPT-3.5", "GPT-4"))
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
