@@ -7,7 +7,7 @@ st.set_page_config(page_title="Tagu", page_icon=":robot_face:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 
 # Set org ID and API key
-# openai.organization = "<YOUR_OPENAI_ORG_ID>"
+openai.organization = st.secrets.secrets["openai"]["organization"][0]
 openai.api_key = st.secrets.secrets["openai"]["api_key"][0]
 print(f"adfad: {openai.api_key}")
 
