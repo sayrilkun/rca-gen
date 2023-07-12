@@ -86,6 +86,7 @@ with container:
         submit_button = st.form_submit_button(label='Send')
 
     if submit_button and user_input:
+        print(f"adfad: {openai.api_key}")
         output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(output)
