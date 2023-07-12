@@ -9,7 +9,7 @@ st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1
 # Set org ID and API key
 # openai.organization = "<YOUR_OPENAI_ORG_ID>"
 openai.api_key = st.secrets.secrets
-print(openai.api_key)
+print(f"adfad: {openai.api_key}")
 
 # Initialise session state variables
 if 'generated' not in st.session_state:
