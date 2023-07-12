@@ -43,7 +43,9 @@ clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 if uploaded_file != None:
     eml_contatiner = st.container()
-    mbox = mailbox.mbox(uploaded_file)
+    bytes_data = uploaded_file.getvalue()
+    st.write(bytes_data)
+    # mbox = mailbox.mbox(uploaded_file)
     # thread = emailthreads.parse(mbox)
     # string_data = thread.read()
     # bytes_data = uploaded_file.getvalue()
