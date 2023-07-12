@@ -1,6 +1,9 @@
 import openai
 import streamlit as st
 from streamlit_chat import message
+import emailthreads
+import mailbox
+
 
 # Setting page title and header
 st.set_page_config(page_title="Tagu", page_icon=":robot_face:")
@@ -38,6 +41,13 @@ counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
+if uploaded_file != None:
+    eml_contatiner = st.container()
+    mbox = mailbox.mbox(uploaded_file)
+    thread = emailthreads.parse(mbox)
+    with eml_container:
+        st.write(thread)
+    
 # Map model names to OpenAI model IDs
 if model_name == "GPT-3.5":
     model = "gpt-3.5-turbo"
