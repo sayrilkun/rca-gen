@@ -5,6 +5,7 @@ from streamlit_chat import message
 # Setting page title and header
 st.set_page_config(page_title="Tagu", page_icon=":robot_face:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
+st.markdown("""---""")
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
