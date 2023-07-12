@@ -45,8 +45,11 @@ if uploaded_file != None:
     eml_contatiner = st.container()
     mbox = mailbox.mbox(uploaded_file)
     thread = emailthreads.parse(mbox)
+    string_data = thread.read()
+    
     with eml_container:
-        st.write(thread)
+        st.write(string_data)
+        # st.write(thread)
     
 # Map model names to OpenAI model IDs
 if model_name == "GPT-3.5":
