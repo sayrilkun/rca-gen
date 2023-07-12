@@ -44,7 +44,7 @@ else:
 
 # reset everything
 if clear_button:
-    st.write(openai.api_key)
+    st.write(openai.api_key["openai"]["api_key"])
     st.session_state['generated'] = []
     st.session_state['past'] = []
     st.session_state['messages'] = [
