@@ -113,7 +113,11 @@ if uploaded_file != None:
     # prompt(instruction)
     
 if generate_button:
-    prompt(instruction)
+    if mail != None:
+        prompt(instruction)
+    else:
+        continue
+
 
 # container for chat history
 response_container = st.container()
