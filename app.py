@@ -110,9 +110,11 @@ if uploaded_file != None:
     {mail.text_plain}
     '''
     # st.write(mail.text_plain)
+    # prompt(instruction)
+    
+if generate_button:
     prompt(instruction)
     
-
 # container for chat history
 response_container = st.container()
 # container for text box
