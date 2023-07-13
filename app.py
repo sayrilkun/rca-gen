@@ -34,33 +34,11 @@ if 'total_cost' not in st.session_state:
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("TEAM PH")
-uploaded_file = st.sidebar.file_uploader("Choose .eml file")
 model_name = st.sidebar.radio("Choose a model:", ("GPT-3.5", "GPT-4"))
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
-if uploaded_file != None:
-    eml_container = st.container()
-    bytes_data = uploaded_file.getvalue()
-    mail = mailparser.parse_from_bytes(bytes_data)
-    with eml_container:
-        st.write(mail.text_plain[0])
-        
-    # print(mail.text_plain)
-    # bytes_data = uploaded_file.getvalue()
-    # st.write(bytes_data)
-    # mbox = mailbox.mbox(bytes_data)
-    # thread = emailthreads.parse(mbox)
-    # st.write(thread)
-    # string_data = thread.read()
-    # bytes_data = uploaded_file.getvalue()
-    # st.write(bytes_data)
-    # st.write(thread)
-    
-
-    #     st.write(string_data)
-    #     # st.write(thread)
     
 # Map model names to OpenAI model IDs
 if model_name == "GPT-3.5":
@@ -100,6 +78,14 @@ def generate_response(prompt):
     completion_tokens = completion.usage.completion_tokens
     return response, total_tokens, prompt_tokens, completion_tokens
 
+
+file_container = st.container()
+with file_container:
+    uploaded_file = st.file_uploader("Choose .eml file")
+    
+if uploaded_file != None:
+    bytes_data = uploaded_file.getvalue()
+    mail = mailparser.parse_from_bytes(bytes_data)
 
 # container for chat history
 response_container = st.container()
