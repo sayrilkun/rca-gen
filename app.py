@@ -42,7 +42,8 @@ clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 if uploaded_file != None:
     eml_contatiner = st.container()
-    mail = mailparser.parse_from_file(uploaded_file)
+    bytes_data = uploaded_file.getvalue()
+    mail = mailparser.parse_from_bytes(bytes_data)
     with eml_container:
         st.write(mail.text_plain[0])
         
