@@ -106,7 +106,7 @@ with file_container:
 if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
-    instruction = f'''can you summarize this email thread
+    instruction = f'''can you summarize this email thread per timestamp and organize it in a table
     
     {mail.text_plain}
     '''
