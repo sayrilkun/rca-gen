@@ -80,6 +80,7 @@ def generate_response(prompt):
 
 
 file_container = st.container()
+st.markdown("##")
 with file_container:
     uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
     
