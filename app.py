@@ -113,7 +113,7 @@ if uploaded_file != None:
     # prompt(instruction)
     
 if generate_button:
-    if mail != None:
+    if mail is not None:
         prompt(instruction)
 
 
