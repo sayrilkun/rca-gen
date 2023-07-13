@@ -5,7 +5,7 @@ import mailparser
 
 
 # Setting page title and header
-st.set_page_config(page_title="Tagu", page_icon=":robot:")
+st.set_page_config(page_title="Tagu", page_icon="::robot::")
 st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 
