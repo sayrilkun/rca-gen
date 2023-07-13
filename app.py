@@ -2,12 +2,14 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 import mailparser
-
+from PIL import Image
 
 # Setting page title and header
 st.set_page_config(page_title="Tagu", page_icon= "🛸")
 st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
+fis = Image.open('fis.jpg')
+st.sidebar.image(fis)
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
