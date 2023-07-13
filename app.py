@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 import emailthreads
-import mailbox
+import mailparser
 
 
 # Setting page title and header
