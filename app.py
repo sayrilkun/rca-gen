@@ -105,10 +105,11 @@ with file_container:
 if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
-    instruct = f'''can you summarize this email thread
+    instruction = f'''can you summarize this email thread
     
     {mail}
     '''
+    prompt(instruction)
 
 # container for chat history
 response_container = st.container()
