@@ -105,6 +105,10 @@ with file_container:
 if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
+    instruct = f'''can you summarize this email thread
+    
+    {mail}
+    '''
 
 # container for chat history
 response_container = st.container()
@@ -118,7 +122,6 @@ with container:
 
     if submit_button and user_input:
         prompt(user_input)
-
 
 if st.session_state['generated']:
     with response_container:
