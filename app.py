@@ -109,7 +109,7 @@ if uploaded_file != None:
     
     {mail.text_plain}
     '''
-    st.write(mail.text_plain)
+    # st.write(mail.text_plain)
     prompt(instruction)
     
 
