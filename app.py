@@ -115,8 +115,7 @@ if uploaded_file != None:
 if generate_button:
     if mail != None:
         prompt(instruction)
-    else:
-        continue
+
 
 
 # container for chat history
