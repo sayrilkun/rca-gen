@@ -101,7 +101,7 @@ file_container = st.container()
 st.markdown("##")
 with file_container:
     uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
-    generate_button = st.button("::rocket::", key="generate")
+    generate_button = st.button("Generatee    :rocket:", key="generate")
 if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
