@@ -109,7 +109,7 @@ if uploaded_file != None:
     
     {mail}
     '''
-    prompt(instruction)
+    st.write(instruction)
 
 # container for chat history
 response_container = st.container()
