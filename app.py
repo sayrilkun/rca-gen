@@ -107,9 +107,9 @@ if uploaded_file != None:
     mail = mailparser.parse_from_bytes(bytes_data)
     instruction = f'''can you summarize this email thread
     
-    {mail}
+    {mail.text plain}
     '''
-    st.write(instruction)
+    prompt(instruction)
 
 # container for chat history
 response_container = st.container()
