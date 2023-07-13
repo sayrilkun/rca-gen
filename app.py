@@ -41,7 +41,7 @@ counter_placeholder.write(f"Total cost of this conversation: ${st.session_state[
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 if uploaded_file != None:
-    eml_contatiner = st.container()
+    eml_container = st.container()
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
     with eml_container:
