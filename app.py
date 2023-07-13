@@ -107,7 +107,7 @@ if uploaded_file != None:
     mail = mailparser.parse_from_bytes(bytes_data)
     instruction = f'''can you summarize this email thread
     
-    {mail.text plain}
+    {mail.text_plain}
     '''
     prompt(instruction)
 
