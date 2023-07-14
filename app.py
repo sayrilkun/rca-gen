@@ -5,8 +5,8 @@ import mailparser
 # from PIL import Image
 
 # Setting page title and header
-st.set_page_config(page_title="Tagu", page_icon= "🛸")
-st.markdown("<h1 style='text-align: center;'> 🤖 Tagu: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
+st.set_page_config(page_title="Ruth", page_icon= "🛸")
+st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 # fis = Image.open('fis.jpg')
 # //st.sidebar.image(fis)
