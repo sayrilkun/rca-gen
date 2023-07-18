@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_chat import message
 import mailparser
 # from PIL import Image
-icon = st.image("https://api.dicebear.com/6.x/bottts/svg?seed=Garfield")
+ipocon = st.image("https://api.dicebear.com/6.x/bottts/svg?seed=Garfield")
 # Setting page title and header
 st.set_page_config(page_title="Ruth", page_icon= "::robot::")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
