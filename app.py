@@ -5,8 +5,8 @@ import mailparser
 # from PIL import Image
 icon = st.image("https://api.dicebear.com/6.x/bottts/svg?seed=Garfield")
 # Setting page title and header
-st.set_page_config(page_title="Ruth", page_icon= icon)
-st.markdown("<h1 style='text-align: center;'> 🤖 ![Alt Text](https://api.dicebear.com/6.x/bottts/svg?seed=Garfield) Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
+st.set_page_config(page_title="Ruth", page_icon= "::robot::")
+st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 # fis = Image.open('fis.jpg')
 # //st.sidebar.image(fis)
