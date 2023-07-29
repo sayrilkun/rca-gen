@@ -35,7 +35,7 @@ if 'total_cost' not in st.session_state:
     st.session_state['total_cost'] = 0.0
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
-st.sidebar.title("TEAM PH")
+st.sidebar.title("Team DATAMRK")
 model_name = st.sidebar.radio("Choose a model:", ( "GPT-3.5","GPT-4"))
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
@@ -147,3 +147,23 @@ if st.session_state['generated']:
             st.write(
                 f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
             counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
+
+
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            footer:after {
+                content:'Made by Team DATAMRK'; 
+                visibility: visible;
+                display: block;
+                position: relative;
+                #background-color: red;
+                padding: 5px;
+                top: 1px;
+            }
+            # header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
