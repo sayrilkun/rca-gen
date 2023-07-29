@@ -139,14 +139,14 @@ container = st.container()
 #     if submit_button and user_input:
 #         prompt(user_input)
 
-# if st.session_state['generated']:
-#     with response_container:
-#         for i in range(len(st.session_state['generated'])):
-#             message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
-#             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
-#             st.write(
-#                 f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
-#             counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
+if st.session_state['generated']:
+    with response_container:
+        for i in range(len(st.session_state['generated'])):
+            message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
+            message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
+            st.write(
+                f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
+            counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 
 
 # ---- HIDE STREAMLIT STYLE ----
