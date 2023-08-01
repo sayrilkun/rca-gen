@@ -103,10 +103,6 @@ def prompt(user_input):
     except openai.error.InvalidRequestError:
         st.warning('Invalid Request. Restart app and try again')
 
-    return output
-
-
-
 
 
 file_container = st.container()
@@ -129,7 +125,7 @@ if uploaded_file != None:
     
 if generate_button:
     if file is True:
-        output_text = prompt(instruction)
+        prompt(instruction)
 
 
 
@@ -151,20 +147,20 @@ if st.session_state['generated']:
         for i in range(len(st.session_state['generated'])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
-            message("fuckkctas", key='oiadf')
+            # message("fuckkctas", key='oiadf')
 
             st.write(
                 f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
             counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
         
-    docx_util.build_docx(output_text)
-    with open("output.docx", "rb") as file:
-        btn = st.download_button(
-                label="Download Output File 📄",
-                data=file,
-                file_name="output.docx",
-                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            )
+            docx_util.build_docx(st.session_state["generated"][i])
+            with open("output.docx", "rb") as file:
+                btn = st.download_button(
+                        label="Download Output File 📄",
+                        data=file,
+                        file_name="output.docx",
+                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    )
 
 
 # ---- HIDE STREAMLIT STYLE ----
