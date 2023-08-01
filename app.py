@@ -158,7 +158,7 @@ if st.session_state['generated']:
         docx_util.build_docx(output_text)
         with open("output.docx", "rb") as file:
             btn = st.download_button(
-                    label="Download Output File 📄",
+                    label="Download Output Files 📄",
                     data=file,
                     file_name="output.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
