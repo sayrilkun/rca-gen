@@ -155,14 +155,14 @@ if st.session_state['generated']:
                 f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
             counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
         
-        docx_util.build_docx(output_text)
-        with open("output.docx", "rb") as file:
-            btn = st.download_button(
-                    label="Download Output Files 📄",
-                    data=file,
-                    file_name="output.docx",
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                )
+    docx_util.build_docx(output_text)
+    with open("output.docx", "rb") as file:
+        btn = st.download_button(
+                label="Download Output File 📄",
+                data=file,
+                file_name="output.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            )
 
 
 # ---- HIDE STREAMLIT STYLE ----
