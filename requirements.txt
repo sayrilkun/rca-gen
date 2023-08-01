@@ -2,4 +2,4 @@ openai
 streamlit
 streamlit_chat
 mail-parser
-docx
+python-docx
