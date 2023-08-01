@@ -1,6 +1,6 @@
 import docx
 
-def build_docx():
+def build_docx(output_text):
         
 
     # Create a document
@@ -37,7 +37,7 @@ def build_docx():
     p = doc.add_paragraph()
 
     # Add a run and format it
-    run = p.add_run("This is my first python-docx tutorial!")
+    run = p.add_run(output_text)
     run.font.name = 'Arial'
     run.font.size = docx.shared.Pt(12)
 
