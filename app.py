@@ -138,13 +138,13 @@ response_container = st.container()
 # container for text box
 container = st.container()
 
-# with container:
-#     with st.form(key='my_form', clear_on_submit=True):
-#         user_input = st.text_area("You:", key='input', height=100)
-#         submit_button = st.form_submit_button(label='Send')
+with container:
+    with st.form(key='my_form', clear_on_submit=True):
+        user_input = st.text_area("You:", key='input', height=100)
+        submit_button = st.form_submit_button(label='Send')
 
-#     if submit_button and user_input:
-#         prompt(user_input)
+    if submit_button and user_input:
+        prompt(user_input)
 
 if st.session_state['generated']:
     with response_container:
