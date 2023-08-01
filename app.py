@@ -2,9 +2,11 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 import mailparser
-# from PIL import Image
-# ipocon = st.image("https://api.dicebear.com/6.x/bottts/svg?seed=Garfield")
+from docx_util import *
+
+
 # Setting page title and header
+
 st.set_page_config(page_title="Ruth", page_icon= "::robot::")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
@@ -103,12 +105,15 @@ def prompt(user_input):
 
 
 
+
+
 file_container = st.container()
 file=False
 st.markdown("##")
 with file_container:
     uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
     generate_button = st.button("Generate :rocket:", key="generate",use_container_width=True)
+
 if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
@@ -147,6 +152,15 @@ if st.session_state['generated']:
             st.write(
                 f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
             counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
+        
+        docx_util.build_docx()
+        with open("output.docx", "rb") as file:
+            btn = st.sidebar.download_button(
+                    label="Download Output File",
+                    data=file,
+                    file_name="output.docx",
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                )
 
 
 # ---- HIDE STREAMLIT STYLE ----
