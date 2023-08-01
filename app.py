@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 import mailparser
-from docx_util import *
+import docx_util
 
 
 # Setting page title and header
