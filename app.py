@@ -8,7 +8,7 @@ import docx_util
 # Setting page title and header
 
 st.set_page_config(page_title="Ruth", page_icon= "::robot::")
-st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATORSADFSDAF 🤖 </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 # fis = Image.open('fis.jpg')
 # //st.sidebar.image(fis)
