@@ -10,8 +10,7 @@ import docx_util
 st.set_page_config(page_title="Ruth", page_icon= "::robot::")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
-# fis = Image.open('fis.jpg')
-# //st.sidebar.image(fis)
+
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
