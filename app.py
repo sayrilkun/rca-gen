@@ -4,6 +4,40 @@ from streamlit_chat import message
 import mailparser
 import docx_util
 
+# generate a response
+def generate_response(prompt):
+    st.session_state['messages'].append({"role": "user", "content": prompt})
+
+    completion = openai.ChatCompletion.create(
+        model=model,
+        messages=st.session_state['messages']
+    )
+    response = completion.choices[0].message.content
+    st.session_state['messages'].append({"role": "assistant", "content": response})
+
+    # print(st.session_state['messages'])
+    total_tokens = completion.usage.total_tokens
+    prompt_tokens = completion.usage.prompt_tokens
+    completion_tokens = completion.usage.completion_tokens
+    return response, total_tokens, prompt_tokens, completion_tokens
+
+
+def prompt(user_input):
+    try:
+        output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
+        st.session_state['past'].append(user_input)
+        st.session_state['generated'].append(output)
+        # st.session_state['model_name'].append(model_name)
+        st.session_state['total_tokens'].append(total_tokens)
+
+        # from https://openai.com/pricing#language-models
+        cost = total_tokens * 0.002 / 1000
+
+        st.session_state['cost'].append(cost)
+        st.session_state['total_cost'] += cost
+
+    except openai.error.InvalidRequestError:
+        st.warning('Invalid Request. Restart app and try again')
 
 # Setting page title and header
 
@@ -57,43 +91,6 @@ if clear_button:
     st.session_state['total_cost'] = 0.0
     st.session_state['total_tokens'] = []
     # counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
-
-
-# generate a response
-def generate_response(prompt):
-    st.session_state['messages'].append({"role": "user", "content": prompt})
-
-    completion = openai.ChatCompletion.create(
-        model=model,
-        messages=st.session_state['messages']
-    )
-    response = completion.choices[0].message.content
-    st.session_state['messages'].append({"role": "assistant", "content": response})
-
-    # print(st.session_state['messages'])
-    total_tokens = completion.usage.total_tokens
-    prompt_tokens = completion.usage.prompt_tokens
-    completion_tokens = completion.usage.completion_tokens
-    return response, total_tokens, prompt_tokens, completion_tokens
-
-
-def prompt(user_input):
-    try:
-        output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
-        st.session_state['past'].append(user_input)
-        st.session_state['generated'].append(output)
-        # st.session_state['model_name'].append(model_name)
-        st.session_state['total_tokens'].append(total_tokens)
-
-        # from https://openai.com/pricing#language-models
-        cost = total_tokens * 0.002 / 1000
-
-        st.session_state['cost'].append(cost)
-        st.session_state['total_cost'] += cost
-
-    except openai.error.InvalidRequestError:
-        st.warning('Invalid Request. Restart app and try again')
-
 
 
 file_container = st.container()
