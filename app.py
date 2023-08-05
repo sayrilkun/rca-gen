@@ -107,6 +107,9 @@ def prompt(user_input):
 file_container = st.container()
 file=False
 st.markdown("##")
+
+message("Hi, My name is Ruth, please upload your email file so I can start generating your RCA! 😎", key=str(i), avatar_style="bottts", seed = "Sophie")
+
 with file_container:
     uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
     generate_button = st.button("Generate :rocket:", key="generate",use_container_width=True)
