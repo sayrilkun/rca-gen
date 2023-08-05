@@ -152,7 +152,6 @@ if st.session_state['generated']:
         for i in range(len(st.session_state['generated'])):
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
-            # message("fuckkctas", key='oiadf')
 
             st.write(
                 f"Model used: {st.session_state['model_name'][i]}; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
