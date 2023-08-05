@@ -118,7 +118,8 @@ if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
-    instruction = f'''Shortly summarize the contents of this email thread per timestamp. Organize it in a 3 column table with namely Date, Time, and Content. 
+    instruction = f'''Shortly summarize the contents of this email thread per timestamp. 
+    Organize it in a 3 column table with namely Date, Time, and Content, then format it in a Python dictionary.  
     
     {mail.text_plain}
     '''
@@ -147,7 +148,7 @@ with container:
 if st.session_state['generated']:
     with response_container:
         for i in range(len(st.session_state['generated'])):
-            message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
+            # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
             # message("fuckkctas", key='oiadf')
 
