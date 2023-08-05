@@ -44,7 +44,7 @@ clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
     
 # Map model names to OpenAI model IDs
-model = "gpt-3.5-turbo"
+model_name = "gpt-3.5-turbo"
 
 # if model_name == "GPT-3.5":
 #     model = "gpt-3.5-turbo"
