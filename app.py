@@ -139,6 +139,7 @@ response_container = st.container()
 # container for text box
 container = st.container()
 
+#chat box
 with container:
     with st.form(key='my_form', clear_on_submit=True):
         user_input = st.text_area("You:", key='input', height=100)
@@ -147,6 +148,7 @@ with container:
     if submit_button and user_input:
         prompt(user_input)
 
+#chat conversation
 if st.session_state['generated']:
     with response_container:
         for i in range(len(st.session_state['generated'])):
