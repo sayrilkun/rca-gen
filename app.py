@@ -93,7 +93,7 @@ def prompt(user_input):
         st.session_state['total_tokens'].append(total_tokens)
 
         # from https://openai.com/pricing#language-models
-        if model_name == "gpt-3.5-turbo":
+        if model == "gpt-3.5-turbo":
             cost = total_tokens * 0.002 / 1000
         else:
             cost = (prompt_tokens * 0.03 + completion_tokens * 0.06) / 1000
