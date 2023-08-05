@@ -118,8 +118,8 @@ if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
-    instruction = f'''Shortly summarize the contents of this email thread. Use only one to two sentences.
-    Organize it in a 3 column table with namely Date, Time, and Content. Then, format it in a Python dictionary.  
+    instruction = f'''Shortly summarize the contents of this email thread per timestamp using only one or two sentences.
+    Organize it in a 3 column table with namely Date, Time, and Content, then provide the output in a Python dictionary format.  
     
     {mail.text_plain}
     '''
