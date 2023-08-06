@@ -107,11 +107,11 @@ if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
-    instruction = f'''Shortly summarize the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
+    instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {mail.text_plain}
 
-    I want you to describe it in a Pthon Dataframe in such a way that when it is visualized in a table, it is organized it in a 3 column table namely Date, Time, and Content.
+    I want your output to be in a Python Dataframe in such a way that when it is visualized in a table, it is organized it in a 3 column table namely Date, Time, and Content.
     
     
     '''
