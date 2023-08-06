@@ -111,7 +111,7 @@ if uploaded_file != None:
 
     {mail.text_plain}
 
-    Organize it in a 3 column table with namely Date, Time, and Content, then provide the output in a Python dictionary format. Dont show the table.  
+    Organize it in a 3 column table with namely Date, Time, and Content, then provide the output in a Python dictionary format. Dont show the table. Summarize the contents don't just copy it.  
     
     
     '''
