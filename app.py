@@ -72,7 +72,7 @@ if 'total_cost' not in st.session_state:
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Team DATAMRK")
 counter_placeholder = st.sidebar.empty()
-counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
+# counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
     
@@ -108,12 +108,10 @@ if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
     instruction = f'''Shortly summarize the contents of this email thread per timestamp using only one or two sentences.
-    Organize it in a 3 column table with namely Date, Time, and Content, then provide the output in a Python dictionary format.  
+    Then provide the output in a Python dictionary format, organize it per Date, Time and Content  
     
     {mail.text_plain}
     '''
-    # st.write(mail.text_plain)
-    # prompt(instruction)
     
 if generate_button:
     if file is True:
