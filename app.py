@@ -108,13 +108,7 @@ if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
 
-    instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
-
-    {mail.text_plain}
-
-    I want your output to be a Python Dataframe like this format below.
-
-    [
+    sample_format =     [
     {
         "Date" : "18-November-22",
         "Time" : "22:00",
@@ -128,6 +122,13 @@ if uploaded_file != None:
         
     }
     ]
+    instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
+
+    {mail.text_plain}
+
+    I want your output to be a Python Dataframe like this format below.
+
+    {sample_format}
     
     '''
     # instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
