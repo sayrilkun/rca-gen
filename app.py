@@ -42,7 +42,7 @@ def prompt(user_input):
 # Setting page title and header
 
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
-st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR 🤖 </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR TEST🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 
 
@@ -107,14 +107,37 @@ if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
+
     instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {mail.text_plain}
 
-    I want your output to be in a Python Dataframe in such a way that when it is visualized in a table, it is organized it in a 3 column table namely Date, Time, and Content.
-    
+    I want your output to be a Python Dataframe like this format below.
+
+    [
+    {
+        "Date" : "18-November-22",
+        "Time" : "22:00",
+        "Contents" : "Summary of the email,"
+        
+    },
+        {
+        "Date" : "21-November-22",
+        "Time" : "12:00",
+        "Contents" : "Summary of the email,"
+        
+    }
+    ]
     
     '''
+    # instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
+
+    # {mail.text_plain}
+
+    # I want your output to be in a Python Dataframe in such a way that when it is visualized in a table, it is organized it in a 3 column table namely Date, Time, and Content.
+    
+    
+    # '''
     
     # instruction = f'''Shortly summarize the contents of this email thread per timestamp using only one or two sentences.
 
