@@ -122,7 +122,7 @@ if uploaded_file != None:
         
     }
     ]
-    instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
+    instruction = f'''Shortly summarize, the contents of each email in this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {mail.text_plain}
 
