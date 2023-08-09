@@ -124,7 +124,7 @@ if uploaded_file != None:
     ]
     instruction = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
-    {mail.body}
+    {mail.text_plain}
 
     I want your output to be a Python Dataframe like this format below.
 
