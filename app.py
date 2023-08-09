@@ -42,7 +42,7 @@ def prompt(user_input):
 # Setting page title and header
 
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
-st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR TEST🤖 </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR TESTasd🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 
 
@@ -122,7 +122,7 @@ if uploaded_file != None:
         
     }
     ]
-    instruction = f'''Shortly summarize, the contents of each email in this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
+    instruction = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {mail.text_plain}
 
