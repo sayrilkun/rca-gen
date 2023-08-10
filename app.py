@@ -179,7 +179,7 @@ if st.session_state['generated']:
             st.write(st.session_state["generated"][0])
             # df = pd.DataFrame(st.session_state["generated"][0])
             df = pd.DataFrame(eval(st.session_state["generated"][0]))
-            st.table(df, use_container_width=True)
+            st.table(df)
 
             # st.write(
             #     f"Model used: GPT 3.5; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
