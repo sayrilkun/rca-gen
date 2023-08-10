@@ -3,6 +3,8 @@ import streamlit as st
 from streamlit_chat import message
 import mailparser
 import docx_util
+import pandas as pd
+import numpy as np
 
 # generate a response
 def generate_response(prompt):
@@ -174,12 +176,15 @@ if st.session_state['generated']:
         for i in range(len(st.session_state['generated'])):
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
+            df = pd.DataFrame(st.session_state["generated"][0])
+            st.dataframe(df)
 
-            st.write(
-                f"Model used: GPT 3.5; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
-            counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
+            # st.write(
+            #     f"Model used: GPT 3.5; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
+            # counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
         
             docx_util.build_docx(st.session_state["generated"][i])
+
             with open("output.docx", "rb") as file:
                 btn = st.download_button(
                         label="Download Output File 📄",

@@ -43,3 +43,4 @@ def build_docx(output_text):
 
     # Save the document
     doc.save("output.docx")
+
