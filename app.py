@@ -179,13 +179,13 @@ if st.session_state['generated']:
             st.write(st.session_state["generated"][0])
             # df = pd.DataFrame(st.session_state["generated"][0])
             df = pd.DataFrame(eval(st.session_state["generated"][0]))
-            st.dataframe(df)
+            st.dataframe(df, use_container_width=True, key = "incident_timeline")
 
             # st.write(
             #     f"Model used: GPT 3.5; Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
             # counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
         
-            docx_util.build_docx(st.session_state["generated"][i])
+            docx_util.build_docx(st.session_state["generated"][i], )
 
             with open("output.docx", "rb") as file:
                 btn = st.download_button(
