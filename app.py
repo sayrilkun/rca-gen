@@ -180,6 +180,7 @@ if st.session_state['generated']:
 
             st.header("☢️ RCA Details")
             st.subheader("☢️ Root Cause")
+            st.subheader("☢️ RCA Executive Summary")
             st.subheader("☢️ Investigation & Resolution")
 
             st.subheader("☢️ Contributing Factors")
@@ -187,7 +188,7 @@ if st.session_state['generated']:
             st.header("☢️ Action Items")
 
             st.header("☢️ RCA 5 WHYs")
-            
+
             st.header("☢️ Incident Timeline")
             try:
                 df = pd.DataFrame(eval(st.session_state["generated"][0]))
