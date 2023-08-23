@@ -176,37 +176,37 @@ if st.session_state['generated']:
         for i in range(len(st.session_state['generated'])):
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
-
-
-            st.header("☢️ RCA Details")
-            st.subheader("☢️ Root Cause")
-            st.subheader("☢️ RCA Executive Summary")
-            st.subheader("☢️ Investigation & Resolution")
-
-            st.subheader("☢️ Contributing Factors")
-
-            st.header("☢️ Action Items")
-
-            st.header("☢️ RCA 5 WHYs")
-
-            st.header("☢️ Incident Timeline")
             try:
-                df = pd.DataFrame(eval(st.session_state["generated"][0]))
-                st.table(df)
+                inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
+                
             except Exception as e:
                 continue
 
             docx_util.build_docx(st.session_state["generated"][i])
 
-            with open("output.docx", "rb") as file:
-                btn = st.download_button(
-                        label="Download Output File 📄",
-                        data=file,
-                        file_name="output.docx",
-                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    )
 
 
+        st.header("☢️ RCA Details")
+        st.subheader("☢️ Root Cause")
+        st.subheader("☢️ RCA Executive Summary")
+        st.subheader("☢️ Investigation & Resolution")
+
+        st.subheader("☢️ Contributing Factors")
+
+        st.header("☢️ Action Items")
+
+        st.header("☢️ RCA 5 WHYs")
+
+        st.header("☢️ Incident Timeline")
+        st.table(inc_timeline_df)
+
+        with open("output.docx", "rb") as file:
+            btn = st.download_button(
+                    label="Download Output File 📄",
+                    data=file,
+                    file_name="output.docx",
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                )
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
