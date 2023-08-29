@@ -162,11 +162,12 @@ if st.session_state['generated']:
                 st.write(st.session_state["generated"][1])
                 rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
                 st.table(rca_details_df)
+                st.subheader("☢️ Root Cause")
+                st.write(rca_details_df.iloc[0, 0])
+                st.subheader("☢️ RCA Executive Summary")
 
 
-        st.subheader("☢️ Root Cause")
-        st.write(rca_details_df.iloc[0, 0])
-        st.subheader("☢️ RCA Executive Summary")
+        
         st.subheader("☢️ Investigation & Resolution")
 
         st.subheader("☢️ Contributing Factors")
