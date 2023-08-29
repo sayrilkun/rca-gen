@@ -1,6 +1,4 @@
-from app import mail.text_plain
-
-sample_format =     [
+inc_timeline_format =     [
 {
     "Date" : "18-November-22",
     "Time" : "22:00",
@@ -14,12 +12,4 @@ sample_format =     [
     
 }
 ]
-instruction = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
-{app.mail.text_plain}
-
-I want your output to be a Python Dataframe like this format below.
-
-{sample_format}
-
-'''
