@@ -123,7 +123,6 @@ if uploaded_file != None:
 if generate_button:
     if file is True:
         prompt(inc_timeline_prompt)
-        prompt(prompts.rca_details_prompt)
 
 
 
@@ -156,6 +155,12 @@ if st.session_state['generated']:
             docx_util.build_docx(st.session_state["generated"][i])
 
         st.header("☢️ RCA Details")
+        rca_details = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
+        if generate_button:
+            if file is True:
+                prompt(prompts.rca_details_prompt)
+
+
         st.subheader("☢️ Root Cause")
         st.subheader("☢️ RCA Executive Summary")
         st.subheader("☢️ Investigation & Resolution")
