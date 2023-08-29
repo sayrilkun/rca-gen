@@ -5,7 +5,7 @@ import mailparser
 import docx_util
 import pandas as pd
 import numpy as np
-import instruction from prompts
+from prompts import instruction
 
 # generate a response
 def generate_response(prompt):

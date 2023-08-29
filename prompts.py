@@ -1,4 +1,4 @@
-import mail.text_plain from app
+from app import mail.text_plain
 
 sample_format =     [
 {
