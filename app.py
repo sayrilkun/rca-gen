@@ -5,6 +5,7 @@ import mailparser
 import docx_util
 import pandas as pd
 import numpy as np
+import prompts
 
 # generate a response
 def generate_response(prompt):
@@ -110,50 +111,10 @@ if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     mail = mailparser.parse_from_bytes(bytes_data)
 
-    sample_format =     [
-    {
-        "Date" : "18-November-22",
-        "Time" : "22:00",
-        "Contents" : "Summary of the email,"
-        
-    },
-        {
-        "Date" : "21-November-22",
-        "Time" : "12:00",
-        "Contents" : "Summary of the email,"
-        
-    }
-    ]
-    instruction = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
-    {mail.text_plain}
-
-    I want your output to be a Python Dataframe like this format below.
-
-    {sample_format}
-    
-    '''
-    # instruction = f'''Shortly summarize, the contents of this email thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
-
-    # {mail.text_plain}
-
-    # I want your output to be in a Python Dataframe in such a way that when it is visualized in a table, it is organized it in a 3 column table namely Date, Time, and Content.
-    
-    
-    # '''
-    
-    # instruction = f'''Shortly summarize the contents of this email thread per timestamp using only one or two sentences.
-
-    # {mail.text_plain}
-
-    # Organize it in a 3 column table with namely Date, Time, and Content, then provide the output in a Python dictionary format. Dont show the table. Summarize the contents don't just copy it.  
-    
-    
-    # '''
 if generate_button:
     if file is True:
-        prompt(instruction)
-
+        prompt(prompts.instruction)
 
 
 # container for chat history
@@ -181,7 +142,7 @@ if st.session_state['generated']:
                 
             except Exception as e:
                 continue
-
+    
             docx_util.build_docx(st.session_state["generated"][i])
 
 
