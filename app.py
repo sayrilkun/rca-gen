@@ -185,7 +185,7 @@ if st.session_state['generated']:
         # DOWNLOAD THE WORD FILE
         with open("output.docx", "rb") as file:
             btn = st.download_button(
-                    label="Download Output File 📄",
+                    label="Download Output File (DOCX) 📄",
                     data=file,
                     file_name="output.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
