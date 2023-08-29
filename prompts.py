@@ -20,7 +20,7 @@ rca_details_format = [
     }
 ]
 
-rca_details_prompt = f''' You are an Incident Analyst. Identify the Root cause of the incident make an executive summary based on the given email thread. 
+rca_details_prompt = f''' You are an Incident Analyst. Identify the Root cause of the incident and make an executive summary based on the given email thread. 
 
 I want your output to be a Python Dataframe like this format below.
 
