@@ -159,6 +159,7 @@ if st.session_state['generated']:
         if rca_details_button:
             if file is True:
                 prompt(prompts.rca_details_prompt)
+                st.write(st.session_state["generated"][1])
 
 
         st.subheader("☢️ Root Cause")
