@@ -7,7 +7,8 @@ import pandas as pd
 import numpy as np
 import email_util
 import prompts
-# generate a response
+
+# Generate a response
 def generate_response(prompt):
     st.session_state['messages'].append({"role": "user", "content": prompt})
 
@@ -24,7 +25,7 @@ def generate_response(prompt):
     completion_tokens = completion.usage.completion_tokens
     return response, total_tokens, prompt_tokens, completion_tokens
 
-
+# Open AI API Function
 def prompt(user_input):
     try:
         output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
@@ -43,7 +44,6 @@ def prompt(user_input):
         st.warning('Invalid Request. Restart app and try again')
 
 # Setting page title and header
-
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
@@ -63,8 +63,7 @@ if 'messages' not in st.session_state:
     st.session_state['messages'] = [
         {"role": "system", "content": "You are a helpful assistant."}
     ]
-# if 'model_name' not in st.session_state:
-#     st.session_state['model_name'] = []
+
 if 'cost' not in st.session_state:
     st.session_state['cost'] = []
 if 'total_tokens' not in st.session_state:
@@ -78,7 +77,7 @@ counter_placeholder = st.sidebar.empty()
 # counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
-    
+# Set model
 model = "gpt-3.5-turbo"
 
 # reset everything
@@ -106,6 +105,7 @@ with file_container:
     uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
     generate_button = st.button("Generate :rocket:", key="generate",use_container_width=True)
 
+# INITIAL PROMPT (incident time line)
 if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
@@ -120,11 +120,10 @@ if uploaded_file != None:
     {prompts.inc_timeline_format}
 
     '''
+# IF BUTTON IS CLICKED
 if generate_button:
     if file is True:
         prompt(inc_timeline_prompt)
-
-
 
 # container for chat history
 response_container = st.container()
@@ -147,13 +146,16 @@ if st.session_state['generated']:
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
             try:
+                # CONVERT THE RESPONSE TO DATAFRAME
                 inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
                 
             except Exception as e:
                 continue
-    
+
+            # WRITE THE RESPONSE TO WORD DOCUMENT
             docx_util.build_docx(st.session_state["generated"][i])
 
+        # SECOND PROMPT (RCA DETAILS)
         st.header("☢️ RCA Details")
         rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
         if rca_details_button:
@@ -166,8 +168,7 @@ if st.session_state['generated']:
                 st.write(rca_details_df.iloc[0, 0])
                 st.subheader("☢️ RCA Executive Summary")
 
-
-        
+    
         st.subheader("☢️ Investigation & Resolution")
 
         st.subheader("☢️ Contributing Factors")
@@ -179,6 +180,8 @@ if st.session_state['generated']:
         st.header("☢️ Incident Timeline")
         st.table(inc_timeline_df)
 
+
+        # DOWNLOAD THE WORD FILE
         with open("output.docx", "rb") as file:
             btn = st.download_button(
                     label="Download Output File 📄",
