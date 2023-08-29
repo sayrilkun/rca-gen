@@ -39,9 +39,11 @@ def prompt(user_input):
 
         st.session_state['cost'].append(cost)
         st.session_state['total_cost'] += cost
+        st.info("Hello")
 
     except openai.error.InvalidRequestError:
         st.warning('Invalid Request. Restart app and try again')
+        st.info("Hello")
 
 # Setting page title and header
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
