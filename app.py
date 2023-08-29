@@ -167,6 +167,7 @@ if st.session_state['generated']:
                 st.subheader("☢️ Root Cause")
                 st.write(rca_details_df.iloc[0, 0])
                 st.subheader("☢️ RCA Executive Summary")
+                st.write(rca_details_df.iloc[0, 1])
 
     
         st.subheader("☢️ Investigation & Resolution")
