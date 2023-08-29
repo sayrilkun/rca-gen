@@ -111,7 +111,8 @@ if uploaded_file != None:
     bytes_data = uploaded_file.getvalue()
     parsed_mail = email_util.parse_from_bytes(bytes_data)
 
-    inc_timeline_propmt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
+    # INITIAL PROMPT, OTHER PROMPTS INSIDE PROMPTS.PY
+    inc_timeline_prompt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {parsed_mail}
     I want your output to be a Python Dataframe like this format below.
@@ -121,7 +122,8 @@ if uploaded_file != None:
     '''
 if generate_button:
     if file is True:
-        prompt(inc_timeline_propmt)
+        prompt(inc_timeline_prompt)
+        prompt(prompts.rca_details_prompt)
 
 
 
@@ -153,8 +155,6 @@ if st.session_state['generated']:
     
             docx_util.build_docx(st.session_state["generated"][i])
 
-
-
         st.header("☢️ RCA Details")
         st.subheader("☢️ Root Cause")
         st.subheader("☢️ RCA Executive Summary")
@@ -176,6 +176,8 @@ if st.session_state['generated']:
                     file_name="output.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
+
+
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
