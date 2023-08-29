@@ -1,10 +1,11 @@
 import openai
 import streamlit as st
 from streamlit_chat import message
-import mailparser
+# import mailparser
 import docx_util
 import pandas as pd
 import numpy as np
+import email_util
 
 # generate a response
 def generate_response(prompt):
@@ -108,7 +109,7 @@ with file_container:
 if uploaded_file != None:
     file = True
     bytes_data = uploaded_file.getvalue()
-    mail = mailparser.parse_from_bytes(bytes_data)
+    parsed_mail = email_util.parse_from_bytes(bytes_data)
 
     sample_format =     [
     {
@@ -126,8 +127,7 @@ if uploaded_file != None:
     ]
     instruction = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
-    {mail.text_plain}
-
+    {parsed_mail}
     I want your output to be a Python Dataframe like this format below.
 
     {sample_format}
