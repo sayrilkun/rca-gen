@@ -1,12 +1,26 @@
+#
+# Initialization
+#
+import sys
+sys.path.append('./lib/')
+
+#
+# Imports
+#
 import openai
 import streamlit as st
 from streamlit_chat import message
-# import mailparser
 import docx_util
 import pandas as pd
 import numpy as np
 import email_util
 import prompts
+from lib import ruthinit
+
+#
+# Globals
+#
+log = ruthinit.log
 
 # Generate a response
 def generate_response(prompt):
@@ -29,6 +43,8 @@ def generate_response(prompt):
 def prompt(user_input):
     try:
         output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
+        log.info("AI response:")
+        log.info(output)
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(output)
         # st.session_state['model_name'].append(model_name)
@@ -39,11 +55,9 @@ def prompt(user_input):
 
         st.session_state['cost'].append(cost)
         st.session_state['total_cost'] += cost
-        st.info("Hello")
 
     except openai.error.InvalidRequestError:
         st.warning('Invalid Request. Restart app and try again')
-        st.info("Hello")
 
 # Setting page title and header
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
@@ -125,6 +139,8 @@ if uploaded_file != None:
 # IF BUTTON IS CLICKED
 if generate_button:
     if file is True:
+        log.info("Sending Message")
+        log.info(inc_timeline_prompt)
         prompt(inc_timeline_prompt)
 
 # container for chat history
