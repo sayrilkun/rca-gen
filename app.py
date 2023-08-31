@@ -1,6 +1,8 @@
 #
 # Initialization
 #
+from distutils.command.upload import upload
+import email
 import sys
 sys.path.append('./lib/')
 
@@ -16,11 +18,14 @@ import numpy as np
 import email_util
 import prompts
 from lib import ruthinit
+from lib import filechecker
+from lib import email_parser
 
 #
 # Globals
 #
 log = ruthinit.log
+file = False
 
 # Generate a response
 def generate_response(prompt):
@@ -63,7 +68,6 @@ def prompt(user_input):
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
-
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
@@ -118,14 +122,23 @@ st.markdown("##")
 
 with file_container:
     message("Hi, My name is Ruth, please upload your email file so I can start generating your RCA! 😎", key="intro", avatar_style="bottts", seed = "Sophie")
-    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
+    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline", type=['.eml', '.msg'])
     generate_button = st.button("Generate :rocket:", key="generate",use_container_width=True)
 
 # INITIAL PROMPT (incident time line)
 if uploaded_file != None:
-    file = True
-    bytes_data = uploaded_file.getvalue()
-    parsed_mail = email_util.parse_from_bytes(bytes_data)
+    log.info(uploaded_file)
+
+    ext = filechecker.GetFileExtension(uploaded_file.name)
+    log.info(f"extension {ext}")
+
+    if ext == '.eml':
+        file = True
+        bytes_data = uploaded_file.getvalue()
+        parsed_mail = email_util.parse_from_bytes(bytes_data)
+
+    elif ext == '.msg':
+        file = True
 
     # INITIAL PROMPT, OTHER PROMPTS INSIDE PROMPTS.PY
     inc_timeline_prompt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
@@ -142,6 +155,7 @@ if generate_button:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
         prompt(inc_timeline_prompt)
+        file = False
 
 # container for chat history
 response_container = st.container()
@@ -186,6 +200,7 @@ if st.session_state['generated']:
                 st.write(rca_details_df.iloc[0, 0])
                 st.subheader("☢️ RCA Executive Summary")
                 st.write(rca_details_df.iloc[0, 1])
+                file = False
 
     
         st.subheader("☢️ Investigation & Resolution")
