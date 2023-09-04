@@ -1,12 +1,31 @@
+#
+# Initialization
+#
+from distutils.command.upload import upload
+import email
+import sys
+sys.path.append('./lib/')
+
+#
+# Imports
+#
 import openai
 import streamlit as st
 from streamlit_chat import message
-# import mailparser
 import docx_util
 import pandas as pd
 import numpy as np
 import email_util
 import prompts
+from lib import ruthinit
+from lib import filechecker
+from lib import email_parser
+
+#
+# Globals
+#
+log = ruthinit.log
+file = False
 
 # Generate a response
 def generate_response(prompt):
@@ -29,6 +48,7 @@ def generate_response(prompt):
 def prompt(user_input):
     try:
         output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
+        log.info("AI responded")
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(output)
         # st.session_state['model_name'].append(model_name)
@@ -47,7 +67,7 @@ def prompt(user_input):
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
-
+new_parser = st.checkbox("use new parser") # this is for testing purposes, remove this on real deployment
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
@@ -102,20 +122,37 @@ st.markdown("##")
 
 with file_container:
     message("Hi, My name is Ruth, please upload your email file so I can start generating your RCA! 😎", key="intro", avatar_style="bottts", seed = "Sophie")
-    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
+    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline", type=['.eml', '.msg'])
     generate_button = st.button("Generate :rocket:", key="generate",use_container_width=True)
 
 # INITIAL PROMPT (incident time line)
 if uploaded_file != None:
-    file = True
-    bytes_data = uploaded_file.getvalue()
-    parsed_mail = email_util.parse_from_bytes(bytes_data)
+    log.info(uploaded_file)
+
+    ext = filechecker.GetFileExtension(uploaded_file.name)
+    log.info(f"extension {ext}")
+
+    if ext == '.eml':
+        file = True
+        log.info("Processing eml file")
+        bytes_data = uploaded_file.getvalue()
+        parsed_mail = email_util.parse_from_bytes(bytes_data)
+
+    elif ext == '.msg': #v2 of parsing .msg
+        file = True
+        log.info("processing msg file")
+        parsed_mail = email_parser.convert_msg_to_text(uploaded_file)
+
+    # elif ext == '.msg':
+    #     file = True
+    #     eml = email_parser.convert_msg_to_eml(uploaded_file)
+    #     parsed_mail = email_util.parse_from_bytes(eml.as_bytes())
 
     # INITIAL PROMPT, OTHER PROMPTS INSIDE PROMPTS.PY
     inc_timeline_prompt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {parsed_mail}
-    I want your output to be a Python Dataframe like this format below.
+    I want your output to be a Python Dataframe like this format below. Just a list of dictionaries please. No special characters or any with \\ for example \\n or \\'
 
     {prompts.inc_timeline_format}
 
@@ -123,7 +160,10 @@ if uploaded_file != None:
 # IF BUTTON IS CLICKED
 if generate_button:
     if file is True:
+        log.info("Sending Message")
+        log.info(inc_timeline_prompt)
         prompt(inc_timeline_prompt)
+        file = False
 
 # container for chat history
 response_container = st.container()
@@ -145,6 +185,7 @@ if st.session_state['generated']:
         for i in range(len(st.session_state['generated'])):
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
+            log.info(st.session_state['generated'])
             try:
                 # CONVERT THE RESPONSE TO DATAFRAME
                 inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
@@ -168,6 +209,7 @@ if st.session_state['generated']:
                 st.write(rca_details_df.iloc[0, 0])
                 st.subheader("☢️ RCA Executive Summary")
                 st.write(rca_details_df.iloc[0, 1])
+                file = False
 
     
         st.subheader("☢️ Investigation & Resolution")

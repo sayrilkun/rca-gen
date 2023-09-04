@@ -1,0 +1,1213 @@
+From: "Gimoros, Ac" <Ac.Gimoros@fisglobal.com>
+To: "Guevarra, Tyrone" <Tyrone.Guevarra@fisglobal.com>, "Guansing, Mary Rose
+ Ann" <Mary.Rose.Ann.Guansing@fisglobal.com>, "Kitts, Johndell"
+	<Johndell.Kitts@fisglobal.com>, "Dy, John Michael G"
+	<John.Michael.Dy@fisglobal.com>, "Cabra, Redner"
+	<Redner.Cabra@fisglobal.com>, "Balagtas, Debbie"
+	<Debbie.Balagtas@fisglobal.com>
+CC: "Basconcillo, Alexander" <Alexander.Basconcillo@fisglobal.com>, "Villegas,
+ Miguel Santino S" <Miguel.Santino.Villegas@fisglobal.com>
+Subject: Re: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+Thread-Topic: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+Thread-Index:
+	AQHZyq0y8yT2CRTv1U2qvpJGLtE+LK/hxakwgAAIyKCAAAFF4IAA4jgQgAAfJWCAAAN/4IAACrwc
+Date: Thu, 10 Aug 2023 03:26:14 +0000
+Message-ID:
+	<PAXPR08MB7351E6445DD20648A6D7F0A18C13A@PAXPR08MB7351.eurprd08.prod.outlook.com>
+References:
+	<PAXPR08MB7351593080004CEA6BD755F68C12A@PAXPR08MB7351.eurprd08.prod.outlook.com>
+ <DB7PR08MB3211227EBE1B0FEFBB9F5015EE12A@DB7PR08MB3211.eurprd08.prod.outlook.com>
+ <VI1PR08MB5374D004AD17A36CF50DB69B9512A@VI1PR08MB5374.eurprd08.prod.outlook.com>
+ <DU0PR08MB74626BA1F2FBCA03F6DEC951BB12A@DU0PR08MB7462.eurprd08.prod.outlook.com>
+ <DB9PR08MB8738CA21443ECD8E9EBCADE49F13A@DB9PR08MB8738.eurprd08.prod.outlook.com>
+ <AS4PR08MB7505B53EA8EF6CB56ADC07AC8F13A@AS4PR08MB7505.eurprd08.prod.outlook.com>
+ <VI1PR08MB371024F95AF64A8D684AAD58F613A@VI1PR08MB3710.eurprd08.prod.outlook.com>
+In-Reply-To:
+	<VI1PR08MB371024F95AF64A8D684AAD58F613A@VI1PR08MB3710.eurprd08.prod.outlook.com>
+Content-Language: en-US
+X-MS-Exchange-Organization-ModifySensitivityLabel:
+	9e1e58c1-766d-4ff4-9619-b604fc37898b;9e1e58c1-766d-4ff4-9619-b604fc37898b
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels:
+	MSIP_Label_9e1e58c1-766d-4ff4-9619-b604fc37898b_Enabled=True;MSIP_Label_9e1e58c1-766d-4ff4-9619-b604fc37898b_SiteId=e3ff91d8-34c8-4b15-a0b4-18910a6ac575;MSIP_Label_9e1e58c1-766d-4ff4-9619-b604fc37898b_SetDate=2023-08-10T03:26:12.272Z;MSIP_Label_9e1e58c1-766d-4ff4-9619-b604fc37898b_Name=Internal
+ Use;MSIP_Label_9e1e58c1-766d-4ff4-9619-b604fc37898b_ContentBits=0;MSIP_Label_9e1e58c1-766d-4ff4-9619-b604fc37898b_Method=Standard;
+Content-Type: multipart/related;
+	boundary="_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: multipart/alternative;
+	boundary="_000_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_"
+
+--_000_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Team,
+
+Thank you all for your valuable insights and dedication to resolving this i=
+ssue. We have several potential leads to explore: the misconfigured payment=
+ gateway integration, the unusual behavior in the payment processing code, =
+and the database deadlocks.
+
+Andrei Cyril F. Gimoros
+Development Manager
+Global Delivery Organization - Manila
+
+E:  ac.gimoros@fisglobal.com<mailto:ac.gimoros@fisglobal.com>
+FIS | Advancing the way the world pays, banks and invests=99
+[cid:image004.png@01D542DF.1DA72090]<https://www.facebook.com/FIStoday>[cid=
+:image005.png@01D542DF.1DA72090]<https://twitter.com/FISGlobal>[cid:image00=
+8.png@01D542DF.1DA72090]<https://www.linkedin.com/company/fis>
+
+________________________________
+From: Guevarra, Tyrone <Tyrone.Guevarra@fisglobal.com>
+Sent: Thursday, August 10, 2023 10:50 AM
+To: Guansing, Mary Rose Ann <Mary.Rose.Ann.Guansing@fisglobal.com>; Kitts, =
+Johndell <Johndell.Kitts@fisglobal.com>; Dy, John Michael G <John.Michael.D=
+y@fisglobal.com>; Cabra, Redner <Redner.Cabra@fisglobal.com>; Balagtas, Deb=
+bie <Debbie.Balagtas@fisglobal.com>; Gimoros, Ac <Ac.Gimoros@fisglobal.com>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com>; Villegas,=
+ Miguel Santino S <Miguel.Santino.Villegas@fisglobal.com>
+Subject: RE: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+Hello Everyone,
+
+
+
+My focus has been on monitoring server resource utilization during these in=
+cidents. It's intriguing to note that CPU and memory usage spikes coincide =
+with these transaction failures. It's plausible that the misconfiguration i=
+s putting excessive strain on the system's resources.
+
+
+
+Thanks & Regards,
+
+
+
+Tyrone Guevarra
+
+System Administrator
+
+RUTH
+
+
+
+From: Guansing, Mary Rose Ann <Mary.Rose.Ann.Guansing@fisglobal.com>
+Sent: Thursday, August 10, 2023 10:36 AM
+To: Kitts, Johndell <Johndell.Kitts@fisglobal.com>; Dy, John Michael G <Joh=
+n.Michael.Dy@fisglobal.com>; Cabra, Redner <Redner.Cabra@fisglobal.com>; Ba=
+lagtas, Debbie <Debbie.Balagtas@fisglobal.com>; Guevarra, Tyrone <Tyrone.Gu=
+evarra@fisglobal.com>; Gimoros, Ac <Ac.Gimoros@fisglobal.com>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com>; Villegas,=
+ Miguel Santino S <Miguel.Santino.Villegas@fisglobal.com>
+Subject: RE: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+
+Dear Team,
+
+I've been delving into the deployment process and have stumbled upon a poss=
+ible misconfiguration in the integration of the new payment gateway. This m=
+isconfiguration could be contributing to the system hang-ups and transactio=
+n failures we're observing.
+
+Regards,
+
+Ann
+
+
+
+Upcoming Out of Office:
+
+  Aug 21
+
+  Aug 28
+
+  Sep 1
+
+
+
+Mary Rose Ann Manzo-Guansing
+
+Consultant
+
+RUTH
+
+
+
+From: Kitts, Johndell <Johndell.Kitts@fisglobal.com<mailto:Johndell.Kitts@f=
+isglobal.com>>
+Sent: Thursday, August 10, 2023 8:45 AM
+To: Dy, John Michael G <John.Michael.Dy@fisglobal.com<mailto:John.Michael.D=
+y@fisglobal.com>>; Cabra, Redner <Redner.Cabra@fisglobal.com<mailto:Redner.=
+Cabra@fisglobal.com>>; Balagtas, Debbie <Debbie.Balagtas@fisglobal.com<mail=
+to:Debbie.Balagtas@fisglobal.com>>; Guansing, Mary Rose Ann <Mary.Rose.Ann.=
+Guansing@fisglobal.com<mailto:Mary.Rose.Ann.Guansing@fisglobal.com>>; Gueva=
+rra, Tyrone <Tyrone.Guevarra@fisglobal.com<mailto:Tyrone.Guevarra@fisglobal=
+.com>>; Gimoros, Ac <Ac.Gimoros@fisglobal.com<mailto:Ac.Gimoros@fisglobal.c=
+om>>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com<mailto:Alex=
+ander.Basconcillo@fisglobal.com>>; Villegas, Miguel Santino S <Miguel.Santi=
+no.Villegas@fisglobal.com<mailto:Miguel.Santino.Villegas@fisglobal.com>>
+Subject: RE: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+
+Hi Team,
+
+
+
+I've been analyzing the recent changes we implemented, particularly the int=
+roduction of a new payment gateway last week. Could there be a connection b=
+etween the new gateway and the issues we're encountering? Exploring this an=
+gle could provide insights into the root cause.
+
+
+
+Johndell Kitts
+
+Business Analyst
+
+
+
+From: Dy, John Michael G <John.Michael.Dy@fisglobal.com<mailto:John.Michael=
+.Dy@fisglobal.com>>
+Sent: Wednesday, August 9, 2023 7:26 PM
+To: Cabra, Redner <Redner.Cabra@fisglobal.com<mailto:Redner.Cabra@fisglobal=
+.com>>; Balagtas, Debbie <Debbie.Balagtas@fisglobal.com<mailto:Debbie.Balag=
+tas@fisglobal.com>>; Guansing, Mary Rose Ann <Mary.Rose.Ann.Guansing@fisglo=
+bal.com<mailto:Mary.Rose.Ann.Guansing@fisglobal.com>>; Guevarra, Tyrone <Ty=
+rone.Guevarra@fisglobal.com<mailto:Tyrone.Guevarra@fisglobal.com>>; Kitts, =
+Johndell <Johndell.Kitts@fisglobal.com<mailto:Johndell.Kitts@fisglobal.com>=
+>; Gimoros, Ac <Ac.Gimoros@fisglobal.com<mailto:Ac.Gimoros@fisglobal.com>>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com<mailto:Alex=
+ander.Basconcillo@fisglobal.com>>; Villegas, Miguel Santino S <Miguel.Santi=
+no.Villegas@fisglobal.com<mailto:Miguel.Santino.Villegas@fisglobal.com>>
+Subject: RE: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+
+Hi Team
+
+I've been meticulously reviewing the transaction-handling codebase. While t=
+here are no glaring issues in the code, I've encountered an intriguing beha=
+vior in a specific code block related to payment processing. This behavior =
+might not be immediately apparent, but I believe it warrants further invest=
+igation.
+
+
+
+
+
+John Michael Dy
+
+Super Senior and Best Developer Ever
+
+
+
+
+
+
+
+From: Cabra, Redner <Redner.Cabra@fisglobal.com<mailto:Redner.Cabra@fisglob=
+al.com>>
+Sent: Wednesday, August 9, 2023 7:11 PM
+To: Balagtas, Debbie <Debbie.Balagtas@fisglobal.com<mailto:Debbie.Balagtas@=
+fisglobal.com>>; Dy, John Michael G <John.Michael.Dy@fisglobal.com<mailto:J=
+ohn.Michael.Dy@fisglobal.com>>; Guansing, Mary Rose Ann <Mary.Rose.Ann.Guan=
+sing@fisglobal.com<mailto:Mary.Rose.Ann.Guansing@fisglobal.com>>; Guevarra,=
+ Tyrone <Tyrone.Guevarra@fisglobal.com<mailto:Tyrone.Guevarra@fisglobal.com=
+>>; Kitts, Johndell <Johndell.Kitts@fisglobal.com<mailto:Johndell.Kitts@fis=
+global.com>>; Gimoros, Ac <Ac.Gimoros@fisglobal.com<mailto:Ac.Gimoros@fisgl=
+obal.com>>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com<mailto:Alex=
+ander.Basconcillo@fisglobal.com>>; Villegas, Miguel Santino S <Miguel.Santi=
+no.Villegas@fisglobal.com<mailto:Miguel.Santino.Villegas@fisglobal.com>>
+Subject: RE: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+
+Greetings All,
+
+I've been deeply engaged in investigating the database logs and have notice=
+d a sudden surge in deadlock incidents during the timeframe when the issue =
+began. These deadlocks are causing the system to stall during crucial trans=
+action processes.
+
+
+
+Redner Ivan P. Cabra
+
+Database Administrator
+
+Global Delivery Organization - Manila
+
+C:  +63.917.807.8652
+
+E:  redner.cabra@fisglobal.com<mailto:redner.cabra@fisglobal.com>
+
+
+
+FIS | Advancing the way the world pays, banks and invests=99
+
+[cid:image001.png@01D9CB78.71290CD0]<https://www.facebook.com/FIStoday>[cid=
+:image002.png@01D9CB78.71290CD0]<https://twitter.com/FISGlobal>[cid:image00=
+3.png@01D9CB78.71290CD0]<https://www.linkedin.com/company/fis>
+
+
+
+
+
+
+
+From: Balagtas, Debbie <Debbie.Balagtas@fisglobal.com<mailto:Debbie.Balagta=
+s@fisglobal.com>>
+Sent: Wednesday, August 9, 2023 6:38 PM
+To: Gimoros, Ac <Ac.Gimoros@fisglobal.com<mailto:Ac.Gimoros@fisglobal.com>>=
+; Dy, John Michael G <John.Michael.Dy@fisglobal.com<mailto:John.Michael.Dy@=
+fisglobal.com>>; Guansing, Mary Rose Ann <Mary.Rose.Ann.Guansing@fisglobal.=
+com<mailto:Mary.Rose.Ann.Guansing@fisglobal.com>>; Guevarra, Tyrone <Tyrone=
+.Guevarra@fisglobal.com<mailto:Tyrone.Guevarra@fisglobal.com>>; Kitts, John=
+dell <Johndell.Kitts@fisglobal.com<mailto:Johndell.Kitts@fisglobal.com>>; C=
+abra, Redner <Redner.Cabra@fisglobal.com<mailto:Redner.Cabra@fisglobal.com>=
+>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com<mailto:Alex=
+ander.Basconcillo@fisglobal.com>>; Villegas, Miguel Santino S <Miguel.Santi=
+no.Villegas@fisglobal.com<mailto:Miguel.Santino.Villegas@fisglobal.com>>
+Subject: RE: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+
+Hello Team,
+
+I want to emphasize how important it is for us to resolve this issue swiftl=
+y. Our customers are experiencing delays at checkout, leading to dissatisfa=
+ction and lost sales. We are looking to your expertise to rectify the situa=
+tion as soon as possible.
+
+
+
+Debbie May Balagtas
+
+
+
+From: Gimoros, Ac <Ac.Gimoros@fisglobal.com<mailto:Ac.Gimoros@fisglobal.com=
+>>
+Sent: Wednesday, August 9, 2023 6:36 PM
+To: Balagtas, Debbie <Debbie.Balagtas@fisglobal.com<mailto:Debbie.Balagtas@=
+fisglobal.com>>; Dy, John Michael G <John.Michael.Dy@fisglobal.com<mailto:J=
+ohn.Michael.Dy@fisglobal.com>>; Guansing, Mary Rose Ann <Mary.Rose.Ann.Guan=
+sing@fisglobal.com<mailto:Mary.Rose.Ann.Guansing@fisglobal.com>>; Guevarra,=
+ Tyrone <Tyrone.Guevarra@fisglobal.com<mailto:Tyrone.Guevarra@fisglobal.com=
+>>; Kitts, Johndell <Johndell.Kitts@fisglobal.com<mailto:Johndell.Kitts@fis=
+global.com>>; Cabra, Redner <Redner.Cabra@fisglobal.com<mailto:Redner.Cabra=
+@fisglobal.com>>
+Cc: Basconcillo, Alexander <Alexander.Basconcillo@fisglobal.com<mailto:Alex=
+ander.Basconcillo@fisglobal.com>>; Villegas, Miguel Santino S <Miguel.Santi=
+no.Villegas@fisglobal.com<mailto:Miguel.Santino.Villegas@fisglobal.com>>
+Subject: [Test Email] Urgent: Point-of-Sale System Issue Resolution
+
+
+
+Dear Team,
+
+I hope this email finds you well. I want to bring everyone's attention to t=
+he critical issue we've been facing with our point-of-sale system. This iss=
+ue is causing transaction failures and disruptions for our client, impactin=
+g their sales and operations. It's imperative that we address this situatio=
+n promptly and effectively.
+
+
+
+Andrei Cyril F. Gimoros
+
+Development Manager, Senior
+
+Global Delivery Organization - Manila
+
+
+
+E:  ac.gimoros@fisglobal.com<mailto:ac.gimoros@fisglobal.com>
+
+FIS | Advancing the way the world pays, banks and invests=99
+
+[cid:image001.png@01D9CB78.71290CD0]<https://www.facebook.com/FIStoday>[cid=
+:image002.png@01D9CB78.71290CD0]<https://twitter.com/FISGlobal>[cid:image00=
+3.png@01D9CB78.71290CD0]<https://www.linkedin.com/company/fis>
+
+
+
+--_000_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; --darkreader-inline-color:=
+ #e8e6e3; color: rgb(0, 0, 0);" data-darkreader-inline-color=3D"" class=3D"=
+elementToProof">
+<span><span class=3D"ui-provider cmb cmc c d e f g h i j k l m n o p q r s =
+t cmd cme w x y z ab ac ae af ag ah ai aj ak ContentPasted0 elementToProof"=
+ dir=3D"ltr">Hi Team,&nbsp;</span></span></div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; --darkreader-inline-color:=
+ #e8e6e3; color: rgb(0, 0, 0);" data-darkreader-inline-color=3D"" class=3D"=
+elementToProof">
+<span><span class=3D"ui-provider cmb cmc c d e f g h i j k l m n o p q r s =
+t cmd cme w x y z ab ac ae af ag ah ai aj ak ContentPasted0 elementToProof"=
+ dir=3D"ltr"><br>
+</span></span></div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; --darkreader-inline-color:=
+ #e8e6e3; color: rgb(0, 0, 0);" data-darkreader-inline-color=3D"" class=3D"=
+elementToProof">
+<span><span class=3D"ui-provider cmb cmc c d e f g h i j k l m n o p q r s =
+t cmd cme w x y z ab ac ae af ag ah ai aj ak ContentPasted0" dir=3D"ltr">Th=
+ank you all for your valuable insights and dedication to resolving this iss=
+ue. We have several potential leads
+ to explore: the misconfigured payment gateway integration, the unusual beh=
+avior in the payment processing code, and the database deadlocks.</span></s=
+pan><br>
+</div>
+<div class=3D"elementToProof">
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; --darkreader-inline-color:=
+ #e8e6e3; color: rgb(0, 0, 0);" data-darkreader-inline-color=3D"">
+<br>
+</div>
+<div id=3D"Signature">
+<div>
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span style=3D"font=
+-size: 10pt; font-family: Arial, sans-serif; --darkreader-inline-color: #e8=
+e6e3; color: black;" data-darkreader-inline-color=3D"">Andrei Cyril F. Gimo=
+ros<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze: 8pt; font-family: Arial, sans-serif; --darkreader-inline-color: #e8e6e3=
+; color: black;" data-darkreader-inline-color=3D"">Development Manager<o:p>=
+</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span style=3D"font=
+-size: 9pt; font-family: Arial, sans-serif; --darkreader-inline-color: #5bd=
+24f; color: rgb(75, 205, 62);" data-darkreader-inline-color=3D"">Global Del=
+ivery Organization - Manila</span></b><b><span style=3D"font-family: Arial,=
+ sans-serif; --darkreader-inline-color: #5bd24f; color: rgb(75, 205, 62);" =
+data-darkreader-inline-color=3D""><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span style=3D"font=
+-size: 9pt; font-family: Arial, sans-serif; --darkreader-inline-color: #5bd=
+24f; color: rgb(75, 205, 62);" data-darkreader-inline-color=3D""><o:p>&nbsp=
+;</o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span style=3D"font=
+-size:9.0pt;=0A=
+font-family:&quot;Arial&quot;,sans-serif">E:</span></b><span style=3D"font-=
+size: 9pt; font-family: Arial, sans-serif; --darkreader-inline-color: #9f97=
+8a; color: rgb(118, 113, 113);" data-darkreader-inline-color=3D"">&nbsp;
+</span><u><span style=3D"font-size: 9pt; font-family: Arial, sans-serif; --=
+darkreader-inline-color: #337dff; color: blue;" data-darkreader-inline-colo=
+r=3D""><a href=3D"mailto:ac.gimoros@fisglobal.com">ac.gimoros@fisglobal.com=
+</a></span></u><span style=3D"font-size: 9pt; font-family: Arial, sans-seri=
+f; --darkreader-inline-color: #9f978a; color: rgb(118, 113, 113);" data-dar=
+kreader-inline-color=3D""><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-top:6.0pt;text-autospace:none"><b><s=
+pan style=3D"font-size: 10pt; font-family: Arial, sans-serif; --darkreader-=
+inline-color: #5bd24f; color: rgb(75, 205, 62);" data-darkreader-inline-col=
+or=3D"">FIS
+<span style=3D"position:relative;top:-1.0pt;=0A=
+mso-text-raise:1.0pt">|</span><span style=3D"mso-spacerun:yes">&nbsp;</span=
+>Advancing the way the world pays, banks and invests=99&nbsp;
+<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><a href=3D"https://www.facebook.com/FIStoday"><span =
+style=3D"font-size: 10pt; text-decoration: none; --darkreader-inline-color:=
+ #e8e6e3; color: windowtext;" data-darkreader-inline-color=3D""><!--[if gte=
+ vml 1]><v:shapetype=0A=
+ id=3D"_x0000_t75" coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=
+=3D"t"=0A=
+ path=3D"m@4@5l@4@11@9@11@9@5xe" filled=3D"f" stroked=3D"f">=0A=
+ <v:stroke joinstyle=3D"miter"/>=0A=
+ <v:formulas>=0A=
+  <v:f eqn=3D"if lineDrawn pixelLineWidth 0"/>=0A=
+  <v:f eqn=3D"sum @0 1 0"/>=0A=
+  <v:f eqn=3D"sum 0 0 @1"/>=0A=
+  <v:f eqn=3D"prod @2 1 2"/>=0A=
+  <v:f eqn=3D"prod @3 21600 pixelWidth"/>=0A=
+  <v:f eqn=3D"prod @3 21600 pixelHeight"/>=0A=
+  <v:f eqn=3D"sum @0 0 1"/>=0A=
+  <v:f eqn=3D"prod @6 1 2"/>=0A=
+  <v:f eqn=3D"prod @7 21600 pixelWidth"/>=0A=
+  <v:f eqn=3D"sum @8 21600 0"/>=0A=
+  <v:f eqn=3D"prod @7 21600 pixelHeight"/>=0A=
+  <v:f eqn=3D"sum @10 21600 0"/>=0A=
+ </v:formulas>=0A=
+ <v:path o:extrusionok=3D"f" gradientshapeok=3D"t" o:connecttype=3D"rect"/>=
+=0A=
+ <o:lock v:ext=3D"edit" aspectratio=3D"t"/>=0A=
+</v:shapetype><v:shape id=3D"_x0000_i1029" type=3D"#_x0000_t75" alt=3D"cid:=
+image004.png@01D542DF.1DA72090"=0A=
+ style=3D'width:15pt;height:15pt;visibility:visible'>=0A=
+ <v:imagedata src=3D"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABQAAAA=
+UCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE=
+1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2Voa=
+Uh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6=
+eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTo=
+wNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOT=
+k5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIge=
+G1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0=
+cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9=
+iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYm=
+UgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1M0VCM=
+jI1MkE4QTQxMUU5QjJBNERFQjUwMDY2MUY0RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1=
+M0VCMjI1M0E4QTQxMUU5QjJBNERFQjUwMDY2MUY0RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJ=
+lZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjUzRUIyMjUwQThBNDExRTlCMkE0REVCNTAwNjYxRjREIi=
+BzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUzRUIyMjUxQThBNDExRTlCMkE0REVCNTAwNjYxR=
+jREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNr=
+ZXQgZW5kPSJyIj8+LcrZxQAAAUxJREFUeNqslDFLw0AUgL2YwW5Oalx0cbQgnYQ6BATFwS6F7i6=
+u+hNc/BkBRyEi7SCCQwZdHKqS2b3/QKRD43flWZ6tlwa9gy8v3L37eHfJnSmKYsFnC+3DGPOj86=
+i/FxBa0IYYIhkaQAYpdO8ajyM9zxZnxg8lRNYgJFCfU0wOJ0j7TiGyY8I1LFVc4Sd0kPZmhFLZk=
+0P2AjfwAYdwMCVt2kqtK1R7ljhk77DLhKHkLk8J7ZyE/h3iKJTOVsmePVgZE9Z5v4KtX3Lq4rgN=
+pKNdsk9DiSuwDxuOvLHjWxg7ks6p7sy+EN/Afr0LR26shZEjqcZSa7J3i7J/m47caPJjl7RLWAV=
+b5Ta8zvuPAnUC/tsGWph5EGZamHoQplrYlbP515aLo9LRe4Z7WINTx3meHD3vl0OgR2WgWXH5uV=
+TW050z96GXC9Zn+xJgAFE6kKyMstMAAAAAAElFTkSuQmCC" o:href=3D"cid:image008.png@=
+01D5470D.4E323D80"/>=0A=
+</v:shape><![endif]--><!--[if !vml]--><img border=3D"0" width=3D"20" height=
+=3D"20" alt=3D"cid:image004.png@01D542DF.1DA72090" v:shapes=3D"_x0000_i1029=
+" data-outlook-trace=3D"F:1|T:1" src=3D"cid:993e5c71-51be-481c-bbf0-6cb5085=
+ba778"><!--[endif]--></span></a><a href=3D"https://twitter.com/FISGlobal"><=
+span style=3D"font-size: 10pt; text-decoration: none; --darkreader-inline-c=
+olor: #e8e6e3; color: windowtext;" data-darkreader-inline-color=3D""><!--[i=
+f gte vml 1]><v:shape id=3D"_x0000_i1030" type=3D"#_x0000_t75" alt=3D"cid:i=
+mage005.png@01D542DF.1DA72090"=0A=
+ style=3D'width:15pt;height:15pt;visibility:visible'>=0A=
+ <v:imagedata src=3D"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABQAAAA=
+UCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE=
+1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2Voa=
+Uh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6=
+eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTo=
+wNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOT=
+k5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIge=
+G1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0=
+cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9=
+iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYm=
+UgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OUM0M=
+DFEN0E4QTQxMUU5OEQzQTg2RjZGMTAxNjVEOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1=
+OUM0MDFEOEE4QTQxMUU5OEQzQTg2RjZGMTAxNjVEOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJ=
+lZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5QzQwMUQ1QThBNDExRTk4RDNBODZGNkYxMDE2NUQ5Ii=
+BzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5QzQwMUQ2QThBNDExRTk4RDNBODZGNkYxMDE2N=
+UQ5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNr=
+ZXQgZW5kPSJyIj8+I3EwEgAAAZBJREFUeNqslD1Lw0AYgJOo6ODiWBxUBBWHgHZxiErdVLRLoDi=
+42MHBHyD4BwQ3J8HBwUWEDlZQ3IofaxSKi4OjdHBW1CH1ObmE1zOxLeTgyZvc5Z7c5b07u9lsWl=
+mWbnWxbftX5VIw6xCK4EMBcrqpATWoQPUyfxvKfmpw9s9FCJHlCUfgthhMHTaQBqlCZKuEU+hrc=
+4YfUEJ6/keoR3bXgUxKPTXSWLh8P6f+2UMb0/xv+lMX0zehoyuKhixI6KTqJqAXNmEf3nWbqx1W=
+JPSNzmuwDZ+irsy0nuALDnk+hlfR7kthwRDO02mPOAo7cAbPxjsrMCSeC/E6FOssKj0kqQvpC/e=
+7Kf9t0HjOyRGaZQbCFolYSKp0xA6QZV0tyzQTo1/Uv0OWhhTWjEa10rfoOJkgGyAcJHynJoUV0a=
+Cm+gb9MG7IRgjXRjIs6YiSUtWL09UfuYITeEQyRhwGtS3LKTuprh3Zb704y/rUKOkXrA4Ph8DMc=
+iRVp4anp9DO/vWikybOpnkeZnLAZlm+BRgAiuyZ6ClrpZ8AAAAASUVORK5CYII=3D" o:href=
+=3D"cid:image009.png@01D5470D.4E323D80"/>=0A=
+</v:shape><![endif]--><!--[if !vml]--><img border=3D"0" width=3D"20" height=
+=3D"20" alt=3D"cid:image005.png@01D542DF.1DA72090" v:shapes=3D"_x0000_i1030=
+" data-outlook-trace=3D"F:1|T:1" src=3D"cid:6c5bb017-9d76-4d88-9e45-60dfa49=
+97629"><!--[endif]--></span></a><a href=3D"https://www.linkedin.com/company=
+/fis"><span style=3D"font-size: 10pt; text-decoration: none; --darkreader-i=
+nline-color: #e8e6e3; color: windowtext;" data-darkreader-inline-color=3D""=
+><!--[if gte vml 1]><v:shape id=3D"_x0000_i1031" type=3D"#_x0000_t75"=0A=
+ alt=3D"cid:image008.png@01D542DF.1DA72090" style=3D'width:15pt;height:15pt=
+;=0A=
+ visibility:visible'>=0A=
+ <v:imagedata src=3D"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABQAAAA=
+UCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE=
+1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2Voa=
+Uh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6=
+eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTo=
+wNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOT=
+k5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIge=
+G1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0=
+cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9=
+iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYm=
+UgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1RUUzR=
+jU5QkE4QTQxMUU5QjQ0OUE4QzcxRjFERDBCRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1=
+RUUzRjU5Q0E4QTQxMUU5QjQ0OUE4QzcxRjFERDBCRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJ=
+lZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVFRTNGNTk5QThBNDExRTlCNDQ5QThDNzFGMUREMEJGIi=
+BzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVFRTNGNTlBQThBNDExRTlCNDQ5QThDNzFGMUREM=
+EJGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNr=
+ZXQgZW5kPSJyIj8+TjGdhAAAAaZJREFUeNqslE0rhFEUx59n8q5pLKRBiYWyYYGFMImFIis2Cht=
+l4xPITso3sLUUmrHyshRGU0oWSkLZoNlQkxoxk/G7073T6c5Mnsmc+j3nPvflf++5L8fNZDJOOa=
+1CfVzXzWuYvAqFcHMwDh26+g1OIQyRo77zbzlGLc7NfoQgQkHcFkz8sZgHWEQ0WlQQsU7cCbR6j=
+DAF84ju5QkiFqDuWoTnlCA6gmhMaflEw4YQU/ukJlj3IFiptogFZc/Dp0Ntwi2JTl+QhE+Pq+yC=
+mdwpY1N6JmOjEIc6+IEP3bcGnqANqizRadg1IQ9bjdvsSSN+GW4oN+AHoYeyOrhmuLTGDOVCxlo=
+8hHULC2zPLKLvlNes9qAM2YsNwAo8ww7cF+pkVvjq9VVhfu3TVntcCkbL8IwvpOCBvqD/sf1sXh=
+AvZVOfqrn9SX01qsW1qdftCb0YE/4ddB/2nqXlS1nVd8zcfvVSavXAgBBz9L9fTK6SRFqG7FCR0=
+KnqpcR3rJJDzD5lI/qI64djD2IqfY2ZTGMsLx8WSbDtqq+VYMOIpQom2HLarwADAHE/i9d7bZod=
+AAAAAElFTkSuQmCC" o:href=3D"cid:image010.png@01D5470D.4E323D80"/>=0A=
+</v:shape><![endif]--><!--[if !vml]--><img border=3D"0" width=3D"20" height=
+=3D"20" alt=3D"cid:image008.png@01D542DF.1DA72090" v:shapes=3D"_x0000_i1031=
+" data-outlook-trace=3D"F:1|T:1" src=3D"cid:085b7a9e-fba5-4584-9e43-7f3f1e8=
+7b8d2"><!--[endif]--></span></a><span style=3D"font-size:10.0pt;mso-ascii-f=
+ont-family:Calibri;mso-fareast-font-family:=0A=
+Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri"><o:p></=
+o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;mso-ascii-font-famil=
+y:Calibri;=0A=
+mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font=
+-family:=0A=
+Calibri"><o:p>&nbsp;</o:p></span></p>
+</div>
+</div>
+</div>
+</div>
+<div id=3D"appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> Guevarra, Tyrone &lt;=
+Tyrone.Guevarra@fisglobal.com&gt;<br>
+<b>Sent:</b> Thursday, August 10, 2023 10:50 AM<br>
+<b>To:</b> Guansing, Mary Rose Ann &lt;Mary.Rose.Ann.Guansing@fisglobal.com=
+&gt;; Kitts, Johndell &lt;Johndell.Kitts@fisglobal.com&gt;; Dy, John Michae=
+l G &lt;John.Michael.Dy@fisglobal.com&gt;; Cabra, Redner &lt;Redner.Cabra@f=
+isglobal.com&gt;; Balagtas, Debbie &lt;Debbie.Balagtas@fisglobal.com&gt;;
+ Gimoros, Ac &lt;Ac.Gimoros@fisglobal.com&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;Alexander.Basconcillo@fisglobal.com&g=
+t;; Villegas, Miguel Santino S &lt;Miguel.Santino.Villegas@fisglobal.com&gt=
+;<br>
+<b>Subject:</b> RE: [Test Email] Urgent: Point-of-Sale System Issue Resolut=
+ion</font>
+<div>&nbsp;</div>
+</div>
+<style>
+<!--
+@font-face
+	{font-family:"Cambria Math"}
+@font-face
+	{font-family:Calibri}
+@font-face
+	{font-family:Aptos}
+@font-face
+	{font-family:"Baguet Script"}
+p.x_MsoNormal, li.x_MsoNormal, div.x_MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif}
+a:link, span.x_MsoHyperlink
+	{color:blue;
+	text-decoration:underline}
+p.x_contentpasted0, li.x_contentpasted0, div.x_contentpasted0
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif}
+span.x_ui-provider
+	{}
+span.x_EmailStyle23
+	{font-family:"Calibri",sans-serif;
+	color:windowtext}
+.x_MsoChpDefault
+	{font-size:10.0pt}
+@page WordSection1
+	{margin:1.0in 1.0in 1.0in 1.0in}
+div.x_WordSection1
+	{}
+-->
+</style>
+<div lang=3D"EN-US" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:break=
+-word">
+<div class=3D"x_WordSection1">
+<p class=3D"x_MsoNormal">Hello Everyone,</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal"><span class=3D"x_ui-provider">My focus has been on=
+ monitoring server resource utilization during these incidents. It's intrig=
+uing to note that CPU and memory usage spikes coincide with these transacti=
+on failures. It's plausible that the
+ misconfiguration is putting excessive strain on the system's resources.</s=
+pan></p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif">Thanks &amp; Rega=
+rds,</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">&nbs=
+p;</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Tyro=
+ne Guevarra</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><span style=3D"font-=
+size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">System A=
+dministrator</span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#4BCD3E">RUT=
+H</span></b><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif; col=
+or:#4BCD3E"></span></b></p>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0i=
+n 0in 0in">
+<p class=3D"x_MsoNormal"><b>From:</b> Guansing, Mary Rose Ann &lt;Mary.Rose=
+.Ann.Guansing@fisglobal.com&gt;
+<br>
+<b>Sent:</b> Thursday, August 10, 2023 10:36 AM<br>
+<b>To:</b> Kitts, Johndell &lt;Johndell.Kitts@fisglobal.com&gt;; Dy, John M=
+ichael G &lt;John.Michael.Dy@fisglobal.com&gt;; Cabra, Redner &lt;Redner.Ca=
+bra@fisglobal.com&gt;; Balagtas, Debbie &lt;Debbie.Balagtas@fisglobal.com&g=
+t;; Guevarra, Tyrone &lt;Tyrone.Guevarra@fisglobal.com&gt;; Gimoros,
+ Ac &lt;Ac.Gimoros@fisglobal.com&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;Alexander.Basconcillo@fisglobal.com&g=
+t;; Villegas, Miguel Santino S &lt;Miguel.Santino.Villegas@fisglobal.com&gt=
+;<br>
+<b>Subject:</b> RE: [Test Email] Urgent: Point-of-Sale System Issue Resolut=
+ion</p>
+</div>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal" style=3D"margin-bottom:15.0pt">Dear Team,</p>
+<p class=3D"x_MsoNormal" style=3D"margin-bottom:15.0pt">I've been delving i=
+nto the deployment process and have stumbled upon a possible misconfigurati=
+on in the integration of the new payment gateway. This misconfiguration cou=
+ld be contributing to the system hang-ups
+ and transaction failures we're observing.</p>
+<div>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><span style=3D"">Reg=
+ards,</span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><i><span style=3D=
+"font-size:18.0pt; font-family:&quot;Baguet Script&quot;; color:#990099">An=
+n</span></i></b></p>
+<p class=3D"x_MsoNormal"><b><span style=3D"font-size:8.0pt; font-family:&qu=
+ot;Arial&quot;,sans-serif; color:#404040">&nbsp;</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><i><u><span style=
+=3D"font-size:10.0pt; color:gray">Upcoming Out of Office:</span></u></i></b=
+></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><i><span style=3D"fo=
+nt-size:10.0pt; color:gray">&nbsp; Aug 21</span></i></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><i><span style=3D"fo=
+nt-size:10.0pt; color:gray">&nbsp; Aug 28</span></i></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><i><span style=3D"fo=
+nt-size:10.0pt; color:gray">&nbsp; Sep 1</span></i></p>
+<p class=3D"x_MsoNormal"><b><span style=3D"font-size:8.0pt; font-family:&qu=
+ot;Arial&quot;,sans-serif; color:#404040">&nbsp;</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Mary=
+ Rose Ann Manzo-Guansing</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><span style=3D"font-=
+size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Consulta=
+nt</span><span style=3D"font-size:9.0pt; font-family:&quot;Arial&quot;,sans=
+-serif"></span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#4BCD3E">RUT=
+H</span></b></p>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0i=
+n 0in 0in">
+<p class=3D"x_MsoNormal"><b>From:</b> Kitts, Johndell &lt;<a href=3D"mailto=
+:Johndell.Kitts@fisglobal.com">Johndell.Kitts@fisglobal.com</a>&gt;
+<br>
+<b>Sent:</b> Thursday, August 10, 2023 8:45 AM<br>
+<b>To:</b> Dy, John Michael G &lt;<a href=3D"mailto:John.Michael.Dy@fisglob=
+al.com">John.Michael.Dy@fisglobal.com</a>&gt;; Cabra, Redner &lt;<a href=3D=
+"mailto:Redner.Cabra@fisglobal.com">Redner.Cabra@fisglobal.com</a>&gt;; Bal=
+agtas, Debbie &lt;<a href=3D"mailto:Debbie.Balagtas@fisglobal.com">Debbie.B=
+alagtas@fisglobal.com</a>&gt;;
+ Guansing, Mary Rose Ann &lt;<a href=3D"mailto:Mary.Rose.Ann.Guansing@fisgl=
+obal.com">Mary.Rose.Ann.Guansing@fisglobal.com</a>&gt;; Guevarra, Tyrone &l=
+t;<a href=3D"mailto:Tyrone.Guevarra@fisglobal.com">Tyrone.Guevarra@fisgloba=
+l.com</a>&gt;; Gimoros, Ac &lt;<a href=3D"mailto:Ac.Gimoros@fisglobal.com">=
+Ac.Gimoros@fisglobal.com</a>&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;<a href=3D"mailto:Alexander.Basconcil=
+lo@fisglobal.com">Alexander.Basconcillo@fisglobal.com</a>&gt;; Villegas, Mi=
+guel Santino S &lt;<a href=3D"mailto:Miguel.Santino.Villegas@fisglobal.com"=
+>Miguel.Santino.Villegas@fisglobal.com</a>&gt;<br>
+<b>Subject:</b> RE: [Test Email] Urgent: Point-of-Sale System Issue Resolut=
+ion</p>
+</div>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal">Hi Team,</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal"><span class=3D"x_ui-provider">I've been analyzing =
+the recent changes we implemented, particularly the introduction of a new p=
+ayment gateway last week. Could there be a connection between the new gatew=
+ay and the issues we're encountering?
+ Exploring this angle could provide insights into the root cause.</span></p=
+>
+<p class=3D"x_MsoNormal"><span class=3D"x_ui-provider">&nbsp;</span></p>
+<p class=3D"x_MsoNormal"><span class=3D"x_ui-provider"><b>Johndell Kitts</b=
+></span></p>
+<p class=3D"x_MsoNormal"><span class=3D"x_ui-provider">Business Analyst</sp=
+an></p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0i=
+n 0in 0in">
+<p class=3D"x_MsoNormal"><b>From:</b> Dy, John Michael G &lt;<a href=3D"mai=
+lto:John.Michael.Dy@fisglobal.com">John.Michael.Dy@fisglobal.com</a>&gt;
+<br>
+<b>Sent:</b> Wednesday, August 9, 2023 7:26 PM<br>
+<b>To:</b> Cabra, Redner &lt;<a href=3D"mailto:Redner.Cabra@fisglobal.com">=
+Redner.Cabra@fisglobal.com</a>&gt;; Balagtas, Debbie &lt;<a href=3D"mailto:=
+Debbie.Balagtas@fisglobal.com">Debbie.Balagtas@fisglobal.com</a>&gt;; Guans=
+ing, Mary Rose Ann &lt;<a href=3D"mailto:Mary.Rose.Ann.Guansing@fisglobal.c=
+om">Mary.Rose.Ann.Guansing@fisglobal.com</a>&gt;;
+ Guevarra, Tyrone &lt;<a href=3D"mailto:Tyrone.Guevarra@fisglobal.com">Tyro=
+ne.Guevarra@fisglobal.com</a>&gt;; Kitts, Johndell &lt;<a href=3D"mailto:Jo=
+hndell.Kitts@fisglobal.com">Johndell.Kitts@fisglobal.com</a>&gt;; Gimoros, =
+Ac &lt;<a href=3D"mailto:Ac.Gimoros@fisglobal.com">Ac.Gimoros@fisglobal.com=
+</a>&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;<a href=3D"mailto:Alexander.Basconcil=
+lo@fisglobal.com">Alexander.Basconcillo@fisglobal.com</a>&gt;; Villegas, Mi=
+guel Santino S &lt;<a href=3D"mailto:Miguel.Santino.Villegas@fisglobal.com"=
+>Miguel.Santino.Villegas@fisglobal.com</a>&gt;<br>
+<b>Subject:</b> RE: [Test Email] Urgent: Point-of-Sale System Issue Resolut=
+ion</p>
+</div>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal">Hi Team</p>
+<p class=3D"x_MsoNormal" style=3D"margin-bottom:15.0pt">I've been meticulou=
+sly reviewing the transaction-handling codebase. While there are no glaring=
+ issues in the code, I've encountered an intriguing behavior in a specific =
+code block related to payment processing.
+ This behavior might not be immediately apparent, but I believe it warrants=
+ further investigation.</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<p class=3D"x_MsoNormal"><b><span style=3D"font-size:10.5pt; font-family:&q=
+uot;Arial&quot;,sans-serif">John Michael Dy</span></b></p>
+<p class=3D"x_MsoNormal"><span style=3D"font-size:10.5pt; font-family:&quot=
+;Arial&quot;,sans-serif">Super Senior and Best Developer Ever</span></p>
+<p class=3D"x_MsoNormal"><span style=3D"font-size:10.5pt; font-family:&quot=
+;Arial&quot;,sans-serif">&nbsp;</span></p>
+<p class=3D"x_MsoNormal"><span style=3D"font-size:10.5pt; font-family:&quot=
+;Arial&quot;,sans-serif">&nbsp;</span></p>
+<p class=3D"x_MsoNormal"><span lang=3D"EN-GB" style=3D"font-size:10.0pt">&n=
+bsp;</span></p>
+</div>
+<div>
+<div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0i=
+n 0in 0in">
+<p class=3D"x_MsoNormal"><b>From:</b> Cabra, Redner &lt;<a href=3D"mailto:R=
+edner.Cabra@fisglobal.com">Redner.Cabra@fisglobal.com</a>&gt;
+<br>
+<b>Sent:</b> Wednesday, August 9, 2023 7:11 PM<br>
+<b>To:</b> Balagtas, Debbie &lt;<a href=3D"mailto:Debbie.Balagtas@fisglobal=
+.com">Debbie.Balagtas@fisglobal.com</a>&gt;; Dy, John Michael G &lt;<a href=
+=3D"mailto:John.Michael.Dy@fisglobal.com">John.Michael.Dy@fisglobal.com</a>=
+&gt;; Guansing, Mary Rose Ann &lt;<a href=3D"mailto:Mary.Rose.Ann.Guansing@=
+fisglobal.com">Mary.Rose.Ann.Guansing@fisglobal.com</a>&gt;;
+ Guevarra, Tyrone &lt;<a href=3D"mailto:Tyrone.Guevarra@fisglobal.com">Tyro=
+ne.Guevarra@fisglobal.com</a>&gt;; Kitts, Johndell &lt;<a href=3D"mailto:Jo=
+hndell.Kitts@fisglobal.com">Johndell.Kitts@fisglobal.com</a>&gt;; Gimoros, =
+Ac &lt;<a href=3D"mailto:Ac.Gimoros@fisglobal.com">Ac.Gimoros@fisglobal.com=
+</a>&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;<a href=3D"mailto:Alexander.Basconcil=
+lo@fisglobal.com">Alexander.Basconcillo@fisglobal.com</a>&gt;; Villegas, Mi=
+guel Santino S &lt;<a href=3D"mailto:Miguel.Santino.Villegas@fisglobal.com"=
+>Miguel.Santino.Villegas@fisglobal.com</a>&gt;<br>
+<b>Subject:</b> RE: [Test Email] Urgent: Point-of-Sale System Issue Resolut=
+ion</p>
+</div>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal" style=3D"margin-bottom:15.0pt">Greetings All,</p>
+<p class=3D"x_MsoNormal" style=3D"margin-bottom:15.0pt">I've been deeply en=
+gaged in investigating the database logs and have noticed a sudden surge in=
+ deadlock incidents during the timeframe when the issue began. These deadlo=
+cks are causing the system to stall
+ during crucial transaction processes.</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Redn=
+er Ivan P. Cabra</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><span style=3D"font-=
+size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Database=
+ Administrator</span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#4BCD3E">Glo=
+bal Delivery Organization - Manila</span></b><b><span style=3D"font-family:=
+&quot;Arial&quot;,sans-serif; color:#4BCD3E"></span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif">C:</span></b><span=
+ style=3D"font-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:=
+#767171">&nbsp; +63.917.807.8652</span><span style=3D"font-family:&quot;Ari=
+al&quot;,sans-serif; color:#767171"></span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif">E:</span></b><span=
+ style=3D"font-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:=
+#767171">&nbsp;
+</span><span lang=3D"EN-PH" style=3D"font-size:9.0pt; font-family:&quot;Ari=
+al&quot;,sans-serif"><a href=3D"mailto:redner.cabra@fisglobal.com"><span st=
+yle=3D"color:#0563C1">redner.cabra@fisglobal.com</span></a></span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><span lang=3D"EN-PH"=
+ style=3D"font-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif">&nbsp;=
+</span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#4BCD3E">FI=
+S
+<span style=3D"top:-1.0pt">|</span> Advancing the way the world pays, banks=
+ and invests=99&nbsp;
+</span></b></p>
+<p class=3D"x_MsoNormal"><a href=3D"https://www.facebook.com/FIStoday"><spa=
+n style=3D"font-size:10.0pt; color:windowtext; text-decoration:none"><img b=
+order=3D"0" width=3D"19" height=3D"19" id=3D"x_Picture_x0020_4" style=3D"wi=
+dth:.2013in; height:.2013in" data-outlook-trace=3D"F:1|T:1" src=3D"cid:imag=
+e001.png@01D9CB78.71290CD0"></span></a><a href=3D"https://twitter.com/FISGl=
+obal"><span style=3D"font-size:10.0pt; color:windowtext; text-decoration:no=
+ne"><img border=3D"0" width=3D"19" height=3D"19" id=3D"x_Picture_x0020_5" s=
+tyle=3D"width:.2013in; height:.2013in" data-outlook-trace=3D"F:1|T:1" src=
+=3D"cid:image002.png@01D9CB78.71290CD0"></span></a><a href=3D"https://www.l=
+inkedin.com/company/fis"><span style=3D"font-size:10.0pt; color:windowtext;=
+ text-decoration:none"><img border=3D"0" width=3D"19" height=3D"19" id=3D"x=
+_Picture_x0020_6" style=3D"width:.2013in; height:.2013in" data-outlook-trac=
+e=3D"F:1|T:1" src=3D"cid:image003.png@01D9CB78.71290CD0"></span></a><span s=
+tyle=3D"font-size:10.0pt"></span></p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0i=
+n 0in 0in">
+<p class=3D"x_MsoNormal"><b>From:</b> Balagtas, Debbie &lt;<a href=3D"mailt=
+o:Debbie.Balagtas@fisglobal.com">Debbie.Balagtas@fisglobal.com</a>&gt;
+<br>
+<b>Sent:</b> Wednesday, August 9, 2023 6:38 PM<br>
+<b>To:</b> Gimoros, Ac &lt;<a href=3D"mailto:Ac.Gimoros@fisglobal.com">Ac.G=
+imoros@fisglobal.com</a>&gt;; Dy, John Michael G &lt;<a href=3D"mailto:John=
+.Michael.Dy@fisglobal.com">John.Michael.Dy@fisglobal.com</a>&gt;; Guansing,=
+ Mary Rose Ann &lt;<a href=3D"mailto:Mary.Rose.Ann.Guansing@fisglobal.com">=
+Mary.Rose.Ann.Guansing@fisglobal.com</a>&gt;;
+ Guevarra, Tyrone &lt;<a href=3D"mailto:Tyrone.Guevarra@fisglobal.com">Tyro=
+ne.Guevarra@fisglobal.com</a>&gt;; Kitts, Johndell &lt;<a href=3D"mailto:Jo=
+hndell.Kitts@fisglobal.com">Johndell.Kitts@fisglobal.com</a>&gt;; Cabra, Re=
+dner &lt;<a href=3D"mailto:Redner.Cabra@fisglobal.com">Redner.Cabra@fisglob=
+al.com</a>&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;<a href=3D"mailto:Alexander.Basconcil=
+lo@fisglobal.com">Alexander.Basconcillo@fisglobal.com</a>&gt;; Villegas, Mi=
+guel Santino S &lt;<a href=3D"mailto:Miguel.Santino.Villegas@fisglobal.com"=
+>Miguel.Santino.Villegas@fisglobal.com</a>&gt;<br>
+<b>Subject:</b> RE: [Test Email] Urgent: Point-of-Sale System Issue Resolut=
+ion</p>
+</div>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<p style=3D"margin-bottom:15.0pt">Hello Team,<span style=3D"font-size:12.0p=
+t; font-family:&quot;Times New Roman&quot;,serif"></span></p>
+<p style=3D"margin-bottom:15.0pt">I want to emphasize how important it is f=
+or us to resolve this issue swiftly. Our customers are experiencing delays =
+at checkout, leading to dissatisfaction and lost sales. We are looking to y=
+our expertise to rectify the situation
+ as soon as possible.</p>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<p class=3D"x_MsoNormal" style=3D"line-height:105%"><b><span style=3D"font-=
+size:10.0pt; line-height:105%; color:black">Debbie May Balagtas</span></b><=
+/p>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0i=
+n 0in 0in">
+<p class=3D"x_MsoNormal"><b>From:</b> Gimoros, Ac &lt;<a href=3D"mailto:Ac.=
+Gimoros@fisglobal.com">Ac.Gimoros@fisglobal.com</a>&gt;
+<br>
+<b>Sent:</b> Wednesday, August 9, 2023 6:36 PM<br>
+<b>To:</b> Balagtas, Debbie &lt;<a href=3D"mailto:Debbie.Balagtas@fisglobal=
+.com">Debbie.Balagtas@fisglobal.com</a>&gt;; Dy, John Michael G &lt;<a href=
+=3D"mailto:John.Michael.Dy@fisglobal.com">John.Michael.Dy@fisglobal.com</a>=
+&gt;; Guansing, Mary Rose Ann &lt;<a href=3D"mailto:Mary.Rose.Ann.Guansing@=
+fisglobal.com">Mary.Rose.Ann.Guansing@fisglobal.com</a>&gt;;
+ Guevarra, Tyrone &lt;<a href=3D"mailto:Tyrone.Guevarra@fisglobal.com">Tyro=
+ne.Guevarra@fisglobal.com</a>&gt;; Kitts, Johndell &lt;<a href=3D"mailto:Jo=
+hndell.Kitts@fisglobal.com">Johndell.Kitts@fisglobal.com</a>&gt;; Cabra, Re=
+dner &lt;<a href=3D"mailto:Redner.Cabra@fisglobal.com">Redner.Cabra@fisglob=
+al.com</a>&gt;<br>
+<b>Cc:</b> Basconcillo, Alexander &lt;<a href=3D"mailto:Alexander.Basconcil=
+lo@fisglobal.com">Alexander.Basconcillo@fisglobal.com</a>&gt;; Villegas, Mi=
+guel Santino S &lt;<a href=3D"mailto:Miguel.Santino.Villegas@fisglobal.com"=
+>Miguel.Santino.Villegas@fisglobal.com</a>&gt;<br>
+<b>Subject:</b> [Test Email] Urgent: Point-of-Sale System Issue Resolution<=
+/p>
+</div>
+</div>
+<p class=3D"x_MsoNormal">&nbsp;</p>
+<div>
+<p class=3D"x_contentpasted0" style=3D"margin-bottom:15.0pt"><span style=3D=
+"font-size:12.0pt; font-family:&quot;Aptos&quot;,sans-serif; color:black">D=
+ear Team,</span></p>
+<p class=3D"x_contentpasted0" style=3D"margin-bottom:15.0pt"><span style=3D=
+"font-size:12.0pt; font-family:&quot;Aptos&quot;,sans-serif; color:black">I=
+ hope this email finds you well. I want to bring everyone's attention to th=
+e critical issue we've been facing with our point-of-sale
+ system. This issue is causing transaction failures and disruptions for our=
+ client, impacting their sales and operations. It's imperative that we addr=
+ess this situation promptly and effectively.</span></p>
+</div>
+<div>
+<div>
+<p class=3D"x_MsoNormal"><span style=3D"font-size:12.0pt; font-family:&quot=
+;Aptos&quot;,sans-serif; color:black">&nbsp;</span></p>
+</div>
+<div id=3D"x_Signature">
+<div>
+<div>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Andr=
+ei Cyril F. Gimoros</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><span style=3D"font-=
+size:8.0pt; font-family:&quot;Arial&quot;,sans-serif; color:black">Developm=
+ent Manager, Senior</span></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#4BCD3E">Glo=
+bal Delivery Organization - Manila</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#4BCD3E">&nb=
+sp;</span></b></p>
+<p class=3D"x_MsoNormal" style=3D"text-autospace:none"><b><span style=3D"fo=
+nt-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif">E:</span></b><span=
+ style=3D"font-size:9.0pt; font-family:&quot;Arial&quot;,sans-serif; color:=
+#767171">&nbsp;
+</span><u><span style=3D"font-size:9.0pt; font-family:&quot;Arial&quot;,san=
+s-serif; color:blue"><a href=3D"mailto:ac.gimoros@fisglobal.com">ac.gimoros=
+@fisglobal.com</a></span></u></p>
+<p class=3D"x_MsoNormal" style=3D"margin-top:6.0pt; text-autospace:none"><b=
+><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif;=
+ color:#4BCD3E">FIS
+<span style=3D"top:-1.0pt">|</span> Advancing the way the world pays, banks=
+ and invests=99&nbsp;
+</span></b></p>
+<p class=3D"x_MsoNormal" style=3D""><a href=3D"https://www.facebook.com/FIS=
+today"><span style=3D"font-size:10.0pt; color:windowtext; text-decoration:n=
+one"><img border=3D"0" width=3D"20" height=3D"20" id=3D"x_Picture_x0020_1" =
+style=3D"width:.2083in; height:.2083in" data-outlook-trace=3D"F:1|T:1" src=
+=3D"cid:image001.png@01D9CB78.71290CD0"></span></a><a href=3D"https://twitt=
+er.com/FISGlobal"><span style=3D"font-size:10.0pt; color:windowtext; text-d=
+ecoration:none"><img border=3D"0" width=3D"20" height=3D"20" id=3D"x_Pictur=
+e_x0020_2" style=3D"width:.2083in; height:.2083in" data-outlook-trace=3D"F:=
+1|T:1" src=3D"cid:image002.png@01D9CB78.71290CD0"></span></a><a href=3D"htt=
+ps://www.linkedin.com/company/fis"><span style=3D"font-size:10.0pt; color:w=
+indowtext; text-decoration:none"><img border=3D"0" width=3D"20" height=3D"2=
+0" id=3D"x_Picture_x0020_3" style=3D"width:.2083in; height:.2083in" data-ou=
+tlook-trace=3D"F:1|T:1" src=3D"cid:image003.png@01D9CB78.71290CD0"></span><=
+/a></p>
+<p class=3D"x_MsoNormal" style=3D""><span style=3D"font-size:10.0pt">&nbsp;=
+</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_--
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: image/png; name="image001.png"
+Content-Description: image001.png
+Content-Disposition: inline; filename="image001.png"; size=1513;
+	creation-date="Thu, 10 Aug 2023 02:50:16 GMT";
+	modification-date="Thu, 10 Aug 2023 03:26:15 GMT"
+Content-ID: <image001.png@01D9CB78.71290CD0>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2
+MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJ
+RD0ieG1wLmlpZDo1M0VCMjI1MkE4QTQxMUU5QjJBNERFQjUwMDY2MUY0RCIgeG1wTU06RG9jdW1l
+bnRJRD0ieG1wLmRpZDo1M0VCMjI1M0E4QTQxMUU5QjJBNERFQjUwMDY2MUY0RCI+IDx4bXBNTTpE
+ZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjUzRUIyMjUwQThBNDExRTlCMkE0
+REVCNTAwNjYxRjREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUzRUIyMjUxQThBNDExRTlC
+MkE0REVCNTAwNjYxRjREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBt
+ZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+LcrZxQAAAUxJREFUeNqslDFLw0AUgL2YwW5Oalx0cbQg
+nYQ6BATFwS6F7i6u+hNc/BkBRyEi7SCCQwZdHKqS2b3/QKRD43flWZ6tlwa9gy8v3L37eHfJnSmK
+YsFnC+3DGPOj86i/FxBa0IYYIhkaQAYpdO8ajyM9zxZnxg8lRNYgJFCfU0wOJ0j7TiGyY8I1LFVc
+4Sd0kPZmhFLZk0P2AjfwAYdwMCVt2kqtK1R7ljhk77DLhKHkLk8J7ZyE/h3iKJTOVsmePVgZE9Z5
+v4KtX3Lq4rgNpKNdsk9DiSuwDxuOvLHjWxg7ks6p7sy+EN/Afr0LR26shZEjqcZSa7J3i7J/m47c
+aPJjl7RLWAVb5Ta8zvuPAnUC/tsGWph5EGZamHoQplrYlbP515aLo9LRe4Z7WINTx3meHD3vl0Og
+R2WgWXH5uVTW050z96GXC9Zn+xJgAFE6kKyMstMAAAAAAElFTkSuQmCC
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: image/png; name="image002.png"
+Content-Description: image002.png
+Content-Disposition: inline; filename="image002.png"; size=1581;
+	creation-date="Thu, 10 Aug 2023 02:50:17 GMT";
+	modification-date="Thu, 10 Aug 2023 03:26:15 GMT"
+Content-ID: <image002.png@01D9CB78.71290CD0>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2
+MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJ
+RD0ieG1wLmlpZDo1OUM0MDFEN0E4QTQxMUU5OEQzQTg2RjZGMTAxNjVEOSIgeG1wTU06RG9jdW1l
+bnRJRD0ieG1wLmRpZDo1OUM0MDFEOEE4QTQxMUU5OEQzQTg2RjZGMTAxNjVEOSI+IDx4bXBNTTpE
+ZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5QzQwMUQ1QThBNDExRTk4RDNB
+ODZGNkYxMDE2NUQ5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5QzQwMUQ2QThBNDExRTk4
+RDNBODZGNkYxMDE2NUQ5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBt
+ZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+I3EwEgAAAZBJREFUeNqslD1Lw0AYgJOo6ODiWBxUBBWH
+gHZxiErdVLRLoDi42MHBHyD4BwQ3J8HBwUWEDlZQ3IofaxSKi4OjdHBW1CH1ObmE1zOxLeTgyZvc
+5Z7c5b07u9lsWlmWbnWxbftX5VIw6xCK4EMBcrqpATWoQPUyfxvKfmpw9s9FCJHlCUfgthhMHTaQ
+BqlCZKuEU+hrc4YfUEJ6/keoR3bXgUxKPTXSWLh8P6f+2UMb0/xv+lMX0zehoyuKhixI6KTqJqAX
+NmEf3nWbqx1WJPSNzmuwDZ+irsy0nuALDnk+hlfR7kthwRDO02mPOAo7cAbPxjsrMCSeC/E6FOss
+Kj0kqQvpC/e7Kf9t0HjOyRGaZQbCFolYSKp0xA6QZV0tyzQTo1/Uv0OWhhTWjEa10rfoOJkgGyAc
+JHynJoUV0aCm+gb9MG7IRgjXRjIs6YiSUtWL09UfuYITeEQyRhwGtS3LKTuprh3Zb704y/rUKOkX
+rA4Ph8DMciRVp4anp9DO/vWikybOpnkeZnLAZlm+BRgAiuyZ6ClrpZ8AAAAASUVORK5CYII=
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: image/png; name="image003.png"
+Content-Description: image003.png
+Content-Disposition: inline; filename="image003.png"; size=1603;
+	creation-date="Thu, 10 Aug 2023 02:50:17 GMT";
+	modification-date="Thu, 10 Aug 2023 03:26:15 GMT"
+Content-ID: <image003.png@01D9CB78.71290CD0>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2
+MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJ
+RD0ieG1wLmlpZDo1RUUzRjU5QkE4QTQxMUU5QjQ0OUE4QzcxRjFERDBCRiIgeG1wTU06RG9jdW1l
+bnRJRD0ieG1wLmRpZDo1RUUzRjU5Q0E4QTQxMUU5QjQ0OUE4QzcxRjFERDBCRiI+IDx4bXBNTTpE
+ZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVFRTNGNTk5QThBNDExRTlCNDQ5
+QThDNzFGMUREMEJGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVFRTNGNTlBQThBNDExRTlC
+NDQ5QThDNzFGMUREMEJGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBt
+ZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TjGdhAAAAaZJREFUeNqslE0rhFEUx59n8q5pLKRBiYWy
+YYGFMImFIis2Chtl4xPITso3sLUUmrHyshRGU0oWSkLZoNlQkxoxk/G7073T6c5Mnsmc+j3nPvfl
+f++5L8fNZDJOOa1CfVzXzWuYvAqFcHMwDh26+g1OIQyRo77zbzlGLc7NfoQgQkHcFkz8sZgHWEQ0
+WlQQsU7cCbR6jDAF84ju5QkiFqDuWoTnlCA6gmhMaflEw4YQU/ukJlj3IFiptogFZc/Dp0Ntwi2J
+Tl+QhE+Pq+yCmdwpY1N6JmOjEIc6+IEP3bcGnqANqizRadg1IQ9bjdvsSSN+GW4oN+AHoYeyOrhm
+uLTGDOVCxlo8hHULC2zPLKLvlNes9qAM2YsNwAo8ww7cF+pkVvjq9VVhfu3TVntcCkbL8IwvpOCB
+vqD/sf1sXhAvZVOfqrn9SX01qsW1qdftCb0YE/4ddB/2nqXlS1nVd8zcfvVSavXAgBBz9L9fTK6S
+RFqG7FCR0KnqpcR3rJJDzD5lI/qI64djD2IqfY2ZTGMsLx8WSbDtqq+VYMOIpQom2HLarwADAHE/
+i9d7bZodAAAAAElFTkSuQmCC
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: image/png; name="Outlook-cid_image0.png"
+Content-Description: Outlook-cid_image0.png
+Content-Disposition: inline; filename="Outlook-cid_image0.png"; size=1540;
+	creation-date="Thu, 10 Aug 2023 03:26:14 GMT";
+	modification-date="Thu, 10 Aug 2023 03:26:15 GMT"
+Content-ID: <993e5c71-51be-481c-bbf0-6cb5085ba778>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2
+MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJ
+RD0ieG1wLmlpZDo1M0VCMjI1MkE4QTQxMUU5QjJBNERFQjUwMDY2MUY0RCIgeG1wTU06RG9jdW1l
+bnRJRD0ieG1wLmRpZDo1M0VCMjI1M0E4QTQxMUU5QjJBNERFQjUwMDY2MUY0RCI+IDx4bXBNTTpE
+ZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjUzRUIyMjUwQThBNDExRTlCMkE0
+REVCNTAwNjYxRjREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUzRUIyMjUxQThBNDExRTlC
+MkE0REVCNTAwNjYxRjREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBt
+ZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+LcrZxQAAAUxJREFUeNqslDFLw0AUgL2YwW5Oalx0cbQg
+nYQ6BATFwS6F7i6u+hNc/BkBRyEi7SCCQwZdHKqS2b3/QKRD43flWZ6tlwa9gy8v3L37eHfJnSmK
+YsFnC+3DGPOj86i/FxBa0IYYIhkaQAYpdO8ajyM9zxZnxg8lRNYgJFCfU0wOJ0j7TiGyY8I1LFVc
+4Sd0kPZmhFLZk0P2AjfwAYdwMCVt2kqtK1R7ljhk77DLhKHkLk8J7ZyE/h3iKJTOVsmePVgZE9Z5
+v4KtX3Lq4rgNpKNdsk9DiSuwDxuOvLHjWxg7ks6p7sy+EN/Afr0LR26shZEjqcZSa7J3i7J/m47c
+aPJjl7RLWAVb5Ta8zvuPAnUC/tsGWph5EGZamHoQplrYlbP515aLo9LRe4Z7WINTx3meHD3vl0Og
+R2WgWXH5uVTW050z96GXC9Zn+xJgAFE6kKyMstMAAAAAAElFTkSuQmCC
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: image/png; name="Outlook-cid_image0.png"
+Content-Description: Outlook-cid_image0.png
+Content-Disposition: inline; filename="Outlook-cid_image0.png"; size=1608;
+	creation-date="Thu, 10 Aug 2023 03:26:14 GMT";
+	modification-date="Thu, 10 Aug 2023 03:26:15 GMT"
+Content-ID: <6c5bb017-9d76-4d88-9e45-60dfa4997629>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2
+MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJ
+RD0ieG1wLmlpZDo1OUM0MDFEN0E4QTQxMUU5OEQzQTg2RjZGMTAxNjVEOSIgeG1wTU06RG9jdW1l
+bnRJRD0ieG1wLmRpZDo1OUM0MDFEOEE4QTQxMUU5OEQzQTg2RjZGMTAxNjVEOSI+IDx4bXBNTTpE
+ZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5QzQwMUQ1QThBNDExRTk4RDNB
+ODZGNkYxMDE2NUQ5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5QzQwMUQ2QThBNDExRTk4
+RDNBODZGNkYxMDE2NUQ5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBt
+ZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+I3EwEgAAAZBJREFUeNqslD1Lw0AYgJOo6ODiWBxUBBWH
+gHZxiErdVLRLoDi42MHBHyD4BwQ3J8HBwUWEDlZQ3IofaxSKi4OjdHBW1CH1ObmE1zOxLeTgyZvc
+5Z7c5b07u9lsWlmWbnWxbftX5VIw6xCK4EMBcrqpATWoQPUyfxvKfmpw9s9FCJHlCUfgthhMHTaQ
+BqlCZKuEU+hrc4YfUEJ6/keoR3bXgUxKPTXSWLh8P6f+2UMb0/xv+lMX0zehoyuKhixI6KTqJqAX
+NmEf3nWbqx1WJPSNzmuwDZ+irsy0nuALDnk+hlfR7kthwRDO02mPOAo7cAbPxjsrMCSeC/E6FOss
+Kj0kqQvpC/e7Kf9t0HjOyRGaZQbCFolYSKp0xA6QZV0tyzQTo1/Uv0OWhhTWjEa10rfoOJkgGyAc
+JHynJoUV0aCm+gb9MG7IRgjXRjIs6YiSUtWL09UfuYITeEQyRhwGtS3LKTuprh3Zb704y/rUKOkX
+rA4Ph8DMciRVp4anp9DO/vWikybOpnkeZnLAZlm+BRgAiuyZ6ClrpZ8AAAAASUVORK5CYII=
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_
+Content-Type: image/png; name="Outlook-cid_image0.png"
+Content-Description: Outlook-cid_image0.png
+Content-Disposition: inline; filename="Outlook-cid_image0.png"; size=1630;
+	creation-date="Thu, 10 Aug 2023 03:26:14 GMT";
+	modification-date="Thu, 10 Aug 2023 03:26:15 GMT"
+Content-ID: <085b7a9e-fba5-4584-9e43-7f3f1e87b8d2>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2
+MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJ
+RD0ieG1wLmlpZDo1RUUzRjU5QkE4QTQxMUU5QjQ0OUE4QzcxRjFERDBCRiIgeG1wTU06RG9jdW1l
+bnRJRD0ieG1wLmRpZDo1RUUzRjU5Q0E4QTQxMUU5QjQ0OUE4QzcxRjFERDBCRiI+IDx4bXBNTTpE
+ZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVFRTNGNTk5QThBNDExRTlCNDQ5
+QThDNzFGMUREMEJGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVFRTNGNTlBQThBNDExRTlC
+NDQ5QThDNzFGMUREMEJGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBt
+ZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TjGdhAAAAaZJREFUeNqslE0rhFEUx59n8q5pLKRBiYWy
+YYGFMImFIis2Chtl4xPITso3sLUUmrHyshRGU0oWSkLZoNlQkxoxk/G7073T6c5Mnsmc+j3nPvfl
+f++5L8fNZDJOOa1CfVzXzWuYvAqFcHMwDh26+g1OIQyRo77zbzlGLc7NfoQgQkHcFkz8sZgHWEQ0
+WlQQsU7cCbR6jDAF84ju5QkiFqDuWoTnlCA6gmhMaflEw4YQU/ukJlj3IFiptogFZc/Dp0Ntwi2J
+Tl+QhE+Pq+yCmdwpY1N6JmOjEIc6+IEP3bcGnqANqizRadg1IQ9bjdvsSSN+GW4oN+AHoYeyOrhm
+uLTGDOVCxlo8hHULC2zPLKLvlNes9qAM2YsNwAo8ww7cF+pkVvjq9VVhfu3TVntcCkbL8IwvpOCB
+vqD/sf1sXhAvZVOfqrn9SX01qsW1qdftCb0YE/4ddB/2nqXlS1nVd8zcfvVSavXAgBBz9L9fTK6S
+RFqG7FCR0KnqpcR3rJJDzD5lI/qI64djD2IqfY2ZTGMsLx8WSbDtqq+VYMOIpQom2HLarwADAHE/
+i9d7bZodAAAAAElFTkSuQmCC
+
+--_009_PAXPR08MB7351E6445DD20648A6D7F0A18C13APAXPR08MB7351eurp_--
