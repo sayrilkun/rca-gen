@@ -48,8 +48,7 @@ def generate_response(prompt):
 def prompt(user_input):
     try:
         output, total_tokens, prompt_tokens, completion_tokens = generate_response(user_input)
-        log.info("AI response:")
-        log.info(output)
+        log.info("AI responded")
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(output)
         # st.session_state['model_name'].append(model_name)
@@ -68,6 +67,7 @@ def prompt(user_input):
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
+new_parser = st.checkbox("use new parser") # this is for testing purposes, remove this on real deployment
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
@@ -139,12 +139,14 @@ if uploaded_file != None:
 
     elif ext == '.msg':
         file = True
+        eml = email_parser.convert_msg_to_eml(uploaded_file)
+        parsed_mail = email_util.parse_from_bytes(eml.as_bytes())
 
     # INITIAL PROMPT, OTHER PROMPTS INSIDE PROMPTS.PY
     inc_timeline_prompt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {parsed_mail}
-    I want your output to be a Python Dataframe like this format below.
+    I want your output to be a Python Dataframe like this format below. Just a list of dictionaries please. No special characters or any with \\ for example \\n or \\'
 
     {prompts.inc_timeline_format}
 
@@ -177,6 +179,7 @@ if st.session_state['generated']:
         for i in range(len(st.session_state['generated'])):
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
+            log.info(st.session_state['generated'])
             try:
                 # CONVERT THE RESPONSE TO DATAFRAME
                 inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))

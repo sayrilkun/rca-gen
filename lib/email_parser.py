@@ -2,8 +2,7 @@
 # Imports
 #
 import ruthinit
-import mailbox
-import tempfile
+from external import outlookmsgfile
 from io import BytesIO
 
 #
@@ -14,4 +13,6 @@ log = ruthinit.log
 #
 # Functions
 #
-
+def convert_msg_to_eml(file):
+    eml = outlookmsgfile.load(file)
+    return eml
