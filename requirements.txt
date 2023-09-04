@@ -5,3 +5,4 @@ mail-parser
 python-docx
 pandas
 numpy
+extract-msg

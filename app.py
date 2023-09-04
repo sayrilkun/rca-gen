@@ -134,13 +134,19 @@ if uploaded_file != None:
 
     if ext == '.eml':
         file = True
+        log.info("Processing eml file")
         bytes_data = uploaded_file.getvalue()
         parsed_mail = email_util.parse_from_bytes(bytes_data)
 
-    elif ext == '.msg':
+    elif ext == '.msg': #v2 of parsing .msg
         file = True
-        eml = email_parser.convert_msg_to_eml(uploaded_file)
-        parsed_mail = email_util.parse_from_bytes(eml.as_bytes())
+        log.info("processing msg file")
+        parsed_mail = email_parser.convert_msg_to_text(uploaded_file)
+
+    # elif ext == '.msg':
+    #     file = True
+    #     eml = email_parser.convert_msg_to_eml(uploaded_file)
+    #     parsed_mail = email_util.parse_from_bytes(eml.as_bytes())
 
     # INITIAL PROMPT, OTHER PROMPTS INSIDE PROMPTS.PY
     inc_timeline_prompt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
