@@ -161,7 +161,7 @@ if uploaded_file != None:
 if generate_button:
     if file is True:
         log.info("Sending Message")
-        log.info(inc_timeline_prompt) //causes error: comment out for a while
+        log.info(inc_timeline_prompt) #//causes error: comment out for a while
         prompt(inc_timeline_prompt)
         file = False
 
