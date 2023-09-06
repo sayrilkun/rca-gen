@@ -12,7 +12,7 @@ sys.path.append('./lib/')
 import openai
 import streamlit as st
 from streamlit_chat import message
-import docx_util
+from lib import docx_util
 import pandas as pd
 import numpy as np
 import email_util
