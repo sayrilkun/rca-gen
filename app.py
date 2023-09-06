@@ -67,7 +67,6 @@ def prompt(user_input):
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
-new_parser = st.checkbox("use new parser") # this is for testing purposes, remove this on real deployment
 
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
@@ -152,7 +151,7 @@ if uploaded_file != None:
     inc_timeline_prompt = f'''Shortly summarize the contents of this email one by one thread per timestamp using only one or two sentences. Summarize the contents don't just copy it. 
 
     {parsed_mail}
-    I want your output to be a Python Dataframe like this format below. Just a list of dictionaries please. No special characters or any with \\ for example \\n or \\'
+    Can you please follow this format (No special characters no \\n or whatever):
 
     {prompts.inc_timeline_format}
 
@@ -194,7 +193,7 @@ if st.session_state['generated']:
                 continue
 
             # WRITE THE RESPONSE TO WORD DOCUMENT
-            docx_util.build_docx(st.session_state["generated"][i])
+            docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
         # SECOND PROMPT (RCA DETAILS)
         st.header("☢️ RCA Details")
