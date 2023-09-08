@@ -213,7 +213,7 @@ if st.session_state['generated']:
 
                 st.subheader("☢️ Investigation & Resolution")
                 st.subheader("☢️ Contributing Factors")
-                file = False
+                # file = False
 
     
         
