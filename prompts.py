@@ -22,7 +22,7 @@ rca_details_format = [
 
 rca_details_prompt = f''' You are an Incident Analyst. 
 Identify the Root cause of the incident and make an executive summary based on the 
-given email thread. 
+given email thread. Include important events happened in the thread in your executive summary.
 
 I want your output to be a Python Dataframe like this format below.
 
