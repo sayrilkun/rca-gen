@@ -56,3 +56,29 @@ I want your output to be a Python Dataframe like this format below. Always remem
 
 # "Contributing Factors" : "Answer #4"
 # 4. What are the factors that contributed to the existing issue.
+
+action_items_format = [{
+    "Actions" : "Actions",
+    "Description" : "Description",
+    "Owner" : "Owner",
+    "Date" : "21-November-22",
+    "Status" : "Status"
+    },
+    {
+    "Actions" : "Actions",
+    "Description" : "Description",
+    "Owner" : "Owner",
+    "Date" : "21-November-22",
+    "Status" : "Status"
+    }
+]
+
+action_items_prompt = f''' Identify the Action Items based on the analysis of the given email thread. Follow below categories
+
+For Actions, identify whether it is Diagnostic, Inquiry, Test, or Implementation.
+Give some description. Identify the owner, the date when it started and the status if completed or not.
+
+Can you please follow this format (No special characters no \\n or whatever):
+{action_items_format}
+
+'''
