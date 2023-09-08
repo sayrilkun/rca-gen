@@ -20,8 +20,7 @@ rca_details_format = [
     }]
 
 rca_details_prompt = f''' You are an Incident Analyst. 
-Identify the Root cause of the incident and make a lengthy executive summary, minimum 2 paragraphs based on the 
-given email thread. Include important events happened in the thread in your executive summary.
+Identify the Root cause of the incident and make a lengthy executive summary based on the given email thread and root cause. Include important events happened in the thread in your executive summary.
 
 I want you to strictly follow this format below.
 
