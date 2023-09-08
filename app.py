@@ -231,7 +231,7 @@ if st.session_state['generated']:
         try:
             st.table(inc_timeline_df)
         except Exception as e:
-            continue
+            pass
 
         # DOWNLOAD THE WORD FILE
         with open("output.docx", "rb") as file:
