@@ -52,6 +52,7 @@ I want your output to be a Python Dataframe like this format below. Always remem
 
 # SHOULD INCLUDE THIS IN RCA DETAILS SECTION, BUT RESPONSE IS ALWAYS GETTING CUT OFF 
 # PROBABLY IT CANT HANDLE SUPER LONG RESPONSES. HOPEFULLY AZURE CAN DO IT.
+# IF NOT, CREATE A PROMPT SEPARATELY
 
 # "Contributing Factors" : "Answer #4"
 # 4. What are the factors that contributed to the existing issue.
