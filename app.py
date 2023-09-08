@@ -227,9 +227,9 @@ if st.session_state['generated']:
         action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
         if action_items_button:
             prompt(prompts.action_items_prompt)
-            st.write(st.session_state["generated"][1])
+            st.write(st.session_state["generated"][2])
             try:
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
+                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][2]))
             except Exception as e:
                     pass
 
