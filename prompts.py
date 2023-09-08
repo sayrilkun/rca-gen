@@ -17,14 +17,13 @@ rca_details_format = [
     {
         "Root Cause" : "Root Cause",
         "RCA Executive Summary" : "RCA Executive Summary"
-    }
-]
+    }]
 
 rca_details_prompt = f''' You are an Incident Analyst. 
 Identify the Root cause of the incident and make a lengthy executive summary, minimum 2 paragraphs based on the 
 given email thread. Include important events happened in the thread in your executive summary.
 
-I want your output to be a Python Dataframe like this format below.
+I want you to strictly follow this format below.
 
 {rca_details_format}
 
