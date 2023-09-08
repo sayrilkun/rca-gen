@@ -202,7 +202,7 @@ if st.session_state['generated']:
         if rca_details_button:
             if file is True:
                 prompt(prompts.rca_details_prompt)
-                # st.write(st.session_state["generated"][1])
+                st.write(st.session_state["generated"][1])
                 rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
                 # st.table(rca_details_df)
 
