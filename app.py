@@ -182,8 +182,9 @@ with container:
 if st.session_state['generated']:
     with response_container:
         for i in range(len(st.session_state['generated'])):
+            # HIDING THE CHATBOX
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
-            message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
+            # message(st.session_state["generated"][i], key=str(i), avatar_style="bottts", seed = "Sophie")
             log.info(st.session_state['generated'])
             try:
                 # CONVERT THE RESPONSE TO DATAFRAME
