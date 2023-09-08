@@ -217,8 +217,9 @@ if st.session_state['generated']:
                     st.success(rca_details_df.iloc[0, 2])
 
                     st.subheader("☢️ Contributing Factors")
+                
                 except Exception as e:
-                    continue
+                    pass
 
                 # file = False
 
