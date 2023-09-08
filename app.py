@@ -234,7 +234,7 @@ if st.session_state['generated']:
                     pass
 
         st.header("☢️ RCA 5 WHYs")
-        five_whys_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+        five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
 
 
         st.header("☢️ Incident Timeline")
