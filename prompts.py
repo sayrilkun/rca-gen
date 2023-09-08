@@ -45,7 +45,7 @@ rca_details_prompt = f''' You are an Incident Analyst. I want you to answer 4 th
 3. What are the key dates that leads to investigation and resolution. Explain each dates.
 4. What are the factors that contributed to the existing issue.
 
-I want your output to be a Python Dataframe like this format below. Always remember to put }] at the end.
+I want your output to be a Python Dataframe like this format below. Always remember to put the brackets at the end.
 
 {rca_details_format}
 
