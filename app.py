@@ -203,33 +203,34 @@ if st.session_state['generated']:
             if file is True:
                 prompt(prompts.rca_details_prompt)
                 st.write(st.session_state["generated"][1])
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
-                # st.table(rca_details_df)
+                try:
+                    rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
+                    # st.table(rca_details_df)
 
-                st.subheader("☢️ Root Cause")
-                st.success(rca_details_df.iloc[0, 0])
+                    st.subheader("☢️ Root Cause")
+                    st.success(rca_details_df.iloc[0, 0])
 
-                st.subheader("☢️ RCA Executive Summary")
-                st.success(rca_details_df.iloc[0, 1])
+                    st.subheader("☢️ RCA Executive Summary")
+                    st.success(rca_details_df.iloc[0, 1])
 
-                st.subheader("☢️ Investigation & Resolution")
-                st.success(rca_details_df.iloc[0, 2])
-                
-                st.subheader("☢️ Contributing Factors")
-                file = False
+                    st.subheader("☢️ Investigation & Resolution")
+                    st.success(rca_details_df.iloc[0, 2])
 
-    
-        
+                    st.subheader("☢️ Contributing Factors")
+                except Exception as e:
+                    continue
 
-        
+                # file = False
 
         st.header("☢️ Action Items")
 
         st.header("☢️ RCA 5 WHYs")
 
         st.header("☢️ Incident Timeline")
-        st.table(inc_timeline_df)
-
+        try:
+            st.table(inc_timeline_df)
+        except Exception as e:
+            continue
 
         # DOWNLOAD THE WORD FILE
         with open("output.docx", "rb") as file:
