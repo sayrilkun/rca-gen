@@ -35,7 +35,7 @@ rca_details_format = [
     {
         "Root Cause" : "Answer #1",
         "RCA Executive Summary" : "Answer #2",
-        "Investigation and Resolution" : "Answer #3"
+        "Investigation and Resolution" : "Answer #3",
         "Contributing Factors" : "Answer #4"
     }]
 rca_details_prompt = f''' You are an Incident Analyst. I want you to answer 4 things for me based on your profession.
