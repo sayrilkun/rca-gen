@@ -166,7 +166,7 @@ if generate_button:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
         # prompt(inc_timeline_prompt)
-        prompt("hi 0")
+        prompt("what is A")
         # file = False
 
 # container for chat history
@@ -208,7 +208,7 @@ if st.session_state['generated']:
             # if file is True:
             # prompt(prompts.rca_details_prompt)
             # time.sleep(3)
-            prompt("hi 1 ")
+            prompt("WHAT IS B ")
             # message(" RC details! 😎", key="po", avatar_style="bottts", seed = "Sophie")
 
             # prompt("hi 2")
@@ -234,11 +234,12 @@ if st.session_state['generated']:
 
         #     # file = False
 
-        # st.header("☢️ Action Items")
-        # action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
-        # if action_items_button:
-        #     prompt(prompts.action_items_prompt)
-        #     st.write(st.session_state["generated"][2])
+        st.header("☢️ Action Items")
+        action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+        if action_items_button:
+            # prompt(prompts.action_items_prompt)
+            prompt("WHAT IS C")
+            st.write(st.session_state["generated"][2])
         #     try:
         #         action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
         #         st.table(action_items_df)
@@ -266,11 +267,11 @@ if st.session_state['generated']:
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
 
-action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
-if action_items_button:
-    # prompt(prompts.action_items_prompt)
-    prompt("hi 2")
-    st.write(st.session_state["generated"][2])
+# action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+# if action_items_button:
+#     # prompt(prompts.action_items_prompt)
+#     prompt("hi 2")
+#     st.write(st.session_state["generated"][2])
     # message(" Action Items! 😎", key="po", avatar_style="bottts", seed = "Sophie")
 
 # ---- HIDE STREAMLIT STYLE ----
