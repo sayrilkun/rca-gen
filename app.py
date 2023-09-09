@@ -268,6 +268,8 @@ action_items_button = st.button("Generate Action Items :rocket:", key="action_it
 if action_items_button:
     # prompt(prompts.action_items_prompt)
     prompt("hi")
+    message(" generating your RCA! 😎", key="po", avatar_style="bottts", seed = "Sophie")
+
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
