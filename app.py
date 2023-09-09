@@ -233,7 +233,7 @@ if st.session_state['generated']:
         #         pass
 
         #     # file = False
-if st.session_state['generated'][2]:
+if st.session_state['generated']:
     with response_container:
         st.header("☢️ Action Items")
         action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
