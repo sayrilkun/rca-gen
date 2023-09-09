@@ -206,7 +206,7 @@ if st.session_state['generated']:
         rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
         if rca_details_button:
             # if file is True:
-            # prompt(prompts.rca_details_prompt)
+            prompt(prompts.rca_details_prompt)
             # time.sleep(3)
             # prompt("WHAT IS B ")
             # message(" RC details! 😎", key="po", avatar_style="bottts", seed = "Sophie")
