@@ -213,7 +213,7 @@ if st.session_state['generated']:
 
             # prompt("hi 2")
             
-            st.write(st.session_state["generated"][1])
+            st.success(st.session_state["generated"][1])
         #     try:
         #         rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
         #         # st.table(rca_details_df)
@@ -239,7 +239,7 @@ if st.session_state['generated']:
         if action_items_button:
             # prompt(prompts.action_items_prompt)
             prompt("WHAT IS C")
-            st.write(st.session_state["generated"][2])
+            st.success(st.session_state["generated"][2])
         #     try:
         #         action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
         #         st.table(action_items_df)
