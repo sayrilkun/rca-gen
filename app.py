@@ -214,7 +214,7 @@ if st.session_state['generated']:
             # prompt("hi 2")
             
             rca_d = st.session_state["generated"][1]
-            st.success(rca_d_
+            st.success(rca_d)
         #     try:
         #         rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
         #         # st.table(rca_details_df)
