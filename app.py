@@ -20,7 +20,7 @@ import prompts
 from lib import ruthinit
 from lib import filechecker
 from lib import email_parser
-
+import time
 #
 # Globals
 #
@@ -206,6 +206,9 @@ if st.session_state['generated']:
         if rca_details_button:
             # if file is True:
             prompt(prompts.rca_details_prompt)
+            time.sleep(3)
+            prompt("hi")
+            
         #     st.write(st.session_state["generated"][1])
         #     try:
         #         rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
