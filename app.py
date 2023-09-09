@@ -186,17 +186,17 @@ with container:
 #chat conversation
 if st.session_state['generated']:
     with response_container:
-        for i in range(len(st.session_state['generated'])):
+        # for i in range(len(st.session_state['generated'])):
             # HIDING THE CHATBOX
-            message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
-            message(f'XX{i}XX {st.session_state["generated"][i]} ', key=str(i), avatar_style="bottts", seed = "Sophie")
-            log.info(st.session_state['generated'])
-            try:
-                # CONVERT THE RESPONSE TO DATAFRAME
-                inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
-                
-            except Exception as e:
-                pass
+            # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
+            # message(f'XX{i}XX {st.session_state["generated"][i]} ', key=str(i), avatar_style="bottts", seed = "Sophie")
+            # log.info(st.session_state['generated'])
+        try:
+            # CONVERT THE RESPONSE TO DATAFRAME
+            inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
+            
+        except Exception as e:
+            pass
 
             # WRITE THE RESPONSE TO WORD DOCUMENT
             # docx_util.build_word_document(eval(st.session_state["generated"][0]))
@@ -209,9 +209,11 @@ if st.session_state['generated']:
             # prompt(prompts.rca_details_prompt)
             # time.sleep(3)
             prompt("hi 1 ")
-            prompt("hi 2")
+            # message(" RC details! 😎", key="po", avatar_style="bottts", seed = "Sophie")
+
+            # prompt("hi 2")
             
-        #     st.write(st.session_state["generated"][1])
+            st.write(st.session_state["generated"][1])
         #     try:
         #         rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
         #         # st.table(rca_details_df)
@@ -267,8 +269,9 @@ if st.session_state['generated']:
 action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
 if action_items_button:
     # prompt(prompts.action_items_prompt)
-    prompt("hi")
-    message(" generating your RCA! 😎", key="po", avatar_style="bottts", seed = "Sophie")
+    prompt("hi 2")
+    st.write(st.session_state["generated"][2])
+    # message(" Action Items! 😎", key="po", avatar_style="bottts", seed = "Sophie")
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
