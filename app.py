@@ -237,7 +237,7 @@ if st.session_state['generated']:
         if action_items_button:
             # prompt(prompts.action_items_prompt)
             prompt("WHAT IS C")
-            action_i = st.session_state["generated"][1]
+            action_i = st.session_state["generated"][2]
             st.success(action_i)
             # st.success(st.session_state["generated"][2])
         #     try:
