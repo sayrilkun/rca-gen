@@ -240,6 +240,7 @@ if st.session_state['generated']:
         if action_items_button:
             # prompt(prompts.action_items_prompt)
             prompt("WHAT IS C")
+            st.success(st.session_state["generated"][1])
             st.success(st.session_state["generated"][2])
         #     try:
         #         action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
