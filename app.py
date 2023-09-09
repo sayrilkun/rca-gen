@@ -262,6 +262,7 @@ if st.session_state['generated']:
 action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
 if action_items_button:
     prompt(prompts.action_items_prompt)
+    prompt("hi")
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
