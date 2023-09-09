@@ -196,30 +196,30 @@ if st.session_state['generated']:
             # WRITE THE RESPONSE TO WORD DOCUMENT
             docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
-        # SECOND PROMPT (RCA DETAILS)
-        st.header("☢️ RCA Details")
-        rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
-        if rca_details_button:
-            # if file is True:
-            prompt(prompts.rca_details_prompt)
-            st.write(st.session_state["generated"][1])
-            try:
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
-                # st.table(rca_details_df)
+            # SECOND PROMPT (RCA DETAILS)
+            st.header("☢️ RCA Details")
+            rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
+            if rca_details_button:
+                # if file is True:
+                prompt(prompts.rca_details_prompt)
+                st.write(st.session_state["generated"][1])
+                try:
+                    rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
+                    # st.table(rca_details_df)
 
-                st.subheader("☢️ Root Cause")
-                st.success(rca_details_df.iloc[0, 0])
+                    st.subheader("☢️ Root Cause")
+                    st.success(rca_details_df.iloc[0, 0])
 
-                st.subheader("☢️ RCA Executive Summary")
-                st.success(rca_details_df.iloc[0, 1])
+                    st.subheader("☢️ RCA Executive Summary")
+                    st.success(rca_details_df.iloc[0, 1])
 
-                st.subheader("☢️ Investigation & Resolution")
-                st.success(rca_details_df.iloc[0, 2])
+                    st.subheader("☢️ Investigation & Resolution")
+                    st.success(rca_details_df.iloc[0, 2])
 
-                st.subheader("☢️ Contributing Factors")
-            
-            except Exception as e:
-                pass
+                    st.subheader("☢️ Contributing Factors")
+                
+                except Exception as e:
+                    pass
 
                 # file = False
 
