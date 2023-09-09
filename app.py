@@ -165,7 +165,8 @@ if generate_button:
     if file is True:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
-        prompt(inc_timeline_prompt)
+        # prompt(inc_timeline_prompt)
+        prompt("hi")
         # file = False
 
 # container for chat history
@@ -205,8 +206,9 @@ if st.session_state['generated']:
         rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
         if rca_details_button:
             # if file is True:
-            prompt(prompts.rca_details_prompt)
-            time.sleep(3)
+            # prompt(prompts.rca_details_prompt)
+            # time.sleep(3)
+            prompt("hi")
             prompt("hi")
             
         #     st.write(st.session_state["generated"][1])
@@ -264,7 +266,7 @@ if st.session_state['generated']:
 
 action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
 if action_items_button:
-    prompt(prompts.action_items_prompt)
+    # prompt(prompts.action_items_prompt)
     # prompt("hi")
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
