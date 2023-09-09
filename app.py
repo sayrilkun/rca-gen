@@ -165,8 +165,8 @@ if generate_button:
     if file is True:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
-        # prompt(inc_timeline_prompt)
-        prompt("what is A")
+        prompt(inc_timeline_prompt)
+        # prompt("what is A")
         # file = False
 
 # container for chat history
@@ -208,32 +208,32 @@ if st.session_state['generated']:
             # if file is True:
             # prompt(prompts.rca_details_prompt)
             # time.sleep(3)
-            prompt("WHAT IS B ")
+            # prompt("WHAT IS B ")
             # message(" RC details! 😎", key="po", avatar_style="bottts", seed = "Sophie")
 
             # prompt("hi 2")
             
-            rca_d = st.session_state["generated"][1]
-            st.success(rca_d)
-        #     try:
-        #         rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
-        #         # st.table(rca_details_df)
+            # rca_d = st.session_state["generated"][1]
+            # st.success(rca_d)
+            try:
+                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
+                # st.table(rca_details_df)
 
-        #         st.subheader("☢️ Root Cause")
-        #         st.success(rca_details_df.iloc[0, 0])
+                st.subheader("☢️ Root Cause")
+                st.success(rca_details_df.iloc[0, 0])
 
-        #         st.subheader("☢️ RCA Executive Summary")
-        #         st.success(rca_details_df.iloc[0, 1])
+                st.subheader("☢️ RCA Executive Summary")
+                st.success(rca_details_df.iloc[0, 1])
 
-        #         st.subheader("☢️ Investigation & Resolution")
-        #         st.success(rca_details_df.iloc[0, 2])
+                st.subheader("☢️ Investigation & Resolution")
+                st.success(rca_details_df.iloc[0, 2])
 
-        #         st.subheader("☢️ Contributing Factors")
+                st.subheader("☢️ Contributing Factors")
             
-        #     except Exception as e:
-        #         pass
+            except Exception as e:
+                pass
 
-        #     # file = False
+            # file = False
         st.header("☢️ Action Items")
         action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
         if action_items_button:
