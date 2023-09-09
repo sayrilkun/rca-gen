@@ -51,10 +51,7 @@ def prompt(user_input):
         log.info("AI responded")
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(output)
-        try:
-            log.info(st.session_state['generated'][1])
-        except Exception as e:
-            log.info(st.session_state['generated'][0])
+        log.info(st.session_state['generated'])
         # st.session_state['model_name'].append(model_name)
         st.session_state['total_tokens'].append(total_tokens)
 
@@ -190,7 +187,7 @@ if st.session_state['generated']:
             # HIDING THE CHATBOX
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             # message(f'XX{i}XX {st.session_state["generated"][i]} ', key=str(i), avatar_style="bottts", seed = "Sophie")
-            # log.info(st.session_state['generated'])
+        log.info(st.session_state['generated'])
         try:
             # CONVERT THE RESPONSE TO DATAFRAME
             inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
