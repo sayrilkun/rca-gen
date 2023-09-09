@@ -162,7 +162,7 @@ if generate_button:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
         prompt(inc_timeline_prompt)
-        file = False
+        # file = False
 
 # container for chat history
 response_container = st.container()
