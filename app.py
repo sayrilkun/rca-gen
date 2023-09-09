@@ -194,7 +194,7 @@ if st.session_state['generated']:
                 pass
 
             # WRITE THE RESPONSE TO WORD DOCUMENT
-            docx_util.build_word_document(eval(st.session_state["generated"][0]))
+            # docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
             # SECOND PROMPT (RCA DETAILS)
         st.header("☢️ RCA Details")
