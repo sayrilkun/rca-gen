@@ -166,7 +166,7 @@ if generate_button:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
         # prompt(inc_timeline_prompt)
-        prompt("hi")
+        prompt("hi 0")
         # file = False
 
 # container for chat history
@@ -208,8 +208,8 @@ if st.session_state['generated']:
             # if file is True:
             # prompt(prompts.rca_details_prompt)
             # time.sleep(3)
-            prompt("hi")
-            prompt("hi")
+            prompt("hi 1 ")
+            prompt("hi 2")
             
         #     st.write(st.session_state["generated"][1])
         #     try:
