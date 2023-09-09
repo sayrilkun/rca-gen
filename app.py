@@ -196,52 +196,52 @@ if st.session_state['generated']:
             # WRITE THE RESPONSE TO WORD DOCUMENT
             docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
-        # SECOND PROMPT (RCA DETAILS)
-        st.header("☢️ RCA Details")
-        rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
-        if rca_details_button:
-            if file is True:
-                prompt(prompts.rca_details_prompt)
-                st.write(st.session_state["generated"][1])
+            # SECOND PROMPT (RCA DETAILS)
+            st.header("☢️ RCA Details")
+            rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
+            if rca_details_button:
+                if file is True:
+                    prompt(prompts.rca_details_prompt)
+                    st.write(st.session_state["generated"][1])
+                    try:
+                        rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
+                        # st.table(rca_details_df)
+
+                        st.subheader("☢️ Root Cause")
+                        st.success(rca_details_df.iloc[0, 0])
+
+                        st.subheader("☢️ RCA Executive Summary")
+                        st.success(rca_details_df.iloc[0, 1])
+
+                        st.subheader("☢️ Investigation & Resolution")
+                        st.success(rca_details_df.iloc[0, 2])
+
+                        st.subheader("☢️ Contributing Factors")
+                    
+                    except Exception as e:
+                        pass
+
+                    # file = False
+
+            st.header("☢️ Action Items")
+            action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+            if action_items_button:
+                prompt(prompts.action_items_prompt)
+                st.write(st.session_state["generated"][2])
                 try:
-                    rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
-                    # st.table(rca_details_df)
-
-                    st.subheader("☢️ Root Cause")
-                    st.success(rca_details_df.iloc[0, 0])
-
-                    st.subheader("☢️ RCA Executive Summary")
-                    st.success(rca_details_df.iloc[0, 1])
-
-                    st.subheader("☢️ Investigation & Resolution")
-                    st.success(rca_details_df.iloc[0, 2])
-
-                    st.subheader("☢️ Contributing Factors")
-                
+                    rca_details_df = pd.DataFrame(eval(st.session_state["generated"][]))
                 except Exception as e:
-                    pass
+                        pass
 
-                # file = False
+            st.header("☢️ RCA 5 WHYs")
+            five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
 
-        st.header("☢️ Action Items")
-        action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
-        if action_items_button:
-            prompt(prompts.action_items_prompt)
-            st.write(st.session_state["generated"][2])
+
+            st.header("☢️ Incident Timeline")
             try:
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][]))
+                st.table(inc_timeline_df)
             except Exception as e:
-                    pass
-
-        st.header("☢️ RCA 5 WHYs")
-        five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
-
-
-        st.header("☢️ Incident Timeline")
-        try:
-            st.table(inc_timeline_df)
-        except Exception as e:
-            st.write(st.session_state["generated"][0])
+                st.write(st.session_state["generated"][0])
 
         # DOWNLOAD THE WORD FILE
         with open("output.docx", "rb") as file:
