@@ -213,7 +213,8 @@ if st.session_state['generated']:
 
             # prompt("hi 2")
             
-            st.success(st.session_state["generated"][1])
+            rca_d = st.session_state["generated"][1]
+            st.success(rca_d_
         #     try:
         #         rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
         #         # st.table(rca_details_df)
@@ -233,14 +234,13 @@ if st.session_state['generated']:
         #         pass
 
         #     # file = False
-if st.session_state['generated']:
-    with response_container:
         st.header("☢️ Action Items")
         action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
         if action_items_button:
             # prompt(prompts.action_items_prompt)
             prompt("WHAT IS C")
-            st.success(st.session_state["generated"][1])
+            action_i = st.session_state["generated"][1]
+            st.success(action_i)
             # st.success(st.session_state["generated"][2])
         #     try:
         #         action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
