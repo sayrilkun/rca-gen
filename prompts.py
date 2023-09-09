@@ -82,3 +82,5 @@ Can you please follow this format (No special characters no \\n or whatever):
 {action_items_format}
 
 '''
+
+five_whys_prompt = f''' Generate a 5 whys analysis based on the given email thread'''
