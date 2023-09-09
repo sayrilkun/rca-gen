@@ -51,7 +51,10 @@ def prompt(user_input):
         log.info("AI responded")
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(output)
-        log.info(st.session_state['generated'][1])
+        try:
+            log.info(st.session_state['generated'][1])
+        except Exception as e:
+            log.info(st.session_state['generated'][0])
         # st.session_state['model_name'].append(model_name)
         st.session_state['total_tokens'].append(total_tokens)
 
