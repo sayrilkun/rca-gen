@@ -191,7 +191,7 @@ if st.session_state['generated']:
                 inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
                 
             except Exception as e:
-                continue
+                pass
 
             # WRITE THE RESPONSE TO WORD DOCUMENT
             docx_util.build_word_document(eval(st.session_state["generated"][0]))
