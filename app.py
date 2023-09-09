@@ -229,7 +229,8 @@ if st.session_state['generated']:
             prompt(prompts.action_items_prompt)
             st.write(st.session_state["generated"][3])
             try:
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][3]))
+                action_items_df = pd.DataFrame(eval(st.session_state["generated"][3]))
+                st.table(action_items_df)
             except Exception as e:
                     pass
 
