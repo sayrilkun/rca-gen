@@ -193,8 +193,8 @@ if st.session_state['generated']:
             except Exception as e:
                 continue
 
-        # WRITE THE RESPONSE TO WORD DOCUMENT
-        docx_util.build_word_document(eval(st.session_state["generated"][0]))
+            # WRITE THE RESPONSE TO WORD DOCUMENT
+            docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
         # SECOND PROMPT (RCA DETAILS)
         st.header("☢️ RCA Details")
