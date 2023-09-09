@@ -203,7 +203,6 @@ if st.session_state['generated']:
             if file is True:
                 prompt(prompts.rca_details_prompt)
                 st.write(st.session_state["generated"][1])
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
                 try:
                     rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
                     # st.table(rca_details_df)
@@ -230,7 +229,7 @@ if st.session_state['generated']:
             prompt(prompts.action_items_prompt)
             st.write(st.session_state["generated"][2])
             try:
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][]))
             except Exception as e:
                     pass
 
