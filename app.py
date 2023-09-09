@@ -223,16 +223,16 @@ if st.session_state['generated']:
 
             # file = False
 
-        # st.header("☢️ Action Items")
-        # action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+        st.header("☢️ Action Items")
+        action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
         # if action_items_button:
-        #     prompt(prompts.action_items_prompt)
-        #     st.write(st.session_state["generated"][2])
-        #     try:
-        #         action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
-        #         st.table(action_items_df)
-        #     except Exception as e:
-        #             pass
+        prompt(prompts.action_items_prompt)
+        st.write(st.session_state["generated"][2])
+        try:
+            action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+            st.table(action_items_df)
+        except Exception as e:
+                pass
 
         # st.header("☢️ RCA 5 WHYs")
         # five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
