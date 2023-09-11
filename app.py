@@ -99,6 +99,7 @@ counter_placeholder = st.sidebar.empty()
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 # Set model
+model_name = "GPT-3.5"
 model = "gpt-3.5-turbo"
 
 # reset everything
