@@ -83,7 +83,8 @@ if 'messages' not in st.session_state:
     st.session_state['messages'] = [
         {"role": "system", "content": "You are a helpful assistant."}
     ]
-
+if 'model_name' not in st.session_state:
+    st.session_state['model_name'] = []
 if 'cost' not in st.session_state:
     st.session_state['cost'] = []
 if 'total_tokens' not in st.session_state:
@@ -108,7 +109,7 @@ if clear_button:
         {"role": "system", "content": "You are a helpful assistant."}
     ]
     st.session_state['number_tokens'] = []
-    # st.session_state['model_name'] = []
+    st.session_state['model_name'] = []
     st.session_state['cost'] = []
     st.session_state['total_cost'] = 0.0
     st.session_state['total_tokens'] = []
