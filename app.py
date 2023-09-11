@@ -241,22 +241,20 @@ if st.session_state['generated']:
         st.header("☢️ Action Items")
         action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
         if action_items_button:
-            # prompt(prompts.action_items_prompt)
-            prompt("WHAT IS C")
-            action_i = st.session_state["generated"][2]
-            st.success(action_i)
-            # st.success(st.session_state["generated"][2])
-        #     try:
-        #         action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
-        #         st.table(action_items_df)
-        #     except Exception as e:
-        #             pass
+            prompt(prompts.action_items_prompt)
+            st.success(st.session_state["generated"][2])
+            try:
+                action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+                st.table(action_items_df)
+                
+            except Exception as e:
+                    pass
 
-        # st.header("☢️ RCA 5 WHYs")
-        # five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
-        # if five_whys_button:
-        #     prompt(prompts.five_whys_prompt)
-        #     st.write(st.session_state["generated"][3])
+        st.header("☢️ RCA 5 WHYs")
+        five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
+        if five_whys_button:
+            prompt(prompts.five_whys_prompt)
+            st.write(st.session_state["generated"][3])
 
         st.header("☢️ Incident Timeline")
         try:
