@@ -100,7 +100,9 @@ clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 # Set model
 model_name = "GPT-3.5"
-model = "gpt-3.5-turbo"
+# model = "gpt-3.5-turbo"
+model = "gpt-4"
+
 
 # reset everything
 if clear_button:
