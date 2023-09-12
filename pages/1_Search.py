@@ -31,7 +31,7 @@ with search_container:
         search_state = True
         for item in items:
             if user_input in json.dumps(item, indent=True):
-                search_results = json.dumps(item["id"], indent=True)
+                search_results.append(json.dumps(item["id"], indent=True))
         
     for i in range(len(search_results)):
             existing_item = container.read_item(
