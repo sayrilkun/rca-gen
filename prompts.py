@@ -44,7 +44,7 @@ rca_details_prompt = f''' You are an Incident Analyst. I want you to answer 3 th
 2. Generate a lengthy executive summary, minimum 2 paragraphs, based on the given email thread. Include important events happened in the thread in your executive summary.
 3. What are the key dates that leads to investigation and resolution. Explain each dates.
 
-I want your output to be a Python Dataframe like this format below. Always remember to put the brackets at the end.
+I want your output to be a Python Dataframe like this format below. (No special characters like /*'" no \\n or whatever).
 
 {rca_details_format}
 
