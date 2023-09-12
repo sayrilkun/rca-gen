@@ -58,7 +58,7 @@ def build_docx(output_text):
     # Save the document
     doc.save("output.docx")
 
-def build_word_document(rcadet, inc_timeline):
+def build_word_document(inc_timeline):
     log.info("Creating Document")
     #initialize document
     doc = docx.Document()
@@ -69,7 +69,9 @@ def build_word_document(rcadet, inc_timeline):
     log.info("Filling up RCA Details.")
     #RCA Details
     doc.add_heading('Root Cause Analysis Details', 1)
-    rcaparagraph1 = doc.add_paragraph(rcadet)
+    rcaparagraph1 = doc.add_paragraph(lorem1)
+    rcaparagraph2 = doc.add_paragraph(lorem2)
+    rcaparagraph3 = doc.add_paragraph(lorem3)
 
     log.info("Filling up incident timeline.")
     #incident timeline

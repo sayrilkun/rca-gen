@@ -225,8 +225,7 @@ if st.session_state['generated']:
                 f"Model used: Number of tokens: {st.session_state['total_tokens'][i]};")
             try:
                 # CONVERT THE RESPONSE TO DATAFRAME
-                replaced_generated_table = st.session_state["generated"][0].replace("\\'", "").replace("\\n", "")
-                inc_timeline_df = pd.DataFrame(eval(replaced_generated_table))
+                inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
                 
             except Exception as e:
                 pass
@@ -239,8 +238,7 @@ if st.session_state['generated']:
         rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
         if rca_details_button:
             prompt(prompts.rca_details_prompt)
-            replaced_generated_rca = st.session_state["generated"][1].replace("\\'", "").replace("\\n", "")
-            st.write(replaced_generated_rca)
+            st.write(st.session_state["generated"][1])
 
             try:
             # rca_details="[{'Root Cause': 'The root cause of the incident is a combination of factors: a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. These issues are impacting the point-of-sale system, leading to transaction failures and disruptions for clients.', 'RCA Executive Summary': 'The email thread revolves around the urgent resolution of a critical point-of-sale system issue. The development manager acknowledges the teams efforts and suggests exploring potential leads involving a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. The system administrator identifies a correlation between CPU and memory spikes and transaction failures, indicating a possible resource strain caused by misconfiguration. The business analyst raises the question of a potential connection between the introduction of a new payment gateway and the system issues. A senior developer discovers an intriguing behavior in the payment processing code, requiring further investigation. The database administrator uncovers an increase in deadlock incidents during the occurred system issues, leading to transactional stalls. Overall, the executive summary highlights the importance of promptly addressing the situation to minimize customer dissatisfaction and lost sales.', 'Investigation and Resolution': 'The key dates that lead to investigation and resolution are August 9, 2023, when the team first raises awareness of the system issue, and August 10, 2023, when the team intensifies the investigation by examining the payment gateway integration, payment processing code, and database deadlocks. The ongoing investigation progresses as team members share their findings and observations. The team plans to investigate further and resolve the incident as promptly and effectively as possible to address the customer dissatisfaction and minimize sales impact.'}]"
@@ -270,9 +268,6 @@ if st.session_state['generated']:
             
         except Exception as e:
             st.write(st.session_state["generated"][0])
-
-        # WRITE THE RESPONSE TO WORD DOCUMENT
-        docx_util.build_word_document(replaced_generated_rca, eval(replaced_generated_table))
 
         # DOWNLOAD THE WORD FILE
         with open("output.docx", "rb") as file:
