@@ -297,7 +297,7 @@ if st.session_state['generated']:
                     file_name="output.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
-
+        docx_util.convert_word_to_pdf_unix("output.docx")
         with open("output.pdf", "rb") as file:
             btnpdf = st.download_button(
                 label="Download Output File (PDF) 📄",
