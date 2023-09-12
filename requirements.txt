@@ -10,3 +10,4 @@ aspose-words
 docx2pdf
 azure-identity
 azure-cosmos
+streamlit-extras
