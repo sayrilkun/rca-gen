@@ -256,21 +256,22 @@ if st.session_state['generated']:
                 st.success(rca_details_df.iloc[0, 2])
 
                 st.subheader("Contributing Factors")
+                st.success(rca_details_df.iloc[0, 3])
             
             except Exception as e:
                 log.info(e)
 
-            time.sleep(3)
-            prompt(prompts.action_items_prompt)  
-            st.header("☢️ Action Items")
-            st.write(st.session_state["generated"][2])
-            try:
-                # action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
-                action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
-                st.table(action_items_df)
+            # time.sleep(3)
+            # prompt(prompts.action_items_prompt)  
+            # st.header("☢️ Action Items")
+            # st.write(st.session_state["generated"][2])
+            # try:
+            #     # action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
+            #     action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+            #     st.table(action_items_df)
                 
-            except Exception as e:
-                    pass
+            # except Exception as e:
+            #         pass
 
 
         st.header("Incident Timeline")
