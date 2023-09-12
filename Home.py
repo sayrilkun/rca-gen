@@ -272,10 +272,10 @@ if st.session_state['generated']:
             except Exception as e:
                     pass
 
-            time.sleep(3)
-            prompt(prompts.five_whys_prompt)
-            st.header("☢️ RCA 5 WHYs")
-            st.success(st.session_state["generated"][3])
+            # time.sleep(3)
+            # prompt(prompts.five_whys_prompt)
+            # st.header("☢️ RCA 5 WHYs")
+            # st.success(st.session_state["generated"][3])
 
 
         #     # file = False
