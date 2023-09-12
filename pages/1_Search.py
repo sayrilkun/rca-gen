@@ -33,8 +33,12 @@ for item in items:
         st.write(search_rca_details_df.iloc[0, 1])
         st.write("Investigation & Resolution")
         st.write(search_rca_details_df.iloc[0, 2])
+
+        st.write("Action Items")
         search_action_items_df =  pd.DataFrame(eval(item["actionItems"]))
         st.table(search_action_items_df)
+
+        st.write("Incident Timeline")
         search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
         st.table(search_incident_timeline_df)
         st.write("RCA 5 WHYs")
