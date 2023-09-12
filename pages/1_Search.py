@@ -20,7 +20,6 @@ container = ruthinit.container
 search_state = False
 search_container = st.container()
 items = container.read_all_items()
-ifSearch = True
 search_results = []
 with search_container:
     with st.form(key='search', clear_on_submit=True):
@@ -29,16 +28,14 @@ with search_container:
 
     if submit_button and search_input:
         search_state = True
-        ifSearch = True
         for item in items:
-            ifSearch = True
             if search_input.casefold() in json.dumps(item, indent=True).casefold():
                 search_results.append(item["id"])
                 ifSearch = True
             else:
                 ifSearch = False
-        if ifSearch is False:
-            st.warning("No Results Found.")
+        # if ifSearch is False:
+        #     st.warning("No Results Found.")
         
     for i in range(len(search_results)):
         existing_item =  container.read_item(
