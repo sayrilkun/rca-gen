@@ -22,6 +22,20 @@ from lib import filechecker
 from lib import email_parser
 import time
 import os
+
+import json
+from azure.cosmos import CosmosClient, PartitionKey
+DATABASE_NAME = "datamrkdb"
+CONTAINER_NAME = "incidents"v
+client = CosmosClient(url=ENDPOINT, credential=KEY)
+database = client.create_database_if_not_exists(id=DATABASE_NAME)
+print("Database\t", database.id)
+
+key_path = PartitionKey(path="/categoryId")
+container = database.create_container_if_not_exists(
+    id=CONTAINER_NAME, partition_key=key_path, offer_throughput=400
+)
+print("Container\t", container.id)
 #
 # Globals
 #
@@ -65,6 +79,8 @@ def prompt(user_input):
     except openai.error.InvalidRequestError:
         st.warning('Invalid Request. Restart app and try again')
 
+    
+
 # Setting page title and header
 st.set_page_config(page_title="Ruth", page_icon= ":flower:")
 st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
@@ -73,6 +89,7 @@ st.markdown("""---""")
 # Set org ID and API key
 openai.organization = st.secrets.secrets["openai"]["organization"][0]
 openai.api_key = st.secrets.secrets["openai"]["api_key"][0]
+
 
 
 # Initialise session state variables
