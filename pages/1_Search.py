@@ -69,7 +69,7 @@ with search_container:
 
 if search_state is False:
     for item in items:
-        with st.expander(f''' 	:sun_with_face: Incident Name: {item["incidentName"]}
+        with st.expander(f''' 	🌞 Incident Name: {item["incidentName"]}
         Date Uploaded: {item["incidentDate"]} \n
         Uploaded by: {item["uploader"]} \n
         Email Subject: {item["emailSubject"]} \n
