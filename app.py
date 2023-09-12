@@ -242,9 +242,9 @@ if st.session_state['generated']:
         action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
         if action_items_button:
             prompt(prompts.action_items_prompt)
-            st.success(st.session_state["generated"][2])
+            st.success(st.session_state["generated"][1])
             try:
-                action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+                action_items_df = pd.DataFrame(eval(st.session_state["generated"][1]))
                 st.table(action_items_df)
                 
             except Exception as e:
@@ -254,7 +254,7 @@ if st.session_state['generated']:
         five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
         if five_whys_button:
             prompt(prompts.five_whys_prompt)
-            st.write(st.session_state["generated"][3])
+            st.write(st.session_state["generated"][1])
 
         st.header("☢️ Incident Timeline")
         try:
