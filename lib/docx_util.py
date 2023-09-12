@@ -93,7 +93,6 @@ def build_word_document(inc_timeline):
 
     doc.add_page_break()
     doc.save('output.docx')
-    doc.save('output.pdf')
 
 def convert_word_to_pdf(filepath, filename='output'):
     '''
