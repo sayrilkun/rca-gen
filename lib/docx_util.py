@@ -7,6 +7,7 @@ from lorem import *
 import function
 import ruthinit
 from docx2pdf import convert
+import aspose.words as aw
 
 #
 # Globals
@@ -108,5 +109,25 @@ def convert_word_to_pdf(filepath, filename='output'):
 
     log.info(f"pdf path and name: {path}")
     convert(filepath, path)
+
+    return path
+
+def convert_word_to_pdf_unix(filepath, filename='output'):
+    '''
+    convert word to pdf
+
+    parameters:
+        filepath - docx filepath
+    
+    return:
+        path - pdf path
+    '''
+
+    path = f"{filename}.pdf"
+    log.info("Converting DOCX to PDF")
+    docfile = aw.Document(filepath)
+    docfile.save(path)
+
+    log.info(f"pdf path and name: {path}")
 
     return path
