@@ -59,26 +59,26 @@ with search_container:
             st.write(existing_item["rca5WHYs"])
 
 
-if search_state is False:
-    for item in items:
-        with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
-        '''):
-            search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
-            st.write("Root Cause")
-            st.write(search_rca_details_df.iloc[0, 0])
-            st.write("RCA Executive Summary")
-            st.write(search_rca_details_df.iloc[0, 1])
-            st.write("Investigation & Resolution")
-            st.write(search_rca_details_df.iloc[0, 2])
+# if search_state is False:
+#     for item in items:
+#         with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
+#         '''):
+#             search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
+#             st.write("Root Cause")
+#             st.write(search_rca_details_df.iloc[0, 0])
+#             st.write("RCA Executive Summary")
+#             st.write(search_rca_details_df.iloc[0, 1])
+#             st.write("Investigation & Resolution")
+#             st.write(search_rca_details_df.iloc[0, 2])
 
-            st.write("Action Items")
-            search_action_items_df =  pd.DataFrame(eval(item["actionItems"]))
-            st.table(search_action_items_df)
+#             st.write("Action Items")
+#             search_action_items_df =  pd.DataFrame(eval(item["actionItems"]))
+#             st.table(search_action_items_df)
 
-            st.write("Incident Timeline")
-            search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
-            st.table(search_incident_timeline_df)
+#             st.write("Incident Timeline")
+#             search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
+#             st.table(search_incident_timeline_df)
 
-            st.write("RCA 5 WHYs")
-            st.write(item["rca5WHYs"])
+#             st.write("RCA 5 WHYs")
+#             st.write(item["rca5WHYs"])
         
