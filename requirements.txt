@@ -7,3 +7,4 @@ pandas
 numpy
 extract-msg
 aspose-words
+docx2pdf
