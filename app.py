@@ -25,6 +25,10 @@ import os
 
 import json
 from azure.cosmos import CosmosClient, PartitionKey
+
+
+ENDPOINT = st.secrets.secrets["azure"]["endpoint"][0]
+KEY = st.secrets.secrets["azure"]["key"][0]
 DATABASE_NAME = "datamrkdb"
 CONTAINER_NAME = "incidents"
 client = CosmosClient(url=ENDPOINT, credential=KEY)
