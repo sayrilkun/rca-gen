@@ -17,10 +17,6 @@ container = ruthinit.container
 
 title = st.text_input('Search for incidents')
 
-# for i in range(5):
-#     with st.expander(f"Incident #{i+1}"):
-#         st.write(f"Incident #{i+1}""")
-#         st.image("https://static.streamlit.io/examples/dice.jpg")
 
 items = container.read_all_items()
 for item in items:
@@ -41,7 +37,7 @@ for item in items:
         st.write("Incident Timeline")
         search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
         st.table(search_incident_timeline_df)
+        
         st.write("RCA 5 WHYs")
         st.write(item["rca5WHYs"])
         
-    # print(json.dumps(item["id"], indent=True))
