@@ -14,3 +14,12 @@ image = Image.open('static/team.png')
 
 title = st.text_input('Search for incidents')
 # st.write('The current movie title is', title)
+
+for i in range(5):
+    with st.expander(f"Incident #{i+1}"):
+        st.write(\"\"\"
+            The chart above shows some numbers I picked for you.
+            I rolled actual dice for these, so they're *guaranteed* to
+            be random.
+        \"\"\")
+        st.image("https://static.streamlit.io/examples/dice.jpg")
