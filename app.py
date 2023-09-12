@@ -26,7 +26,7 @@ import os
 import json
 from azure.cosmos import CosmosClient, PartitionKey
 DATABASE_NAME = "datamrkdb"
-CONTAINER_NAME = "incidents"v
+CONTAINER_NAME = "incidents"
 client = CosmosClient(url=ENDPOINT, credential=KEY)
 database = client.create_database_if_not_exists(id=DATABASE_NAME)
 print("Database\t", database.id)
