@@ -234,8 +234,8 @@ if st.session_state['generated']:
             # docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
             # SECOND PROMPT (RCA DETAILS)
-        st.header("☢️ RCA Details")
-        rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
+        st.header("RCA Details")
+        rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
         if rca_details_button:
             prompt(prompts.rca_details_prompt)
             st.write(st.session_state["generated"][1])
@@ -246,16 +246,16 @@ if st.session_state['generated']:
                 rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
 
 
-                st.subheader("☢️ Root Cause")
+                st.subheader("Root Cause")
                 st.success(rca_details_df.iloc[0, 0])
 
-                st.subheader("☢️ RCA Executive Summary")
+                st.subheader("RCA Executive Summary")
                 st.success(rca_details_df.iloc[0, 1])
 
-                st.subheader("☢️ Investigation & Resolution")
+                st.subheader("Investigation & Resolution")
                 st.success(rca_details_df.iloc[0, 2])
 
-                st.subheader("☢️ Contributing Factors")
+                st.subheader("Contributing Factors")
             
             except Exception as e:
                 pass
@@ -282,7 +282,7 @@ if st.session_state['generated']:
             # five_whys = "1. Why are there system hang-ups and transaction failures?\n   - Possible cause: Misconfigured payment gateway integration.\n\n2. Why is there a misconfigured payment gateway integration?\n   - Possible cause: Issues during the deployment process.\n\n3. Why were there issues during the deployment process?\n   - Possible cause: Lack of proper configuration and testing.\n\n4. Why was there a lack of proper configuration and testing?\n   - Possible cause: Insufficient attention to detail or oversight.\n\n5. Why was there insufficient attention to detail or oversight?\n   - Possible cause: Lack of clear communication or guidelines during the deployment process."
             # st.success(five_whys)
 
-        st.header("☢️ Incident Timeline")
+        st.header("Incident Timeline")
         try:
             st.table(inc_timeline_df)
             
