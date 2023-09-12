@@ -25,23 +25,6 @@ from lib import email_parser
 import time
 import os
 
-import json
-from azure.cosmos import CosmosClient, PartitionKey
-
-
-ENDPOINT = st.secrets.secrets["azure"]["endpoint"][0]
-KEY = st.secrets.secrets["azure"]["key"][0]
-DATABASE_NAME = "datamrkdb"
-CONTAINER_NAME = "incidents"
-client = CosmosClient(url=ENDPOINT, credential=KEY)
-database = client.create_database_if_not_exists(id=DATABASE_NAME)
-print("Database\t", database.id)
-
-key_path = PartitionKey(path="/categoryId")
-container = database.create_container_if_not_exists(
-    id=CONTAINER_NAME, partition_key=key_path, offer_throughput=400
-)
-print("Container\t", container.id)
 #
 # Globals
 #
