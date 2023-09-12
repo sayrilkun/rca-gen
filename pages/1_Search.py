@@ -36,8 +36,8 @@ with search_container:
             #     ifSearch = False
         # if ifSearch is False:
         #     st.warning("No Results Found.")
-            if not search_results:
-                st.warning("No Results Found.")
+        if not search_results:
+            st.warning("No Results Found.")
         
     for i in range(len(search_results)):
         existing_item =  container.read_item(
