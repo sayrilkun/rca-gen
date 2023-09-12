@@ -20,7 +20,7 @@ container = ruthinit.container
 search_state = False
 search_container = st.container()
 items = container.read_all_items()
-
+ifSearch = True
 search_results = []
 with search_container:
     with st.form(key='search', clear_on_submit=True):
