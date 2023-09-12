@@ -23,13 +23,13 @@ items = container.read_all_items()
 search_results = []
 with search_container:
     with st.form(key='search', clear_on_submit=True):
-        user_input = st.text_area("Search keywords", key='keyword', height=50)
+        user_input = st.text_area("Search keywords", key='keyword', height=25)
         submit_button = st.form_submit_button(label='Send')
 
     if submit_button and user_input:
         search_state = True
         for item in items:
-            if search in json.dumps(item, indent=True):
+            if user_input in json.dumps(item, indent=True):
                 search_results = json.dumps(item["id"], indent=True)
         
     for i in range(len(search_results)):
