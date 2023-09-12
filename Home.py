@@ -15,6 +15,8 @@ from streamlit_chat import message
 from lib import docx_util
 import pandas as pd
 import numpy as np
+from PIL import Image
+from streamlit_extras.app_logo import add_logo
 import email_util
 import prompts
 from lib import ruthinit
@@ -45,6 +47,7 @@ print("Container\t", container.id)
 #
 log = ruthinit.log
 file = False
+image = Image.open('static/ruthname.png')
 
 # Generate a response
 def generate_response(prompt):
@@ -86,8 +89,8 @@ def prompt(user_input):
     
 
 # Setting page title and header
-st.set_page_config(page_title="Ruth", page_icon= ":flower:")
-st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
+st.set_page_config(page_title="Ruth", page_icon= "static/ruthlogo.png")
+#st.markdown("<h1 style='text-align: center;'> 🤖 Ruth: RCA GENERATOR🤖 </h1>", unsafe_allow_html=True)
 st.markdown("""---""")
 
 # Set org ID and API key
@@ -115,7 +118,9 @@ if 'total_cost' not in st.session_state:
     st.session_state['total_cost'] = 0.0
 prompt_generated = False
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
-st.sidebar.title("Team DATAMRK")
+add_logo('static/ruthsmall.png', height=100)
+st.sidebar.header("Main Page")
+#st.sidebar.title("Team DATAMRK")
 counter_placeholder = st.sidebar.empty()
 # counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
@@ -144,13 +149,13 @@ if clear_button:
 
 file_container = st.container()
 file=False
-st.markdown("##")
+#st.markdown("##")
 
 
 with file_container:
-    message("Hi, My name is Ruth, please upload your email file so I can start generating your RCA! 😎", key="intro", avatar_style="bottts", seed = "Sophie")
-    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline", type=['.eml', '.msg'])
-    generate_button = st.button("Generate :rocket:", key="generate",use_container_width=True)
+    message("Hi! My name is Ruth, please upload your email file so I can start generating your RCA!", key="intro", avatar_style="adventurer-neutral", seed = "Patches&backgroundColor=ffdfbf")
+    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
+    generate_button = st.button("Generate RCA", key="generate",use_container_width=True)
 
 # INITIAL PROMPT (incident time line)
 if uploaded_file != None:
