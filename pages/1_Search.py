@@ -15,29 +15,50 @@ database = ruthinit.database
 container = ruthinit.container
 
 
-title = st.text_input('Search for incidents')
-
-
+# search_input = st.text_input('Search for incidents')
+search_state = False
+search_container = st.container()
 items = container.read_all_items()
-for item in items:
-    with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
-    '''):
-        search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
-        st.write("Root Cause")
-        st.write(search_rca_details_df.iloc[0, 0])
-        st.write("RCA Executive Summary")
-        st.write(search_rca_details_df.iloc[0, 1])
-        st.write("Investigation & Resolution")
-        st.write(search_rca_details_df.iloc[0, 2])
 
-        st.write("Action Items")
-        search_action_items_df =  pd.DataFrame(eval(item["actionItems"]))
-        st.table(search_action_items_df)
+search_results = []
+with container:
+    with st.form(key='search', clear_on_submit=True):
+        user_input = st.text_area("Search keywords", key='keyword', height=50)
+        submit_button = st.form_submit_button(label='Send')
 
-        st.write("Incident Timeline")
-        search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
-        st.table(search_incident_timeline_df)
+    if submit_button and user_input:
+        search_state = True
+        for item in items:
+            if search in json.dumps(item, indent=True):
+                search_results = json.dumps(item["id"], indent=True)
         
-        st.write("RCA 5 WHYs")
-        st.write(item["rca5WHYs"])
+    for i in range(len(search_results)):
+            existing_item = container.read_item(
+            item= search_results[i],
+            partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
+            st.write(f"{existing_item})
+
+
+if search_state is False:
+    for item in items:
+        with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
+        '''):
+            search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
+            st.write("Root Cause")
+            st.write(search_rca_details_df.iloc[0, 0])
+            st.write("RCA Executive Summary")
+            st.write(search_rca_details_df.iloc[0, 1])
+            st.write("Investigation & Resolution")
+            st.write(search_rca_details_df.iloc[0, 2])
+
+            st.write("Action Items")
+            search_action_items_df =  pd.DataFrame(eval(item["actionItems"]))
+            st.table(search_action_items_df)
+
+            st.write("Incident Timeline")
+            search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
+            st.table(search_incident_timeline_df)
+
+            st.write("RCA 5 WHYs")
+            st.write(item["rca5WHYs"])
         
