@@ -46,7 +46,7 @@ with search_container:
         Date Uploaded: {existing_item["incidentDate"]} \n
         Uploaded by: {existing_item["uploader"]} \n
         Email Subject: {existing_item["emailSubject"]} \n
-        ""):
+        "):
             search_rca_details_df = pd.DataFrame(eval(existing_item["rcaDetails"]))
             st.write("Root Cause")
             st.write(search_rca_details_df.iloc[0, 0])
@@ -69,11 +69,11 @@ with search_container:
 
 if search_state is False:
     for item in items:
-        with st.expander(f''' 	:sun_with_face: Incident Name: {item["incidentName"]} \n 
+        with st.expander(f"	::sun_with_face:: Incident Name: {item["incidentName"]} \n 
         Date Uploaded: {item["incidentDate"]} \n
         Uploaded by: {item["uploader"]} \n
         Email Subject: {item["emailSubject"]} \n
-        '''):
+        "):
             search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
             st.write("Root Cause")
             st.write(search_rca_details_df.iloc[0, 0])
