@@ -72,7 +72,8 @@ if search_state is False:
         with st.expander(f''' 	🌞 Incident Name: {item["incidentName"]}
         Date Uploaded: {item["incidentDate"]} \n
         Uploaded by: {item["uploader"]} \n
-        Email Subject: {item["emailSubject"]} \n
+        Email Subject: \n
+        {item["emailSubject"]} \n
         '''):
             search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
             st.write("Root Cause")
