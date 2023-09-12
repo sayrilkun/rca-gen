@@ -29,7 +29,9 @@ with search_container:
 
     if submit_button and search_input:
         search_state = True
+        ifSearch = True
         for item in items:
+            ifSearch = True
             if search_input.casefold() in json.dumps(item, indent=True).casefold():
                 search_results.append(item["id"])
                 ifSearch = True
