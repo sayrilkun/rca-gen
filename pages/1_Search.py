@@ -42,10 +42,9 @@ with search_container:
         existing_item =  container.read_item(
         item= search_results[i],
         partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
-        with st.expander(f''' 	:sun_with_face: Incident Name: {existing_item["incidentName"]}
+        with st.expander(f''' 🌞 Incident Name: {existing_item["incidentName"]}
         Date Uploaded: {existing_item["incidentDate"]} \n
         Uploaded by: {existing_item["uploader"]} \n
-        Email Subject: {existing_item["emailSubject"]} \n
         '''):
             search_rca_details_df = pd.DataFrame(eval(existing_item["rcaDetails"]))
             st.write("Root Cause")
@@ -66,14 +65,15 @@ with search_container:
             st.write("RCA 5 WHYs")
             st.write(existing_item["rca5WHYs"])
 
+            st.write(f'Email Subject: {existing_item["emailSubject"]}')
+
 
 if search_state is False:
     for item in items:
         with st.expander(f''' 	🌞 Incident Name: {item["incidentName"]}
         Date Uploaded: {item["incidentDate"]} \n
         Uploaded by: {item["uploader"]} \n
-        Email Subject: \n
-        {item["emailSubject"]} \n
+        
         '''):
             search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
             st.write("Root Cause")
@@ -93,4 +93,6 @@ if search_state is False:
 
             st.write("RCA 5 WHYs")
             st.write(item["rca5WHYs"])
+
+            st.write(f'Email Subject: {existing_item["emailSubject"]}')
         
