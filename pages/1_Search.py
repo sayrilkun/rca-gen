@@ -24,14 +24,16 @@ items = container.read_all_items()
 search_results = []
 with search_container:
     with st.form(key='search', clear_on_submit=True):
-        user_input = st.text_input("Search keywords")
+        search_input = st.text_input("Search keywords")
         submit_button = st.form_submit_button(label='Send')
 
-    if submit_button and user_input:
+    if submit_button and search_input:
         search_state = True
         for item in items:
-            if user_input.casefold() in json.dumps(item, indent=True).casefold():
+            if search_input.casefold() in json.dumps(item, indent=True).casefold():
                 search_results.append(item["id"])
+            else:
+                st.warning("No results found.")
         
     for i in range(len(search_results)):
         existing_item =  container.read_item(
