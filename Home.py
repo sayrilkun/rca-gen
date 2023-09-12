@@ -260,6 +260,23 @@ if st.session_state['generated']:
             except Exception as e:
                 pass
 
+            time.sleep(3)
+            prompt(prompts.action_items_prompt)  
+            st.header("☢️ Action Items")
+            try:
+                # action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
+                action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+                st.table(action_items_df)
+                
+            except Exception as e:
+                    pass
+
+            time.sleep(3)
+            prompt(prompts.five_whys_prompt)
+            st.header("☢️ RCA 5 WHYs")
+            st.success(st.session_state["generated"][3])
+
+
         #     # file = False
             # st.header("☢️ Action Items")
         # action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
