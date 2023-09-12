@@ -44,10 +44,10 @@ with search_container:
         existing_item =  container.read_item(
         item= search_results[i],
         partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
-        with st.expander(f''' 🌞 Incident Name: {existing_item["incidentName"]}
+        with st.expander(f''' 	🌞 Incident Name: {existing_item["incidentName"]}
         Date Uploaded: {existing_item["incidentDate"]}
         Uploaded by: {existing_item["uploader"]} \n
-
+        
         '''):
             ifSearch = True
             search_rca_details_df = pd.DataFrame(eval(existing_item["rcaDetails"]))
