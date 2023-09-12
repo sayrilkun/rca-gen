@@ -51,14 +51,14 @@ image = Image.open('static/ruthname.png')
 
 # Generate a response
 def generate_response(prompt):
-    st.session_state['messages'][0] = {"role": "user", "content": prompt}
+    st.session_state['messages'].append({"role": "user", "content": prompt})
 
     completion = openai.ChatCompletion.create(
         model=model,
-        messages=st.session_state['messages'][0]
+        messages=st.session_state['messages']
     )
     response = completion.choices[0].message.content
-    st.session_state['messages'][0] = {"role": "assistant", "content": response}
+    st.session_state['messages'].append({"role": "assistant", "content": response})
 
     # print(st.session_state['messages'])
     total_tokens = completion.usage.total_tokens
@@ -237,8 +237,8 @@ if st.session_state['generated']:
         st.header("☢️ RCA Details")
         rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
         if rca_details_button:
-            prompt(prompts.rca_details_prompt)
-            st.write(st.session_state["generated"][1])
+            # prompt(prompts.rca_details_prompt)
+            # st.write(st.session_state["generated"][1])
 
             try:
             # rca_details="[{'Root Cause': 'The root cause of the incident is a combination of factors: a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. These issues are impacting the point-of-sale system, leading to transaction failures and disruptions for clients.', 'RCA Executive Summary': 'The email thread revolves around the urgent resolution of a critical point-of-sale system issue. The development manager acknowledges the teams efforts and suggests exploring potential leads involving a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. The system administrator identifies a correlation between CPU and memory spikes and transaction failures, indicating a possible resource strain caused by misconfiguration. The business analyst raises the question of a potential connection between the introduction of a new payment gateway and the system issues. A senior developer discovers an intriguing behavior in the payment processing code, requiring further investigation. The database administrator uncovers an increase in deadlock incidents during the occurred system issues, leading to transactional stalls. Overall, the executive summary highlights the importance of promptly addressing the situation to minimize customer dissatisfaction and lost sales.', 'Investigation and Resolution': 'The key dates that lead to investigation and resolution are August 9, 2023, when the team first raises awareness of the system issue, and August 10, 2023, when the team intensifies the investigation by examining the payment gateway integration, payment processing code, and database deadlocks. The ongoing investigation progresses as team members share their findings and observations. The team plans to investigate further and resolve the incident as promptly and effectively as possible to address the customer dissatisfaction and minimize sales impact.'}]"
