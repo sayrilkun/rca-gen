@@ -66,7 +66,7 @@ with search_container:
 
 if search_state is False:
     for item in items:
-        with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
+        with st.expander(f'''\n Incident Name: {item["incidentName"]} \n Date Uploaded: {item["incidentDate"]} \n
         '''):
             search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
             st.write("Root Cause")
