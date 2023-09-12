@@ -11,6 +11,7 @@ st.sidebar.header("Search")
 image = Image.open('static/team.png')
 
 database = ruthinit.database
+container = ruthinit.container
 
 
 title = st.text_input('Search for incidents')
