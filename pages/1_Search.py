@@ -34,11 +34,12 @@ with search_container:
                 search_results.append(json.dumps(item["id"], indent=True))
                 st.write(json.dumps(item["id"], indent=True))
         
-    # for i in range(len(search_results)):
-    #         existing_item = container.read_item(
-    #         item= search_results[i],
-    #         partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
-    #         st.write(f"{existing_item}")
+    for i in range(len(search_results)):
+        st.write(search_results[i])
+            # existing_item = container.read_item(
+            # item= search_results[i],
+            # partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
+            # st.write(f"{existing_item}")
 
 
 if search_state is False:
