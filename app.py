@@ -92,7 +92,7 @@ if 'total_tokens' not in st.session_state:
     st.session_state['total_tokens'] = []
 if 'total_cost' not in st.session_state:
     st.session_state['total_cost'] = 0.0
-
+prompt_generated = False
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Team DATAMRK")
 counter_placeholder = st.sidebar.empty()
@@ -117,6 +117,7 @@ if clear_button:
     st.session_state['cost'] = []
     st.session_state['total_cost'] = 0.0
     st.session_state['total_tokens'] = []
+    prompt_generated = False
     # counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 
 
@@ -168,6 +169,7 @@ if generate_button:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
         prompt(inc_timeline_prompt)
+        prompt_generated = True
         # prompt("what is A")
         # file = False
 
@@ -177,13 +179,13 @@ response_container = st.container()
 container = st.container()
 
 #chat box
-with container:
-    with st.form(key='my_form', clear_on_submit=True):
-        user_input = st.text_area("You:", key='input', height=100)
-        submit_button = st.form_submit_button(label='Send')
+# with container:
+#     with st.form(key='my_form', clear_on_submit=True):
+#         user_input = st.text_area("You:", key='input', height=100)
+#         submit_button = st.form_submit_button(label='Send')
 
-    if submit_button and user_input:
-        prompt(user_input)
+#     if submit_button and user_input:
+#         prompt(user_input)
 
 #chat conversation
 if st.session_state['generated']:
@@ -206,55 +208,56 @@ if st.session_state['generated']:
             # docx_util.build_word_document(eval(st.session_state["generated"][0]))
 
             # SECOND PROMPT (RCA DETAILS)
-        st.header("☢️ RCA Details")
-        rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
-        if rca_details_button:
-            # prompt(prompts.rca_details_prompt)
-            # st.write(st.session_state["generated"][1])
+        # st.header("☢️ RCA Details")
+        # rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
+        # if rca_details_button:
+        #     # prompt(prompts.rca_details_prompt)
+        #     # st.write(st.session_state["generated"][1])
 
-            try:
-                rca_details="[{'Root Cause': 'The root cause of the incident is a combination of factors: a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. These issues are impacting the point-of-sale system, leading to transaction failures and disruptions for clients.', 'RCA Executive Summary': 'The email thread revolves around the urgent resolution of a critical point-of-sale system issue. The development manager acknowledges the team's efforts and suggests exploring potential leads involving a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. The system administrator identifies a correlation between CPU and memory spikes and transaction failures, indicating a possible resource strain caused by misconfiguration. The business analyst raises the question of a potential connection between the introduction of a new payment gateway and the system issues. A senior developer discovers an intriguing behavior in the payment processing code, requiring further investigation. The database administrator uncovers an increase in deadlock incidents during the occurred system issues, leading to transactional stalls. Overall, the executive summary highlights the importance of promptly addressing the situation to minimize customer dissatisfaction and lost sales.', 'Investigation and Resolution': 'The key dates that lead to investigation and resolution are August 9, 2023, when the team first raises awareness of the system issue, and August 10, 2023, when the team intensifies the investigation by examining the payment gateway integration, payment processing code, and database deadlocks. The ongoing investigation progresses as team members share their findings and observations. The team plans to investigate further and resolve the incident as promptly and effectively as possible to address the customer dissatisfaction and minimize sales impact.'}]"
-                rca_details_df = pd.DataFrame(eval(rca_details))
+        #     try:
+        #         rca_details="[{'Root Cause': 'The root cause of the incident is a combination of factors: a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. These issues are impacting the point-of-sale system, leading to transaction failures and disruptions for clients.', 'RCA Executive Summary': 'The email thread revolves around the urgent resolution of a critical point-of-sale system issue. The development manager acknowledges the team's efforts and suggests exploring potential leads involving a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. The system administrator identifies a correlation between CPU and memory spikes and transaction failures, indicating a possible resource strain caused by misconfiguration. The business analyst raises the question of a potential connection between the introduction of a new payment gateway and the system issues. A senior developer discovers an intriguing behavior in the payment processing code, requiring further investigation. The database administrator uncovers an increase in deadlock incidents during the occurred system issues, leading to transactional stalls. Overall, the executive summary highlights the importance of promptly addressing the situation to minimize customer dissatisfaction and lost sales.', 'Investigation and Resolution': 'The key dates that lead to investigation and resolution are August 9, 2023, when the team first raises awareness of the system issue, and August 10, 2023, when the team intensifies the investigation by examining the payment gateway integration, payment processing code, and database deadlocks. The ongoing investigation progresses as team members share their findings and observations. The team plans to investigate further and resolve the incident as promptly and effectively as possible to address the customer dissatisfaction and minimize sales impact.'}]"
+        #         rca_details_df = pd.DataFrame(eval(rca_details))
 
-                st.subheader("☢️ Root Cause")
-                st.success(rca_details_df.iloc[0, 0])
+        #         st.subheader("☢️ Root Cause")
+        #         st.success(rca_details_df.iloc[0, 0])
 
-                st.subheader("☢️ RCA Executive Summary")
-                st.success(rca_details_df.iloc[0, 1])
+        #         st.subheader("☢️ RCA Executive Summary")
+        #         st.success(rca_details_df.iloc[0, 1])
 
-                st.subheader("☢️ Investigation & Resolution")
-                st.success(rca_details_df.iloc[0, 2])
+        #         st.subheader("☢️ Investigation & Resolution")
+        #         st.success(rca_details_df.iloc[0, 2])
 
-                st.subheader("☢️ Contributing Factors")
+        #         st.subheader("☢️ Contributing Factors")
             
-            except Exception as e:
-                pass
+        #     except Exception as e:
+        #         pass
 
-            # file = False
-        st.header("☢️ Action Items")
-        action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
-        if action_items_button:
-            # prompt(prompts.action_items_prompt)
-            # st.success(st.session_state["generated"][1])
-            try:
-                action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
-                action_items_df = pd.DataFrame(eval(action_items))
-                st.table(action_items_df)
+        #     # file = False
+        # st.header("☢️ Action Items")
+        # action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+        # if action_items_button:
+        #     # prompt(prompts.action_items_prompt)
+        #     # st.success(st.session_state["generated"][1])
+        #     try:
+        #         action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
+        #         action_items_df = pd.DataFrame(eval(action_items))
+        #         st.table(action_items_df)
                 
-            except Exception as e:
-                    pass
+        #     except Exception as e:
+        #             pass
 
-        st.header("☢️ RCA 5 WHYs")
-        five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
-        if five_whys_button:
-            # prompt(prompts.five_whys_prompt)
-            # st.write(st.session_state["generated"][1])
-            five_whys = "1. Why are there system hang-ups and transaction failures?\n   - Possible cause: Misconfigured payment gateway integration.\n\n2. Why is there a misconfigured payment gateway integration?\n   - Possible cause: Issues during the deployment process.\n\n3. Why were there issues during the deployment process?\n   - Possible cause: Lack of proper configuration and testing.\n\n4. Why was there a lack of proper configuration and testing?\n   - Possible cause: Insufficient attention to detail or oversight.\n\n5. Why was there insufficient attention to detail or oversight?\n   - Possible cause: Lack of clear communication or guidelines during the deployment process."
-            st.success(five_whys)
-            
+        # st.header("☢️ RCA 5 WHYs")
+        # five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
+        # if five_whys_button:
+        #     # prompt(prompts.five_whys_prompt)
+        #     # st.write(st.session_state["generated"][1])
+        #     five_whys = "1. Why are there system hang-ups and transaction failures?\n   - Possible cause: Misconfigured payment gateway integration.\n\n2. Why is there a misconfigured payment gateway integration?\n   - Possible cause: Issues during the deployment process.\n\n3. Why were there issues during the deployment process?\n   - Possible cause: Lack of proper configuration and testing.\n\n4. Why was there a lack of proper configuration and testing?\n   - Possible cause: Insufficient attention to detail or oversight.\n\n5. Why was there insufficient attention to detail or oversight?\n   - Possible cause: Lack of clear communication or guidelines during the deployment process."
+        #     st.success(five_whys)
+
         st.header("☢️ Incident Timeline")
         try:
             st.table(inc_timeline_df)
+            
         except Exception as e:
             st.write(st.session_state["generated"][0])
 
@@ -282,12 +285,52 @@ if st.session_state['generated']:
                 mime="application/pdf"
             )
 
-# action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
-# if action_items_button:
-#     # prompt(prompts.action_items_prompt)
-#     prompt("hi 2")
-#     st.write(st.session_state["generated"][2])
-    # message(" Action Items! 😎", key="po", avatar_style="bottts", seed = "Sophie")
+if 
+st.header("☢️ RCA Details")
+rca_details_button = st.button("Generate RCA Details :rocket:", key="rca_details",use_container_width=True)
+if rca_details_button:
+    # prompt(prompts.rca_details_prompt)
+    # st.write(st.session_state["generated"][1])
+
+    try:
+        rca_details="[{'Root Cause': 'The root cause of the incident is a combination of factors: a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. These issues are impacting the point-of-sale system, leading to transaction failures and disruptions for clients.', 'RCA Executive Summary': 'The email thread revolves around the urgent resolution of a critical point-of-sale system issue. The development manager acknowledges the team's efforts and suggests exploring potential leads involving a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. The system administrator identifies a correlation between CPU and memory spikes and transaction failures, indicating a possible resource strain caused by misconfiguration. The business analyst raises the question of a potential connection between the introduction of a new payment gateway and the system issues. A senior developer discovers an intriguing behavior in the payment processing code, requiring further investigation. The database administrator uncovers an increase in deadlock incidents during the occurred system issues, leading to transactional stalls. Overall, the executive summary highlights the importance of promptly addressing the situation to minimize customer dissatisfaction and lost sales.', 'Investigation and Resolution': 'The key dates that lead to investigation and resolution are August 9, 2023, when the team first raises awareness of the system issue, and August 10, 2023, when the team intensifies the investigation by examining the payment gateway integration, payment processing code, and database deadlocks. The ongoing investigation progresses as team members share their findings and observations. The team plans to investigate further and resolve the incident as promptly and effectively as possible to address the customer dissatisfaction and minimize sales impact.'}]"
+        rca_details_df = pd.DataFrame(eval(rca_details))
+
+        st.subheader("☢️ Root Cause")
+        st.success(rca_details_df.iloc[0, 0])
+
+        st.subheader("☢️ RCA Executive Summary")
+        st.success(rca_details_df.iloc[0, 1])
+
+        st.subheader("☢️ Investigation & Resolution")
+        st.success(rca_details_df.iloc[0, 2])
+
+        st.subheader("☢️ Contributing Factors")
+    
+    except Exception as e:
+        pass
+
+    # file = False
+st.header("☢️ Action Items")
+action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+if action_items_button:
+    # prompt(prompts.action_items_prompt)
+    # st.success(st.session_state["generated"][1])
+    try:
+        action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
+        action_items_df = pd.DataFrame(eval(action_items))
+        st.table(action_items_df)
+        
+    except Exception as e:
+            pass
+
+st.header("☢️ RCA 5 WHYs")
+five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
+if five_whys_button:
+    # prompt(prompts.five_whys_prompt)
+    # st.write(st.session_state["generated"][1])
+    five_whys = "1. Why are there system hang-ups and transaction failures?\n   - Possible cause: Misconfigured payment gateway integration.\n\n2. Why is there a misconfigured payment gateway integration?\n   - Possible cause: Issues during the deployment process.\n\n3. Why were there issues during the deployment process?\n   - Possible cause: Lack of proper configuration and testing.\n\n4. Why was there a lack of proper configuration and testing?\n   - Possible cause: Insufficient attention to detail or oversight.\n\n5. Why was there insufficient attention to detail or oversight?\n   - Possible cause: Lack of clear communication or guidelines during the deployment process."
+    st.success(five_whys)
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
