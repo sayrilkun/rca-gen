@@ -71,7 +71,7 @@ with search_container:
 if search_state is False:
     for item in items:
         with st.expander(f''' 	🌞 Incident Name: {item["incidentName"]}
-        Date Uploaded: {item["incidentDate"]} \n
+        Date Uploaded: {item["incidentDate"]}
         Uploaded by: {item["uploader"]} \n
         
         '''):
