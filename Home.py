@@ -31,6 +31,9 @@ import os
 log = ruthinit.log
 file = False
 image = Image.open('static/ruthname.png')
+is_rca_det_generated = False # flag if rca_det is generated
+is_file_generated = False # flag if file is generated
+full_rca_det = []
 
 # Generate a response
 def generate_response(prompt):
@@ -198,6 +201,9 @@ container = st.container()
 
 #chat conversation
 if st.session_state['generated']:
+    rca_details_clean = ""
+    inc_timeline_clean = ""
+
     with response_container:
         for i in range(len(st.session_state['generated'])):
             # HIDING THE CHATBOX
@@ -208,42 +214,79 @@ if st.session_state['generated']:
                 f"Model used: Number of tokens: {st.session_state['total_tokens'][i]};")
             try:
                 # CONVERT THE RESPONSE TO DATAFRAME
-                inc_timeline_df = pd.DataFrame(eval(st.session_state["generated"][0]))
+                inc_timeline_clean = st.session_state["generated"][0].replace("\\n", "").replace("\\'", "")
+                inc_timeline_df = pd.DataFrame(eval(inc_timeline_clean))
                 
             except Exception as e:
                 pass
 
-            # WRITE THE RESPONSE TO WORD DOCUMENT
-            # docx_util.build_word_document(eval(st.session_state["generated"][0]))
+        # SECOND PROMPT (RCA DETAILS)
 
-            # SECOND PROMPT (RCA DETAILS)
+        rca_root_cause = "" # Root Cause
+        rca_ex_sum = "" # executive summary
+        rca_inv_res = "" # investigation & resolution
+        rca_cont_fact = "" # contributing factors
+
         st.header("RCA Details")
         rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
         if rca_details_button:
-            prompt(prompts.rca_details_prompt)
+            prompt(f"{prompts.rca_details_prompt}")
             st.write(st.session_state["generated"][1])
+            fail = False
 
             try:
-            # rca_details="[{'Root Cause': 'The root cause of the incident is a combination of factors: a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. These issues are impacting the point-of-sale system, leading to transaction failures and disruptions for clients.', 'RCA Executive Summary': 'The email thread revolves around the urgent resolution of a critical point-of-sale system issue. The development manager acknowledges the teams efforts and suggests exploring potential leads involving a misconfigured payment gateway integration, unusual behavior in the payment processing code, and database deadlocks. The system administrator identifies a correlation between CPU and memory spikes and transaction failures, indicating a possible resource strain caused by misconfiguration. The business analyst raises the question of a potential connection between the introduction of a new payment gateway and the system issues. A senior developer discovers an intriguing behavior in the payment processing code, requiring further investigation. The database administrator uncovers an increase in deadlock incidents during the occurred system issues, leading to transactional stalls. Overall, the executive summary highlights the importance of promptly addressing the situation to minimize customer dissatisfaction and lost sales.', 'Investigation and Resolution': 'The key dates that lead to investigation and resolution are August 9, 2023, when the team first raises awareness of the system issue, and August 10, 2023, when the team intensifies the investigation by examining the payment gateway integration, payment processing code, and database deadlocks. The ongoing investigation progresses as team members share their findings and observations. The team plans to investigate further and resolve the incident as promptly and effectively as possible to address the customer dissatisfaction and minimize sales impact.'}]"
-            # rca_details_df = pd.DataFrame(eval(rca_details))
-                rca_details_df = pd.DataFrame(eval(st.session_state["generated"][1]))
+                log.info("Generating RCA Details")
+                rca_details_clean = st.session_state["generated"][1].replace("\\n", "").replace("\\'", "")
+                log.info(rca_details_clean)
+                rca_details_df = pd.DataFrame(eval(rca_details_clean))
 
 
                 st.subheader("Root Cause")
-                st.success(rca_details_df.iloc[0, 0])
+                rca_root_cause = rca_details_df.iloc[0, 0]
+                st.success(rca_root_cause)
 
                 st.subheader("RCA Executive Summary")
-                st.success(rca_details_df.iloc[0, 1])
+                rca_ex_sum = rca_details_df.iloc[0, 1]
+                st.success(rca_ex_sum)
 
                 st.subheader("Investigation & Resolution")
-                st.success(rca_details_df.iloc[0, 2])
+                rca_inv_res = rca_details_df.iloc[0, 2]
+                st.success(rca_inv_res)
 
                 st.subheader("Contributing Factors")
-                st.success(rca_details_df.iloc[0, 3])
+                rca_cont_fact = rca_details_df.iloc[0, 3]
+                st.success(rca_cont_fact)
+
+                log.info("Generated RCA Details")
+
+                is_rca_det_generated = True
             
             except Exception as e:
                 log.info(e)
+                fail = True
 
+        log.info(is_rca_det_generated)
+        if is_rca_det_generated:
+            full_rca_det = [rca_root_cause, rca_ex_sum, rca_inv_res, rca_cont_fact]
+            log.info(full_rca_det)
+            docx_util.build_word_document(full_rca_det, eval(inc_timeline_clean))
+            docx_util.convert_word_to_pdf_unix("output.docx")
+            log.info("Generating Word & PDF File.")
+            log.info(rca_details_clean)
+            with open("output.docx", "rb") as file:
+                btn = st.download_button(
+                    label="Download Output File (DOCX) 📄",
+                    data=file,
+                    file_name="output.docx",
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                )
+            with open("output.pdf", "rb") as file:
+                btnpdf = st.download_button(
+                    label="Download Output File (PDF) 📄",
+                    data=file,
+                    file_name="output.pdf",
+                    mime="application/pdf"
+                )
             # time.sleep(3)
             # prompt(prompts.action_items_prompt)  
             # st.header("☢️ Action Items")
@@ -263,23 +306,6 @@ if st.session_state['generated']:
             
         except Exception as e:
             st.write(st.session_state["generated"][0])
-
-        # DOWNLOAD THE WORD FILE
-        with open("output.docx", "rb") as file:
-            btn = st.download_button(
-                    label="Download Output File (DOCX) 📄",
-                    data=file,
-                    file_name="output.docx",
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                )
-        docx_util.convert_word_to_pdf_unix("output.docx")
-        with open("output.pdf", "rb") as file:
-            btnpdf = st.download_button(
-                label="Download Output File (PDF) 📄",
-                data=file,
-                file_name="output.pdf",
-                mime="application/pdf"
-            )
 
 # if prompt_generated is True:
 #     st.header("☢️ RCA Details")
