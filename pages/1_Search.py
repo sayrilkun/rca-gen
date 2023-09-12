@@ -32,15 +32,15 @@ with search_container:
         for item in items:
             if user_input in json.dumps(item, indent=True):
                 search_results.append(json.dumps(item["id"], indent=True))
-                st.write(json.dumps(item["id"], indent=True))
+                st.write(json.dumps(item["id"]))
         
     for i in range(len(search_results)):
         st.write(search_results[i])
-        hi=search_results[i]
-        existing_item = container.read_item(
-        item= hi,
-        partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
-        st.write(f"Item: {item}")
+        st.write(f"Type {type(search_results[i]})
+        # existing_item = container.read_item(
+        # item= hi,
+        # partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
+        # st.write(f"Item: {item}")
         # st.write(f"{existing_item}")
 
 
