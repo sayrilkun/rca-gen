@@ -47,7 +47,9 @@ with search_container:
         with st.expander(f''' 🌞 Incident Name: {existing_item["incidentName"]}
         Date Uploaded: {existing_item["incidentDate"]}
         Uploaded by: {existing_item["uploader"]} \n
+
         '''):
+            ifSearch = True
             search_rca_details_df = pd.DataFrame(eval(existing_item["rcaDetails"]))
             st.write("Root Cause")
             st.write(search_rca_details_df.iloc[0, 0])
