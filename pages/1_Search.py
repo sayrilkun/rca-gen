@@ -23,7 +23,7 @@ title = st.text_input('Search for incidents')
 
 items = container.read_all_items()
 for item in items:
-    with st.expander(f'''Incident Name: {item["incidentName"]} \n
+    with st.expander(f'''\n Incident Name: {item["incidentName"]} \n
     Date Uploaded: {item["incidentDate"]} \n
     Uploaded by: {item["uploader"]}
     
