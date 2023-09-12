@@ -36,8 +36,9 @@ with search_container:
         
     for i in range(len(search_results)):
         st.write(search_results[i])
+        hi=search_results[i]
         existing_item = container.read_item(
-        item= "1",
+        item= hi,
         partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
         st.write(f"Item: {item}")
         # st.write(f"{existing_item}")
