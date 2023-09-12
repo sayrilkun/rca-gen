@@ -21,6 +21,7 @@ from lib import ruthinit
 from lib import filechecker
 from lib import email_parser
 import time
+import os
 #
 # Globals
 #
@@ -266,7 +267,10 @@ if st.session_state['generated']:
 
         log.info("Docx - PDF")
 
-        pdfpath = docx_util.convert_word_to_pdf("output.docx")
+        if os.name == 'nt':
+            pdfpath = docx_util.convert_word_to_pdf("output.docx")
+        else:
+            pdfpath = docx_util.convert_word_to_pdf_unix("output.docx")
 
         with open(pdfpath, "rb") as file:
             btnpdf = st.download_button(
