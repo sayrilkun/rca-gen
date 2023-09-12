@@ -247,9 +247,11 @@ if st.session_state['generated']:
         st.header("☢️ RCA 5 WHYs")
         five_whys_button = st.button("Generate 5 WHYs :rocket:", key="five_whys",use_container_width=True)
         if five_whys_button:
-            prompt(prompts.five_whys_prompt)
-            st.write(st.session_state["generated"][1])
-
+            # prompt(prompts.five_whys_prompt)
+            # st.write(st.session_state["generated"][1])
+            five_whys = "1. Why are there system hang-ups and transaction failures?\n   - Possible cause: Misconfigured payment gateway integration.\n\n2. Why is there a misconfigured payment gateway integration?\n   - Possible cause: Issues during the deployment process.\n\n3. Why were there issues during the deployment process?\n   - Possible cause: Lack of proper configuration and testing.\n\n4. Why was there a lack of proper configuration and testing?\n   - Possible cause: Insufficient attention to detail or oversight.\n\n5. Why was there insufficient attention to detail or oversight?\n   - Possible cause: Lack of clear communication or guidelines during the deployment process."
+            st.success(five_whys)
+            
         st.header("☢️ Incident Timeline")
         try:
             st.table(inc_timeline_df)
