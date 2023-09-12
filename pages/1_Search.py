@@ -15,10 +15,10 @@ database = ruthinit.database
 
 title = st.text_input('Search for incidents')
 
-for i in range(5):
-    with st.expander(f"Incident #{i+1}"):
-        st.write(f"Incident #{i+1}""")
-        st.image("https://static.streamlit.io/examples/dice.jpg")
+# for i in range(5):
+#     with st.expander(f"Incident #{i+1}"):
+#         st.write(f"Incident #{i+1}""")
+#         st.image("https://static.streamlit.io/examples/dice.jpg")
 
 items = container.read_all_items()
 for item in items:
