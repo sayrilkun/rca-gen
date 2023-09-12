@@ -34,7 +34,7 @@ with search_container:
                 search_results.append(item["id"])
         
     for i in range(len(search_results)):
-        existing_item = container.read_item(
+        existing_items = container.read_item(
         item= search_results[i],
         partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
         for existing_item in existing_items:
