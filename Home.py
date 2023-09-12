@@ -298,14 +298,7 @@ if st.session_state['generated']:
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
 
-        log.info("Docx - PDF")
-
-        if os.name == 'nt':
-            pdfpath = docx_util.convert_word_to_pdf("output.docx")
-        else:
-            pdfpath = docx_util.convert_word_to_pdf_unix("output.docx")
-
-        with open(pdfpath, "rb") as file:
+        with open("output.pdf", "rb") as file:
             btnpdf = st.download_button(
                 label="Download Output File (PDF) 📄",
                 data=file,
