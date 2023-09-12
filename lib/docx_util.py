@@ -6,6 +6,7 @@ import docx
 from lorem import *
 import function
 import ruthinit
+from docx2pdf import convert
 
 #
 # Globals
@@ -91,3 +92,21 @@ def build_word_document(inc_timeline):
 
     doc.add_page_break()
     doc.save('output.docx')
+
+def convert_word_to_pdf(filepath, filename='output'):
+    '''
+    convert word to pdf
+
+    parameters:
+        filepath - docx filepath
+    
+    return:
+        path - pdf path
+    '''
+    log.info("Converting DOCX to PDF")
+    path = f'{filename}.pdf'
+
+    log.info(f"pdf path and name: {path}")
+    convert(filepath, path)
+
+    return path

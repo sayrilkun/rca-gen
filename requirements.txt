@@ -6,3 +6,4 @@ python-docx
 pandas
 numpy
 extract-msg
+docx2pdf

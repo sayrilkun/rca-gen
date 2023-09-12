@@ -271,6 +271,18 @@ if st.session_state['generated']:
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
 
+        log.info("Docx - PDF")
+
+        pdfpath = docx_util.convert_word_to_pdf("output.docx")
+
+        with open(pdfpath, "rb") as file:
+            btnpdf = st.download_button(
+                label="Download Output File (PDF) 📄",
+                data=file,
+                file_name="output.pdf",
+                mime="application/pdf"
+            )
+
 # action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
 # if action_items_button:
 #     # prompt(prompts.action_items_prompt)
