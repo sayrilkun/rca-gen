@@ -258,7 +258,7 @@ if st.session_state['generated']:
                 st.subheader("☢️ Contributing Factors")
             
             except Exception as e:
-                pass
+                log.info(e)
 
 
 
