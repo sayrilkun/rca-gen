@@ -32,7 +32,7 @@ with search_container:
         for item in items:
             if user_input in json.dumps(item, indent=True):
                 search_results.append(json.dumps(item["id"], indent=True))
-                print(json.dumps(item["id"], indent=True))
+                st.write(json.dumps(item["id"], indent=True))
         
     # for i in range(len(search_results)):
     #         existing_item = container.read_item(
