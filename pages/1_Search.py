@@ -21,7 +21,7 @@ search_container = st.container()
 items = container.read_all_items()
 
 search_results = []
-with container:
+with search_container:
     with st.form(key='search', clear_on_submit=True):
         user_input = st.text_area("Search keywords", key='keyword', height=50)
         submit_button = st.form_submit_button(label='Send')
