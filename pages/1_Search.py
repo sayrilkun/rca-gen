@@ -24,9 +24,8 @@ title = st.text_input('Search for incidents')
 
 items = container.read_all_items()
 for item in items:
-    with st.expander(st.write(f'''Incident Name: {item["incidentName"])}                                              Date Uploaded: {item["incidentDate"]}
+    with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
     '''):
-        st.write("RCA Details")
         search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
         st.write("Root Cause")
         st.write(search_rca_details_df.iloc[0, 0])
@@ -34,6 +33,10 @@ for item in items:
         st.write(search_rca_details_df.iloc[0, 1])
         st.write("Investigation & Resolution")
         st.write(search_rca_details_df.iloc[0, 2])
+        search_action_items_df =  pd.DataFrame(eval(item["actionItems"]))
+        st.table(search_action_items_df)
+        search_incident_timeline_df = pd.DataFrame(eval(item["incidentTimeline"]))
+        st.table(search_incident_timeline_df)
         st.write("RCA 5 WHYs")
         st.write(item["rca5WHYs"])
         
