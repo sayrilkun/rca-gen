@@ -24,7 +24,7 @@ title = st.text_input('Search for incidents')
 
 items = container.read_all_items()
 for item in items:
-    with st.expander(f'''Incident Name: {item["incidentName"]}                                              Date Uploaded: {item["incidentDate"]}
+    with st.expander(st.write(f'''Incident Name: {item["incidentName"])}                                              Date Uploaded: {item["incidentDate"]}
     '''):
         st.write("RCA Details")
         search_rca_details_df = pd.DataFrame(eval(item["rcaDetails"]))
