@@ -42,7 +42,7 @@ with search_container:
         existing_item =  container.read_item(
         item= search_results[i],
         partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
-        with st.expander(f''' 🌞 Incident Name: {existing_item["incidentName"]}
+        with st.expander(f''' 🌞  Incident Name: {existing_item["incidentName"]}
         Date Uploaded: {existing_item["incidentDate"]} \n
         Uploaded by: {existing_item["uploader"]} \n
         '''):
@@ -70,7 +70,7 @@ with search_container:
 
 if search_state is False:
     for item in items:
-        with st.expander(f''' 	🌞 Incident Name: {item["incidentName"]}
+        with st.expander(f''' 	🌞  Incident Name: {item["incidentName"]}
         Date Uploaded: {item["incidentDate"]}
         Uploaded by: {item["uploader"]} \n
         
