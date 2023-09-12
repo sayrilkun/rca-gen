@@ -32,8 +32,11 @@ with search_container:
         for item in items:
             if search_input.casefold() in json.dumps(item, indent=True).casefold():
                 search_results.append(item["id"])
+                ifSearch = True
             else:
-                st.warning("No results found.")
+                ifSearch = False
+        if ifSearch is False:
+            st.warning("No Results Found.")
         
     for i in range(len(search_results)):
         existing_item =  container.read_item(
