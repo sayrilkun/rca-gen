@@ -51,14 +51,14 @@ image = Image.open('static/ruthname.png')
 
 # Generate a response
 def generate_response(prompt):
-    st.session_state['messages'].append({"role": "user", "content": prompt})
+    st.session_state['messages'][0] = {"role": "user", "content": prompt}
 
     completion = openai.ChatCompletion.create(
         model=model,
-        messages=st.session_state['messages']
+        messages=st.session_state['messages'][0]
     )
     response = completion.choices[0].message.content
-    st.session_state['messages'].append({"role": "assistant", "content": response})
+    st.session_state['messages'][0] = {"role": "assistant", "content": response}
 
     # print(st.session_state['messages'])
     total_tokens = completion.usage.total_tokens
@@ -154,7 +154,7 @@ file=False
 
 with file_container:
     message("Hi! My name is Ruth, please upload your email file so I can start generating your RCA!", key="intro", avatar_style="adventurer-neutral", seed = "Patches&backgroundColor=ffdfbf")
-    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline")
+    uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline", type=['.eml', '.msg'])
     generate_button = st.button("Generate RCA", key="generate",use_container_width=True)
 
 # INITIAL PROMPT (incident time line)
@@ -298,14 +298,7 @@ if st.session_state['generated']:
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
 
-        log.info("Docx - PDF")
-
-        if os.name == 'nt':
-            pdfpath = docx_util.convert_word_to_pdf("output.docx")
-        else:
-            pdfpath = docx_util.convert_word_to_pdf_unix("output.docx")
-
-        with open(pdfpath, "rb") as file:
+        with open("output.pdf", "rb") as file:
             btnpdf = st.download_button(
                 label="Download Output File (PDF) 📄",
                 data=file,
