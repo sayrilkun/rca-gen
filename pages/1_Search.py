@@ -6,7 +6,7 @@ import base64
 st.set_page_config(page_title="Search", page_icon= "static/ruthlogo.png")
 
 add_logo('static/ruthsmall.png', height=100)
-st.sidebar.header("Search)
+st.sidebar.header("Search")
 image = Image.open('static/team.png')
 
 #st.write('Team DATAMRK')
