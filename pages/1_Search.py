@@ -94,5 +94,5 @@ if search_state is False:
             st.write("RCA 5 WHYs")
             st.write(item["rca5WHYs"])
 
-            st.write(f'Email Subject: {existing_item["emailSubject"]}')
+            st.write(f'Email Subject: {item["emailSubject"]}')
         
