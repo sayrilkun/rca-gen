@@ -4,6 +4,7 @@ from streamlit_extras.app_logo import add_logo
 import base64
 from lib import ruthinit
 import pandas as pd
+import json
 
 st.set_page_config(page_title="Search", page_icon= "static/ruthlogo.png")
 
