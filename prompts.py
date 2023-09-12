@@ -44,11 +44,13 @@ rca_details_prompt = f''' You are an Incident Analyst. I want you to answer 3 th
 1. Identify the Root cause of the incident 
 2. Generate a lengthy executive summary, minimum 2 paragraphs, based on the given email thread. Include important events happened in the thread in your executive summary.
 3. What are the key dates that leads to investigation and resolution. Explain each dates.
-# 4. What are the factors that contributed to the existing issue.
+4. What are the factors that contributed to the existing issue.
 
-I want your output to be a Python Dataframe like this format below. (No special characters like /*'" no \\n or whatever).
+Please follow the json format below. (No special characters like /*'" no \\n or whatever).
 
 {rca_details_format}
+
+Not multiple instance of braces just put all of them in one
 
 '''
 
