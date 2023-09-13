@@ -344,8 +344,8 @@ if prompt_generated is True:
 #         pass
 
 #         # file = False
-    st.header("☢️ Action Items")
-    action_items_button = st.button("Generate Action Items :rocket:", key="action_items",use_container_width=True)
+    st.header("Action Items")
+    action_items_button = st.button("Generate Action Items", key="action_items",use_container_width=True)
     if action_items_button:
         prompt(prompts.action_items_prompt)
         st.success(st.session_state["generated"][2])
