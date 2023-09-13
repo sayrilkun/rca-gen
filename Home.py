@@ -335,7 +335,7 @@ if st.session_state['generated']:
                         "emailSubject" : "[Test Email] Urgent: Point-of-Sale System Issue Resolution",
                         "rcaDetails": rca_details_clean,
                         "actionItems" : st.session_state["generated"][2],
-                        "rca5WHYs" : st.session_state["generated"][3]},
+                        "rca5WHYs" : st.session_state["generated"][3],
                         "incidentTimeline" : st.session_state["generated"][0],
                         }
                     try:
