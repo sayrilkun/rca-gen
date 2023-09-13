@@ -104,7 +104,6 @@ def build_word_document(action_items, rca_why, rca_det, inc_timeline):
     action_item_table.style = "Table Grid"
     columns = action_item_table.rows[0].cells
     columns[0].text = "Actions"
-    columns[0].style.bg.color = RGBColor(75,205,62)
     columns[1].text = "Description"
     columns[2].text = "Owner"
     columns[3].text = "Date"
