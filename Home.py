@@ -245,7 +245,7 @@ if st.session_state['generated']:
         # rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
         # if rca_details_button:
             # prompt(f"{prompts.rca_details_prompt}")
-        st.write(st.session_state["generated"][1])
+        # st.write(st.session_state["generated"][1])
         fail = False
 
         try:
@@ -253,7 +253,7 @@ if st.session_state['generated']:
             rca_details_clean = st.session_state["generated"][1].replace("\\n", "").replace("\\'", "")
             rca_details_clean = rca_details_clean.replace("'s", "\\'s")
             log.info(rca_details_clean)
-            st.write(rca_details_clean)
+            # st.write(rca_details_clean)
             rca_details_df = pd.DataFrame(eval(rca_details_clean))
 
 
