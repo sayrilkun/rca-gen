@@ -182,15 +182,18 @@ if uploaded_file != None:
 # IF BUTTON IS CLICKED
 if generate_button:
     if file is True:
-        with st.spinner('Generating RCA Please Wait...'):
+        with st.spinner('Generating Incident Timeline. Please Wait...'):
             log.info("Sending Message")
             log.info(inc_timeline_prompt)
             prompt(inc_timeline_prompt)
             time.sleep(3)
+        with st.spinner('Generating Root Cause Analysis. Please Wait...'):
             prompt(f"{prompts.rca_details_prompt}")
             time.sleep(3)
+        with st.spinner('Generating Action Items. Please Wait...'):
             prompt(prompts.action_items_prompt)
             time.sleep(3)
+        with st.spinner('Generating 5 WHYs Analysis. Please Wait...'):
             prompt(prompts.five_whys_prompt)
             prompt_generated = True
             # prompt("what is A")
