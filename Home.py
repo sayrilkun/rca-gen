@@ -24,7 +24,7 @@ from lib import filechecker
 from lib import email_parser
 import time
 import os
-
+import datetime
 #
 # Globals
 #
@@ -227,12 +227,7 @@ if st.session_state['generated']:
                 pass
 
 
-        st.header("Incident Timeline")
-        try:
-            st.table(inc_timeline_df)
-            
-        except Exception as e:
-            st.write(st.session_state["generated"][0])
+
         # SECOND PROMPT (RCA DETAILS)
 
         rca_root_cause = "" # Root Cause
@@ -295,8 +290,16 @@ if st.session_state['generated']:
         st.header("☢️ RCA 5 WHYs")
         st.success(st.session_state["generated"][3])
 
+        st.header("Incident Timeline")
+        try:
+            st.table(inc_timeline_df)
+            
+        except Exception as e:
+            st.write(st.session_state["generated"][0])
+
         log.info(is_rca_det_generated)
         if is_rca_det_generated:
+            
             full_rca_det = [rca_root_cause, rca_ex_sum, rca_inv_res, rca_cont_fact]
             log.info(full_rca_det)
             docx_util.build_word_document(full_rca_det, eval(inc_timeline_clean))
@@ -317,6 +320,30 @@ if st.session_state['generated']:
                     file_name="output.pdf",
                     mime="application/pdf"
                 )
+
+            with st.expander("Save As")
+                incident_name = st.text_input("Incident Name")
+                uploader_name = st.text_input("Uploader Name")
+                save_button = st.button("Save :rocket:", key="save",use_container_width=True)
+                if save_button:
+                    item = {
+                        "categoryId": "61dba35b-4f02-45c5-b648-c6badc0cbd79",
+                        "incidentDate": f"{datetime.datetime.now()}",
+                        "incidentName": f"{incident_name}",
+                        "projectAssignment": "SAMPLE BANK AMS",
+                        "uploader": f"{uploader_name}",
+                        "emailSubject" : "[Test Email] Urgent: Point-of-Sale System Issue Resolution",
+                        "rcaDetails": f"{rca_details_clean}",
+                        "actionItems" : f"{st.session_state["generated"][2]}",
+                        "rca5WHYs" : f"{st.session_state["generated"][3]}",
+                        "incidentTimeline" : f"{st.session_state["generated"][0]}"
+                    }
+                    try:
+                        container.create_item(item,enable_automatic_id_generation=True)
+                        st.success("Saved successfully")
+                    except Exception as e:
+                        st.warning(e)
+
             # time.sleep(3)
             # prompt(prompts.action_items_prompt)  
             # st.header("☢️ Action Items")
