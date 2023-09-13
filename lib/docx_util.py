@@ -109,7 +109,7 @@ def build_word_document(action_items, rca_why, rca_det, inc_timeline):
     columns[4].text = "Status"
 
     for x in action_items:
-        row = timeline_table.add_row().cells
+        row = action_item_table.add_row().cells
         row[0].text = x["Actions"]
         row[1].text = x["Description"]
         row[2].text = x["Owner"]
