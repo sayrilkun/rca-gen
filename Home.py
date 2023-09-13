@@ -336,7 +336,7 @@ if st.session_state['generated']:
                         "rcaDetails": rca_details_clean,
                         "actionItems" : st.session_state["generated"][2],
                         "rca5WHYs" : st.session_state["generated"][3]},
-                        "incidentTimeline" : st.session_state["generated"][0]
+                        "incidentTimeline" : st.session_state["generated"][0],
                         }
                     try:
                         container.create_item(item,enable_automatic_id_generation=True)
