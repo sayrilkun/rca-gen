@@ -8,6 +8,7 @@ import function
 import ruthinit
 from docx2pdf import convert
 import aspose.words as aw
+from docx.shared import RGBColor
 
 #
 # Globals
@@ -36,6 +37,7 @@ def build_docx(output_text):
     run.font.name = 'Arial'
     run.font.size = docx.shared.Pt(16)
 
+
     # Add more text to the same paragraph
     run = p.add_run(" Tutorial")
 
@@ -63,8 +65,13 @@ def build_word_document(rca_det, inc_timeline):
     #initialize document
     doc = docx.Document()
 
+    # Main Color: Core Green (75,205,62)
+    # Supporting Color 1: Teal (0,151,117)
+    # Supporting Color 2: Dark Teal (1,91,126)
+
     #Main Header
-    doc.add_heading('RUTH Analysis', 0)
+    h1 = doc.add_heading('RUTH Analysis', 0)
+    h1.style.font.color.rgb = RGBColor(75,205,62)
 
     log.info("Filling up RCA Details.")
     #RCA Details
@@ -96,6 +103,7 @@ def build_word_document(rca_det, inc_timeline):
         row[1].text = x["Time"]
         row[2].text = x["Contents"]
 
+    # doc.font.color.rgb = RGBColor(75,205,62)
     doc.add_page_break()
     doc.save('output.docx')
 
