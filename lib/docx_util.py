@@ -64,6 +64,12 @@ def build_word_document(rca_det, inc_timeline):
     log.info("Creating Document")
     #initialize document
     doc = docx.Document()
+    section = doc.sections[0]
+    header = section.header
+    paragraph = header.paragraphs[0]
+    paragraph.text = "\t\t"
+    run = paragraph.add_run()
+    run.add_picture("static/ruthlogo.png")
 
     # Main Color: Core Green (75,205,62)
     # Supporting Color 1: Teal (0,151,117)
