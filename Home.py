@@ -237,6 +237,7 @@ if st.session_state['generated']:
             try:
                 log.info("Generating RCA Details")
                 rca_details_clean = st.session_state["generated"][1].replace("\\n", "").replace("\\'", "")
+                rca_details_clean = rca_details_clean.replace("'s", "\\'s")
                 log.info(rca_details_clean)
                 st.write(rca_details_clean)
                 rca_details_df = pd.DataFrame(eval(rca_details_clean))
