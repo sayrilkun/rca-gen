@@ -46,7 +46,7 @@ rca_details_prompt = f''' You are an Incident Analyst. I want you to answer 3 th
 3. What are the key dates that leads to investigation and resolution. Explain each dates.
 4. What are the factors that contributed to the existing issue.
 
-Please follow the json format below. (No special characters like /*'" no \\n or whatever). Please don't put apostrophe in your response please.
+Please strictly follow the format below, do not create another brace. Please don't put apostrophe in your response please.
 
 {rca_details_format}
 
