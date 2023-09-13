@@ -70,24 +70,30 @@ def build_word_document(rca_det, inc_timeline):
     # Supporting Color 2: Dark Teal (1,91,126)
 
     #Main Header
-    h1 = doc.add_heading('RUTH Analysis', 0)
-    h1.style.font.color.rgb = RGBColor(75,205,62)
+    h0 = doc.add_heading('RUTH Analysis', 0)
+    h0.style.font.color.rgb = RGBColor(75,205,62)
 
     log.info("Filling up RCA Details.")
     #RCA Details
-    doc.add_heading('Root Cause Analysis Details', 1)
-    doc.add_heading('Root Cause', 2)
+    h1 = doc.add_heading('Root Cause Analysis Details', 1)
+    h1.style.font.color.rgb = RGBColor(0,151,117)
+    h2 = doc.add_heading('Root Cause', 2)
+    h2.style.font.color.rgb = RGBColor(1,91,126)
     rcaparagraph1 = doc.add_paragraph(rca_det[0])
-    doc.add_heading('RCA Executive Summary', 2)
+    h2 = doc.add_heading('RCA Executive Summary', 2)
+    h2.style.font.color.rgb = RGBColor(1,91,126)
     rcaparagraph1 = doc.add_paragraph(rca_det[1])
-    doc.add_heading('Investigation & Resolution', 2)
+    h2 = doc.add_heading('Investigation & Resolution', 2)
+    h2.style.font.color.rgb = RGBColor(1,91,126)
     rcaparagraph1 = doc.add_paragraph(rca_det[2])
-    doc.add_heading('Contributing Factors', 2)
+    h2 = doc.add_heading('Contributing Factors', 2)
+    h2.style.font.color.rgb = RGBColor(1,91,126)
     rcaparagraph1 = doc.add_paragraph(rca_det[3])
 
     log.info("Filling up incident timeline.")
     #incident timeline
-    doc.add_heading('Incident Timeline', 1)
+    h1 = doc.add_heading('Incident Timeline', 1)
+    h1.style.font.color.rgb = RGBColor(0,151,117)
     timeline_table = doc.add_table(rows=1, cols=3)
     columns = timeline_table.rows[0].cells
     columns[0].text = "Date"

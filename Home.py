@@ -142,7 +142,8 @@ file=False
 
 
 with file_container:
-    message("Hi! My name is Ruth, please upload your email file so I can start generating your RCA!", key="intro", avatar_style="adventurer-neutral", seed = "Patches&backgroundColor=ffdfbf")
+    #st.chat_message("Hi! My name is Ruth, please upload your email file so I can start generating your RCA!", avatar='static/ruthlogo.png')
+    message("Hi! My name is Ruth, please upload your email file so I can start generating your RCA!", key="intro", avatar_style="micah", seed = "Rascal")
     uploaded_file = st.file_uploader("Choose .eml file to generate Incident Timeline", type=['.eml', '.msg'])
     generate_button = st.button("Generate RCA", key="generate",use_container_width=True)
 
