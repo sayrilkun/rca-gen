@@ -328,15 +328,15 @@ if st.session_state['generated']:
                 if save_button:
                     item = {
                         "categoryId": "61dba35b-4f02-45c5-b648-c6badc0cbd79",
-                        "incidentDate": f"{datetime.datetime.now()}",
-                        "incidentName": f"{incident_name}",
+                        "incidentDate": datetime.datetime.now(),
+                        "incidentName": incident_name,
                         "projectAssignment": "SAMPLE BANK AMS",
                         "uploader": f"{uploader_name}",
                         "emailSubject" : "[Test Email] Urgent: Point-of-Sale System Issue Resolution",
-                        "rcaDetails": f"{rca_details_clean}",
-                        "actionItems" : f"{st.session_state["generated"][2]}",
-                        "rca5WHYs" : f"{st.session_state["generated"][3]}",
-                        "incidentTimeline" : f"{st.session_state["generated"][0]}"
+                        "rcaDetails": rca_details_clean,
+                        "actionItems" : st.session_state["generated"][2],
+                        "rca5WHYs" : st.session_state["generated"][3]},
+                        "incidentTimeline" : st.session_state["generated"][0]
                     }
                     try:
                         container.create_item(item,enable_automatic_id_generation=True)
