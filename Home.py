@@ -29,6 +29,8 @@ import datetime
 # Globals
 #
 log = ruthinit.log
+database = ruthinit.database
+container = ruthinit.container
 file = False
 image = Image.open('static/ruthname.png')
 is_rca_det_generated = False # flag if rca_det is generated
