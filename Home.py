@@ -293,7 +293,7 @@ if st.session_state['generated']:
             st.write("error parsing")
 
         st.header("☢️ RCA 5 WHYs")
-        st.success(five_whys)
+        st.success(st.session_state["generated"][3])
 
         log.info(is_rca_det_generated)
         if is_rca_det_generated:
