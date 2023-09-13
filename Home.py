@@ -219,7 +219,7 @@ if st.session_state['generated']:
             # message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="croodles", seed="Tigger")
             # message(f'XX{i}XX {st.session_state["generated"][i]} ', key=str(i), avatar_style="bottts", seed = "Sophie")
             log.info(st.session_state['generated'])
-            log.info(f"Number of tokens: {st.session_state['total_tokens'][i]};"))
+            log.info(f"Number of tokens: {st.session_state['total_tokens'][i]};")
             try:
                 # CONVERT THE RESPONSE TO DATAFRAME
                 inc_timeline_clean = st.session_state["generated"][0].replace("\\n", "").replace("\\'", "")
