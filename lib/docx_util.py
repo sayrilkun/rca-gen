@@ -60,7 +60,7 @@ def build_docx(output_text):
     # Save the document
     doc.save("output.docx")
 
-def build_word_document(rca_det, inc_timeline):
+def build_word_document(action_items, rca_why, rca_det, inc_timeline):
     log.info("Creating Document")
     #initialize document
     doc = docx.Document()
@@ -95,6 +95,33 @@ def build_word_document(rca_det, inc_timeline):
     h2 = doc.add_heading('Contributing Factors', 2)
     h2.style.font.color.rgb = RGBColor(1,91,126)
     rcaparagraph1 = doc.add_paragraph(rca_det[3])
+
+    log.info("Filling up Action Items.")
+    #Filling up Action Items
+    h1 = doc.add_heading("Action Items", 1)
+    h1.style.font.color.rgb = RGBColor(0,151,117)
+    action_item_table = doc.add_table(rows=1, cols=5)
+    columns = action_item_table.rows[0].cells
+    columns[0].text = "Actions"
+    columns[1].text = "Description"
+    columns[2].text = "Owner"
+    columns[3].text = "Date"
+    columns[4].text = "Status"
+
+    for x in action_items:
+        row = timeline_table.add_row().cells
+        row[0].text = x["Actions"]
+        row[1].text = x["Description"]
+        row[2].text = x["Owner"]
+        row[3].text = x["Date"]
+        row[4].text = x["Status"]
+
+    log.info("5 Whys.")
+    #Filling up Action Items
+    h1 = doc.add_heading("5 Whys", 1)
+    h1.style.font.color.rgb = RGBColor(0,151,117)
+    whyparagraph = doc.add_paragraph(rca_why)
+
 
     log.info("Filling up incident timeline.")
     #incident timeline
