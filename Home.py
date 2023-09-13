@@ -182,18 +182,19 @@ if uploaded_file != None:
 # IF BUTTON IS CLICKED
 if generate_button:
     if file is True:
-        log.info("Sending Message")
-        log.info(inc_timeline_prompt)
-        prompt(inc_timeline_prompt)
-        time.sleep(3)
-        prompt(f"{prompts.rca_details_prompt}")
-        time.sleep(3)
-        prompt(prompts.action_items_prompt)
-        time.sleep(3)
-        prompt(prompts.five_whys_prompt)
-        prompt_generated = True
-        # prompt("what is A")
-        # file = False
+        with st.spinner('Generating RCA Please Wait...'):
+            log.info("Sending Message")
+            log.info(inc_timeline_prompt)
+            prompt(inc_timeline_prompt)
+            time.sleep(3)
+            prompt(f"{prompts.rca_details_prompt}")
+            time.sleep(3)
+            prompt(prompts.action_items_prompt)
+            time.sleep(3)
+            prompt(prompts.five_whys_prompt)
+            prompt_generated = True
+            # prompt("what is A")
+            # file = False
 
 # container for chat history
 response_container = st.container()
