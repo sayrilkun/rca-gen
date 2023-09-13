@@ -93,4 +93,4 @@ Can you please follow this format (No special characters no \\n or whatever):
 
 '''
 
-five_whys_prompt = f''' Generate a 5 whys analysis based on the given email thread'''
+five_whys_prompt = f''' Generate a 5 whys analysis based on the given email thread. List in butllet form'''
