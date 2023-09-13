@@ -181,6 +181,8 @@ if generate_button:
         log.info("Sending Message")
         log.info(inc_timeline_prompt)
         prompt(inc_timeline_prompt)
+        time.sleep(5)
+        prompt(f"{prompts.rca_details_prompt}")
         prompt_generated = True
         # prompt("what is A")
         # file = False
@@ -236,44 +238,45 @@ if st.session_state['generated']:
 
 
         st.header("RCA Details")
-        rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
-        if rca_details_button:
-            prompt(f"{prompts.rca_details_prompt}")
-            st.write(st.session_state["generated"][1])
-            fail = False
+        # rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
+        # if rca_details_button:
+            # prompt(f"{prompts.rca_details_prompt}")
+        st.write(st.session_state["generated"][1])
+        fail = False
 
-            try:
-                log.info("Generating RCA Details")
-                rca_details_clean = st.session_state["generated"][1].replace("\\n", "").replace("\\'", "")
-                rca_details_clean = rca_details_clean.replace("'s", "\\'s")
-                log.info(rca_details_clean)
-                st.write(rca_details_clean)
-                rca_details_df = pd.DataFrame(eval(rca_details_clean))
+        try:
+            log.info("Generating RCA Details")
+            rca_details_clean = st.session_state["generated"][1].replace("\\n", "").replace("\\'", "")
+            rca_details_clean = rca_details_clean.replace("'s", "\\'s")
+            log.info(rca_details_clean)
+            st.write(rca_details_clean)
+            rca_details_df = pd.DataFrame(eval(rca_details_clean))
 
 
-                st.subheader("Root Cause")
-                rca_root_cause = rca_details_df.iloc[0, 0]
-                st.success(rca_root_cause)
+            st.subheader("Root Cause")
+            rca_root_cause = rca_details_df.iloc[0, 0]
+            st.success(rca_root_cause)
 
-                st.subheader("RCA Executive Summary")
-                rca_ex_sum = rca_details_df.iloc[1, 1]
-                st.success(rca_ex_sum)
+            st.subheader("RCA Executive Summary")
+            rca_ex_sum = rca_details_df.iloc[1, 1]
+            st.success(rca_ex_sum)
 
-                st.subheader("Investigation & Resolution")
-                rca_inv_res = rca_details_df.iloc[2, 2]
-                st.success(rca_inv_res)
+            st.subheader("Investigation & Resolution")
+            rca_inv_res = rca_details_df.iloc[2, 2]
+            st.success(rca_inv_res)
 
-                st.subheader("Contributing Factors")
-                rca_cont_fact = rca_details_df.iloc[3, 3]
-                st.success(rca_cont_fact)
+            st.subheader("Contributing Factors")
+            rca_cont_fact = rca_details_df.iloc[3, 3]
+            st.success(rca_cont_fact)
 
-                log.info("Generated RCA Details")
+            log.info("Generated RCA Details")
 
-                is_rca_det_generated = True
-            
-            except Exception as e:
-                log.info(e)
-                fail = True
+            is_rca_det_generated = True
+
+        
+        except Exception as e:
+            log.info(e)
+            fail = True
 
         log.info(is_rca_det_generated)
         if is_rca_det_generated:
