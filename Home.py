@@ -284,14 +284,17 @@ if st.session_state['generated']:
         st.header("☢️ Action Items")
         try:
     #         action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
-            action_items_df = pd.DataFrame(eval(st.session_state["generated"][2]))
+            action_items_clean = st.session_state["generated"][2].replace("\\'","").replace("\\n","")
+            action_items_clean = action_items_clean.replace("'s", "\\'s").replace("'t", "\\'t")
+            action_items_df = pd.DataFrame(eval(action_items_clean))
             st.table(action_items_df)
             
         except Exception as e:
             st.write("error parsing")
 
         st.header("☢️ RCA 5 WHYs")
-        st.success(st.session_state["generated"][3])
+        rca_whys = st.session_state["generated"][3]
+        st.success(rca_whys)
 
         st.header("Incident Timeline")
         try:
@@ -305,7 +308,7 @@ if st.session_state['generated']:
             
             full_rca_det = [rca_root_cause, rca_ex_sum, rca_inv_res, rca_cont_fact]
             log.info(full_rca_det)
-            docx_util.build_word_document(full_rca_det, eval(inc_timeline_clean))
+            docx_util.build_word_document(eval(action_items_clean), rca_whys, full_rca_det, eval(inc_timeline_clean))
             docx_util.convert_word_to_pdf_unix("output.docx")
             log.info("Generating Word & PDF File.")
             log.info(rca_details_clean)
