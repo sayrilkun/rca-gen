@@ -101,6 +101,7 @@ def build_word_document(action_items, rca_why, rca_det, inc_timeline):
     h1 = doc.add_heading("Action Items", 1)
     h1.style.font.color.rgb = RGBColor(0,151,117)
     action_item_table = doc.add_table(rows=1, cols=5)
+    action_item_table.style = "Table Grid"
     columns = action_item_table.rows[0].cells
     columns[0].text = "Actions"
     columns[1].text = "Description"
@@ -128,6 +129,7 @@ def build_word_document(action_items, rca_why, rca_det, inc_timeline):
     h1 = doc.add_heading('Incident Timeline', 1)
     h1.style.font.color.rgb = RGBColor(0,151,117)
     timeline_table = doc.add_table(rows=1, cols=3)
+    timeline_table.style = "Table Grid"
     columns = timeline_table.rows[0].cells
     columns[0].text = "Date"
     columns[1].text = "Time"
