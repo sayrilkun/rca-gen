@@ -281,7 +281,7 @@ if st.session_state['generated']:
             fail = True
 
 
-        st.header("☢️ Action Items")
+        st.header("Action Items")
         try:
     #         action_items="[{'Actions': 'Diagnostic', 'Description': 'Investigate potential misconfiguration in the payment gateway integration causing CPU and memory spikes', 'Owner': 'Tyrone Guevarra', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Further investigate the potential misconfiguration in the integration of the new payment gateway', 'Owner': 'Mary Rose Ann Guansing', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Explore the connection between the new payment gateway and the system issues', 'Owner': 'Johndell Kitts', 'Date': '10th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the intriguing behavior in the payment processing code', 'Owner': 'John Michael Dy', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Diagnostic', 'Description': 'Investigate the surge in deadlock incidents and their impact on transaction delays', 'Owner': 'Redner Cabra', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Swiftly resolve the point-of-sale system issue', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}, {'Actions': 'Implementation', 'Description': 'Address the critical issue causing transaction failures and disruptions', 'Owner': 'Team', 'Date': '9th August 2023', 'Status': 'Not Completed'}]"
             action_items_clean = st.session_state["generated"][2].replace("\\'","").replace("\\n","")
@@ -292,10 +292,10 @@ if st.session_state['generated']:
         except Exception as e:
             st.write("error parsing")
 
-        st.header("☢️ RCA 5 WHYs")
+        st.header("RCA 5 WHYs")
         rca_whys = st.session_state["generated"][3]
         st.success(rca_whys)
-
+        
         st.header("Incident Timeline")
         try:
             st.table(inc_timeline_df)
@@ -314,14 +314,14 @@ if st.session_state['generated']:
             log.info(rca_details_clean)
             with open("output.docx", "rb") as file:
                 btn = st.download_button(
-                    label="Download Output File (DOCX) 📄",
+                    label="Download Output File (DOCX) 📜",
                     data=file,
                     file_name="output.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
             with open("output.pdf", "rb") as file:
                 btnpdf = st.download_button(
-                    label="Download Output File (PDF) 📄",
+                    label="Download Output File (PDF) 📜",
                     data=file,
                     file_name="output.pdf",
                     mime="application/pdf"
@@ -330,7 +330,7 @@ if st.session_state['generated']:
             with st.expander("Save As"):
                 incident_name = st.text_input("Incident Name")
                 uploader_name = st.text_input("Uploader Name")
-                save_button = st.button("Save :rocket:", key="save",use_container_width=True)
+                save_button = st.button("Save", key="save",use_container_width=True)
                 if save_button:
                     item = {
                         "categoryId": "61dba35b-4f02-45c5-b648-c6badc0cbd79",

@@ -69,7 +69,7 @@ def build_word_document(action_items, rca_why, rca_det, inc_timeline):
     paragraph = header.paragraphs[0]
     paragraph.text = "\t\t"
     run = paragraph.add_run()
-    run.add_picture("static/ruthlogo.png")
+    run.add_picture("static/ruthlogosmall.png")
 
     # Main Color: Core Green (75,205,62)
     # Supporting Color 1: Teal (0,151,117)
