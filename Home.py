@@ -220,12 +220,20 @@ if st.session_state['generated']:
             except Exception as e:
                 pass
 
+
+        st.header("Incident Timeline")
+        try:
+            st.table(inc_timeline_df)
+            
+        except Exception as e:
+            st.write(st.session_state["generated"][0])
         # SECOND PROMPT (RCA DETAILS)
 
         rca_root_cause = "" # Root Cause
         rca_ex_sum = "" # executive summary
         rca_inv_res = "" # investigation & resolution
         rca_cont_fact = "" # contributing factors
+
 
         st.header("RCA Details")
         rca_details_button = st.button("Generate RCA Details", key="rca_details",use_container_width=True)
@@ -302,12 +310,7 @@ if st.session_state['generated']:
             #         pass
 
 
-        st.header("Incident Timeline")
-        try:
-            st.table(inc_timeline_df)
-            
-        except Exception as e:
-            st.write(st.session_state["generated"][0])
+
 
 if prompt_generated is True:
 #     st.header("☢️ RCA Details")
