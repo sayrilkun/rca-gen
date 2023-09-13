@@ -330,7 +330,7 @@ if st.session_state['generated']:
                 if save_button:
                     item = {
                         "categoryId": "61dba35b-4f02-45c5-b648-c6badc0cbd79",
-                        "incidentDate": datetime.date.today(),
+                        "incidentDate": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
                         "incidentName": incident_name,
                         "projectAssignment": "SAMPLE BANK AMS",
                         "uploader": f"{uploader_name}",
