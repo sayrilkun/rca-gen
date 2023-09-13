@@ -321,7 +321,7 @@ if st.session_state['generated']:
                     mime="application/pdf"
                 )
 
-            with st.expander("Save As")
+            with st.expander("Save As"):
                 incident_name = st.text_input("Incident Name")
                 uploader_name = st.text_input("Uploader Name")
                 save_button = st.button("Save :rocket:", key="save",use_container_width=True)
