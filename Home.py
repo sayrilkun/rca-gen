@@ -247,15 +247,15 @@ if st.session_state['generated']:
                 st.success(rca_root_cause)
 
                 st.subheader("RCA Executive Summary")
-                rca_ex_sum = rca_details_df.iloc[0, 1]
+                rca_ex_sum = rca_details_df.iloc[1, 1]
                 st.success(rca_ex_sum)
 
                 st.subheader("Investigation & Resolution")
-                rca_inv_res = rca_details_df.iloc[0, 2]
+                rca_inv_res = rca_details_df.iloc[2, 2]
                 st.success(rca_inv_res)
 
                 st.subheader("Contributing Factors")
-                rca_cont_fact = rca_details_df.iloc[0, 3]
+                rca_cont_fact = rca_details_df.iloc[3, 3]
                 st.success(rca_cont_fact)
 
                 log.info("Generated RCA Details")
