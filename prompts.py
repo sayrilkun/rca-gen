@@ -34,11 +34,17 @@ inc_timeline_format =     [
 rca_details_format = [
     {
         "Root Cause" : "Answer #1",
-        "RCA Executive Summary" : "Answer #2",
+    },
+    {
+        "RCA Executive Summary" : "Answer #2"
+    },
+    {
         "Investigation and Resolution" : "Answer #3",
+    },
+    {
         "Contributing Factors" : "Answer #4"
-        
-    }]
+    }
+    ]
 rca_details_prompt = f''' You are an Incident Analyst. I want you to answer 3 things for me based on your profession.
 
 1. Identify the Root cause of the incident 
